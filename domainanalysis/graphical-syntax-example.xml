@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.6//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_6.dtd'>
+<nta>
+	<declaration>// Place global declarations here.
+</declaration>
+	<template>
+		<name x="5" y="5">Template</name>
+		<declaration>// Place local declarations here.
+</declaration>
+		<location id="id0" x="195" y="-153">
+			<name x="212" y="-178">ExternalHarddrive</name>
+			<label kind="comments" x="-187" y="195">Sources are specified places where physical media resources may be found.
+
+Collections are databases of metadata
+
+Locations are links (URI) between collection tracks and items in a source</label>
+		</location>
+		<location id="id1" x="357" y="85">
+			<name x="357" y="51">iPod</name>
+		</location>
+		<location id="id2" x="-144" y="-153">
+			<name x="-154" y="-187">MinePlader</name>
+		</location>
+		<location id="id3" x="-144" y="85">
+			<name x="-280" y="59">MainCollection</name>
+			<label kind="comments" x="-595" y="110">This includes tracks that are not necessarily available</label>
+		</location>
+		<location id="id4" x="127" y="85">
+			<name x="136" y="42">USBthumbdrive</name>
+		</location>
+		<location id="id5" x="25" y="-153">
+			<name x="15" y="-187">Laptop</name>
+		</location>
+		<init ref="id0"/>
+		<transition id="id6">
+			<source ref="id5"/>
+			<target ref="id3"/>
+			<label kind="comments" x="8" y="-93">link</label>
+		</transition>
+		<transition id="id7">
+			<source ref="id3"/>
+			<target ref="id4"/>
+			<label kind="comments" x="-85" y="102">copy
+playlist PartyTracks</label>
+		</transition>
+		<transition id="id8">
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<label kind="comments" x="-127" y="-85">link</label>
+		</transition>
+		<transition id="id9">
+			<source ref="id0"/>
+			<target ref="id3"/>
+			<label kind="comments" x="51" y="-34">link</label>
+		</transition>
+		<transition id="id10">
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="comments" x="314" y="-59">derived
+* -&gt; mp3</label>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Process = Template();
+// List one or more processes to be composed into a system.
+system Process;
+</system>
+	<queries>
+		<query>
+			<formula/>
+			<comment/>
+		</query>
+	</queries>
+</nta>
