@@ -4,7 +4,42 @@
   <eClassifiers xsi:type="ecore:EClass" name="Collection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="item" upperBound="-1" eType="#//Item"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composition" upperBound="-1"
+        eType="#//Composition" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Item"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//Item"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Item" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//Item #//CategorizedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composition" lowerBound="1"
+        upperBound="-1" eType="#//Composition" eOpposite="#//Composition/track"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Playlist" eSuperTypes="#//Item">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="track" lowerBound="1" upperBound="-1"
+        eType="#//Track"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Album" eSuperTypes="#//Item #//CategorizedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="track" lowerBound="1" upperBound="-1"
+        eType="#//Track"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Composition" eSuperTypes="#//CategorizedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="track" upperBound="-1"
+        eType="#//Track" eOpposite="#//Track/composition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryReference" eSuperTypes="#//Playlist"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Artist"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CategorizedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artist" upperBound="-1"
+        eType="#//Artist"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="category" upperBound="-1"
+        eType="#//Category"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Category">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CategoryType" lowerBound="1"
+        eType="#//CategoryType" defaultValueLiteral="Genre"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CategoryType">
+    <eLiterals name="Rating"/>
+    <eLiterals name="Genre" value="1"/>
+    <eLiterals name="Tag" value="2"/>
+  </eClassifiers>
 </ecore:EPackage>

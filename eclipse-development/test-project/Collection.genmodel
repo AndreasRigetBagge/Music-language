@@ -6,10 +6,37 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>Collection.ecore</foreignModel>
   <genPackages prefix="Collection" disposableProviderFactory="true" ecorePackage="Collection.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Collection.ecore#//CategoryType">
+      <genEnumLiterals ecoreEnumLiteral="Collection.ecore#//CategoryType/Rating"/>
+      <genEnumLiterals ecoreEnumLiteral="Collection.ecore#//CategoryType/Genre"/>
+      <genEnumLiterals ecoreEnumLiteral="Collection.ecore#//CategoryType/Tag"/>
+    </genEnums>
     <genClasses ecoreClass="Collection.ecore#//Collection">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Collection.ecore#//Collection/item"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//Collection/composition"/>
     </genClasses>
     <genClasses ecoreClass="Collection.ecore#//Item"/>
-    <genClasses ecoreClass="Collection.ecore#//Track"/>
+    <genClasses ecoreClass="Collection.ecore#//Track">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//Track/composition"/>
+    </genClasses>
+    <genClasses ecoreClass="Collection.ecore#//Playlist">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//Playlist/track"/>
+    </genClasses>
+    <genClasses ecoreClass="Collection.ecore#//Album">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//Album/track"/>
+    </genClasses>
+    <genClasses ecoreClass="Collection.ecore#//Composition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//Composition/track"/>
+    </genClasses>
+    <genClasses ecoreClass="Collection.ecore#//QueryReference"/>
+    <genClasses ecoreClass="Collection.ecore#//Artist"/>
+    <genClasses ecoreClass="Collection.ecore#//CategorizedElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//CategorizedElement/artist"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//CategorizedElement/category"/>
+    </genClasses>
+    <genClasses ecoreClass="Collection.ecore#//Category">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Collection.ecore#//Category/CategoryType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Collection.ecore#//Category/Value"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
