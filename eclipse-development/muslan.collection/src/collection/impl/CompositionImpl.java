@@ -2,9 +2,11 @@
  */
 package collection.impl;
 
-import collection.Collection;
 import collection.CollectionPackage;
-import collection.Item;
+import collection.Composition;
+import collection.Track;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -13,41 +15,39 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Collection</b></em>'.
+ * An implementation of the model object '<em><b>Composition</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link collection.impl.CollectionImpl#getItem <em>Item</em>}</li>
+ *   <li>{@link collection.impl.CompositionImpl#getTracks <em>Tracks</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CollectionImpl extends MinimalEObjectImpl.Container implements Collection {
+public class CompositionImpl extends CategorizedElementImpl implements Composition {
 	/**
-	 * The cached value of the '{@link #getItem() <em>Item</em>}' containment reference list.
+	 * The cached value of the '{@link #getTracks() <em>Tracks</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItem()
+	 * @see #getTracks()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Item> item;
+	protected EList<Track> tracks;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CollectionImpl() {
+	protected CompositionImpl() {
 		super();
 	}
 
@@ -58,7 +58,7 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CollectionPackage.Literals.COLLECTION;
+		return CollectionPackage.Literals.COMPOSITION;
 	}
 
 	/**
@@ -67,11 +67,26 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	 * @generated
 	 */
 	@Override
-	public EList<Item> getItem() {
-		if (item == null) {
-			item = new EObjectContainmentEList<Item>(Item.class, this, CollectionPackage.COLLECTION__ITEM);
+	public EList<Track> getTracks() {
+		if (tracks == null) {
+			tracks = new EObjectWithInverseResolvingEList.ManyInverse<Track>(Track.class, this, CollectionPackage.COMPOSITION__TRACKS, CollectionPackage.TRACK__COMPOSITIONS);
 		}
-		return item;
+		return tracks;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CollectionPackage.COMPOSITION__TRACKS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTracks()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -82,8 +97,8 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CollectionPackage.COLLECTION__ITEM:
-				return ((InternalEList<?>)getItem()).basicRemove(otherEnd, msgs);
+			case CollectionPackage.COMPOSITION__TRACKS:
+				return ((InternalEList<?>)getTracks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +111,8 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CollectionPackage.COLLECTION__ITEM:
-				return getItem();
+			case CollectionPackage.COMPOSITION__TRACKS:
+				return getTracks();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,9 +126,9 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CollectionPackage.COLLECTION__ITEM:
-				getItem().clear();
-				getItem().addAll((java.util.Collection<? extends Item>)newValue);
+			case CollectionPackage.COMPOSITION__TRACKS:
+				getTracks().clear();
+				getTracks().addAll((Collection<? extends Track>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +142,8 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CollectionPackage.COLLECTION__ITEM:
-				getItem().clear();
+			case CollectionPackage.COMPOSITION__TRACKS:
+				getTracks().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -142,10 +157,10 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CollectionPackage.COLLECTION__ITEM:
-				return item != null && !item.isEmpty();
+			case CollectionPackage.COMPOSITION__TRACKS:
+				return tracks != null && !tracks.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //CollectionImpl
+} //CompositionImpl

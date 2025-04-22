@@ -31,15 +31,6 @@ public interface CollectionFactory extends EFactory {
 	Collection createCollection();
 
 	/**
-	 * Returns a new object of class '<em>Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Item</em>'.
-	 * @generated
-	 */
-	Item createItem();
-
-	/**
 	 * Returns a new object of class '<em>Track</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,6 +38,42 @@ public interface CollectionFactory extends EFactory {
 	 * @generated
 	 */
 	Track createTrack();
+
+	/**
+	 * Returns a new object of class '<em>Album</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Album</em>'.
+	 * @generated
+	 */
+	Album createAlbum();
+
+	/**
+	 * Returns a new object of class '<em>Composition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Composition</em>'.
+	 * @generated
+	 */
+	Composition createComposition();
+
+	/**
+	 * Returns a new object of class '<em>Artist</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Artist</em>'.
+	 * @generated
+	 */
+	Artist createArtist();
+
+	/**
+	 * Returns a new object of class '<em>Category</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Category</em>'.
+	 * @generated
+	 */
+	Category createCategory();
 
 	/**
 	 * Returns the package supported by this factory.

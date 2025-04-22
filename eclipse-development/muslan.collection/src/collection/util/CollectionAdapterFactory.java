@@ -72,12 +72,28 @@ public class CollectionAdapterFactory extends AdapterFactoryImpl {
 				return createCollectionAdapter();
 			}
 			@Override
-			public Adapter caseItem(Item object) {
-				return createItemAdapter();
-			}
-			@Override
 			public Adapter caseTrack(Track object) {
 				return createTrackAdapter();
+			}
+			@Override
+			public Adapter caseAlbum(Album object) {
+				return createAlbumAdapter();
+			}
+			@Override
+			public Adapter caseComposition(Composition object) {
+				return createCompositionAdapter();
+			}
+			@Override
+			public Adapter caseArtist(Artist object) {
+				return createArtistAdapter();
+			}
+			@Override
+			public Adapter caseCategorizedElement(CategorizedElement object) {
+				return createCategorizedElementAdapter();
+			}
+			@Override
+			public Adapter caseCategory(Category object) {
+				return createCategoryAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -114,20 +130,6 @@ public class CollectionAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link collection.Item <em>Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see collection.Item
-	 * @generated
-	 */
-	public Adapter createItemAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link collection.Track <em>Track</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -138,6 +140,76 @@ public class CollectionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTrackAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link collection.Album <em>Album</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see collection.Album
+	 * @generated
+	 */
+	public Adapter createAlbumAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link collection.Composition <em>Composition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see collection.Composition
+	 * @generated
+	 */
+	public Adapter createCompositionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link collection.Artist <em>Artist</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see collection.Artist
+	 * @generated
+	 */
+	public Adapter createArtistAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link collection.CategorizedElement <em>Categorized Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see collection.CategorizedElement
+	 * @generated
+	 */
+	public Adapter createCategorizedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link collection.Category <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see collection.Category
+	 * @generated
+	 */
+	public Adapter createCategoryAdapter() {
 		return null;
 	}
 

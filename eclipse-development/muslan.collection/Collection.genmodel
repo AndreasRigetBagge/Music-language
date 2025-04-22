@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/test-project/src" modelPluginID="test-project"
-    modelName="Collection" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/muslan.collection/src" editDirectory="/muslan.collection.edit/src"
+    editorDirectory="/muslan.collection.editor/src" modelPluginID="muslan.collection" modelName="Collection"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="21.0" copyrightFields="false" editPluginID="muslan.collection.edit"
+    editorPluginID="muslan.collection.editor" testsPluginID="muslan.collection.tests"
     operationReflection="true" importOrganizing="true">
   <foreignModel>Collection.ecore</foreignModel>
   <genPackages prefix="Collection" disposableProviderFactory="true" ecorePackage="Collection.ecore#/">
@@ -13,6 +15,8 @@
     </genEnums>
     <genClasses ecoreClass="Collection.ecore#//Collection">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Collection.ecore#//Collection/categorizedelements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Collection.ecore#//Collection/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Collection.ecore#//Collection/artist"/>
     </genClasses>
     <genClasses ecoreClass="Collection.ecore#//Track">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//Track/compositions"/>
@@ -23,10 +27,13 @@
     <genClasses ecoreClass="Collection.ecore#//Composition">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//Composition/tracks"/>
     </genClasses>
-    <genClasses ecoreClass="Collection.ecore#//Artist"/>
+    <genClasses ecoreClass="Collection.ecore#//Artist">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Collection.ecore#//Artist/Name"/>
+    </genClasses>
     <genClasses ecoreClass="Collection.ecore#//CategorizedElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//CategorizedElement/artists"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//CategorizedElement/categories"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Collection.ecore#//CategorizedElement/Name"/>
     </genClasses>
     <genClasses ecoreClass="Collection.ecore#//Category">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Collection.ecore#//Category/CategoryType"/>

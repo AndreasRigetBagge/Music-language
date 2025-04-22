@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: test-project;singleton:=true
-Automatic-Module-Name: test-project
+Bundle-SymbolicName: muslan.collection;singleton:=true
+Automatic-Module-Name: muslan.collection
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName

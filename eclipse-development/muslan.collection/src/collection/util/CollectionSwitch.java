@@ -72,16 +72,42 @@ public class CollectionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CollectionPackage.ITEM: {
-				Item item = (Item)theEObject;
-				T result = caseItem(item);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case CollectionPackage.TRACK: {
 				Track track = (Track)theEObject;
 				T result = caseTrack(track);
-				if (result == null) result = caseItem(track);
+				if (result == null) result = caseCategorizedElement(track);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CollectionPackage.ALBUM: {
+				Album album = (Album)theEObject;
+				T result = caseAlbum(album);
+				if (result == null) result = caseCategorizedElement(album);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CollectionPackage.COMPOSITION: {
+				Composition composition = (Composition)theEObject;
+				T result = caseComposition(composition);
+				if (result == null) result = caseCategorizedElement(composition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CollectionPackage.ARTIST: {
+				Artist artist = (Artist)theEObject;
+				T result = caseArtist(artist);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CollectionPackage.CATEGORIZED_ELEMENT: {
+				CategorizedElement categorizedElement = (CategorizedElement)theEObject;
+				T result = caseCategorizedElement(categorizedElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CollectionPackage.CATEGORY: {
+				Category category = (Category)theEObject;
+				T result = caseCategory(category);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -105,21 +131,6 @@ public class CollectionSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Item</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseItem(Item object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Track</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -131,6 +142,81 @@ public class CollectionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTrack(Track object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Album</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Album</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAlbum(Album object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Composition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Composition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComposition(Composition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Artist</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Artist</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArtist(Artist object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Categorized Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Categorized Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCategorizedElement(CategorizedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Category</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Category</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCategory(Category object) {
 		return null;
 	}
 
