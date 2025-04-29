@@ -1,0 +1,9 @@
+rule Queue2HTML 
+  transform q : Queue {
+  
+  // The EGL template to be invoked
+  template: "queue2html.egl"
+  
+  // The output file to be created
+  target: "../Output/queue.html"
+}
