@@ -3,6 +3,7 @@
   <viewpoint:DAnalysis uid="_YyuMcBRGEfCiPZXAA1bMQw" selectedViews="_tNybEBRJEfCiPZXAA1bMQw" version="15.4.1.202403191723">
     <semanticResources>Collection.ecore</semanticResources>
     <semanticResources>Collection.genmodel</semanticResources>
+    <semanticResources>platform:/resource/muslan.playlist/model/playlist.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_tNybEBRJEfCiPZXAA1bMQw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tp-AwBRJEfCiPZXAA1bMQw" name=" class diagram" repPath="#_tptiEBRJEfCiPZXAA1bMQw" changeId="1745907435181">

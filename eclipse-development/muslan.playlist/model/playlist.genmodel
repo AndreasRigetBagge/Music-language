@@ -10,14 +10,15 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Playlist" basePackage="muslan" disposableProviderFactory="true"
       ecorePackage="playlist.ecore#/">
-    <genClasses ecoreClass="playlist.ecore#//TrackReference">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playlist.ecore#//TrackReference/track"/>
+    <genClasses ecoreClass="playlist.ecore#//Playlist">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference playlist.ecore#//Playlist/playitem"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference playlist.ecore#//Playlist/configurationreference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playlist.ecore#//Playlist/collection"/>
     </genClasses>
-    <genClasses ecoreClass="playlist.ecore#//Playlist"/>
     <genClasses ecoreClass="playlist.ecore#//Query"/>
-    <genClasses ecoreClass="playlist.ecore#//TrackList">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playlist.ecore#//TrackList/trackreference"/>
-    </genClasses>
+    <genClasses ecoreClass="playlist.ecore#//PlayItem"/>
+    <genClasses ecoreClass="playlist.ecore#//ConfigurationReference"/>
+    <genClasses ecoreClass="playlist.ecore#//Collection"/>
   </genPackages>
   <genPackages prefix="Collection" ecorePackage="../../muslan.collection/Collection.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../muslan.collection/Collection.ecore#//CategoryType">
