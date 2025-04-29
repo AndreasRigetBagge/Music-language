@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection:Collection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:collection="https://www.example.org/collection" Name="MyCollection">
+  <categorizedelements xsi:type="collection:Album" artists="//@artist.0" Name="The Big Guitar"/>
+  <categorizedelements xsi:type="collection:Track" artists="//@artist.0" Name="Let me track you"/>
+  <artist Name="John Guitar"/>
+</collection:Collection>
