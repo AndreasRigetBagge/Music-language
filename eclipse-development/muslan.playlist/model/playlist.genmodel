@@ -4,7 +4,7 @@
     modelDirectory="/muslan.playlist/src-gen" creationIcons="false"
     editDirectory="/muslan.playlist.edit/src-gen" editorDirectory="/muslan.playlist.editor/src-gen"
     modelPluginID="muslan.playlist" modelName="Playlist" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="23.0"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0"
     copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>playlist.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
