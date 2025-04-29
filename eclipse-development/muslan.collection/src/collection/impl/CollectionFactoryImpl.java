@@ -63,6 +63,7 @@ public class CollectionFactoryImpl extends EFactoryImpl implements CollectionFac
 			case CollectionPackage.COMPOSITION: return createComposition();
 			case CollectionPackage.ARTIST: return createArtist();
 			case CollectionPackage.CATEGORY: return createCategory();
+			case CollectionPackage.COLLECTION_ROOT: return createCollectionRoot();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -162,6 +163,17 @@ public class CollectionFactoryImpl extends EFactoryImpl implements CollectionFac
 	public Category createCategory() {
 		CategoryImpl category = new CategoryImpl();
 		return category;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CollectionRoot createCollectionRoot() {
+		CollectionRootImpl collectionRoot = new CollectionRootImpl();
+		return collectionRoot;
 	}
 
 	/**

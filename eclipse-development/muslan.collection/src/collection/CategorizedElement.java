@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link collection.CategorizedElement#getArtists <em>Artists</em>}</li>
- *   <li>{@link collection.CategorizedElement#getCategories <em>Categories</em>}</li>
  *   <li>{@link collection.CategorizedElement#getName <em>Name</em>}</li>
+ *   <li>{@link collection.CategorizedElement#getCategory <em>Category</em>}</li>
  * </ul>
  *
  * @see collection.CollectionPackage#getCategorizedElement()
@@ -36,18 +36,6 @@ public interface CategorizedElement extends EObject {
 	 * @generated
 	 */
 	EList<Artist> getArtists();
-
-	/**
-	 * Returns the value of the '<em><b>Categories</b></em>' containment reference list.
-	 * The list contents are of type {@link collection.Category}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Categories</em>' containment reference list.
-	 * @see collection.CollectionPackage#getCategorizedElement_Categories()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Category> getCategories();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -70,5 +58,17 @@ public interface CategorizedElement extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Category</b></em>' reference list.
+	 * The list contents are of type {@link collection.Category}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Category</em>' reference list.
+	 * @see collection.CollectionPackage#getCategorizedElement_Category()
+	 * @model
+	 * @generated
+	 */
+	EList<Category> getCategory();
 
 } // CategorizedElement

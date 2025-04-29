@@ -10,19 +10,12 @@ import collection.CollectionPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,8 +26,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link collection.impl.CategorizedElementImpl#getArtists <em>Artists</em>}</li>
- *   <li>{@link collection.impl.CategorizedElementImpl#getCategories <em>Categories</em>}</li>
  *   <li>{@link collection.impl.CategorizedElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link collection.impl.CategorizedElementImpl#getCategory <em>Category</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,16 +42,6 @@ public abstract class CategorizedElementImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected EList<Artist> artists;
-
-	/**
-	 * The cached value of the '{@link #getCategories() <em>Categories</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategories()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Category> categories;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -79,6 +62,16 @@ public abstract class CategorizedElementImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getCategory() <em>Category</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Category> category;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,20 +112,6 @@ public abstract class CategorizedElementImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	@Override
-	public EList<Category> getCategories() {
-		if (categories == null) {
-			categories = new EObjectContainmentEList<Category>(Category.class, this,
-					CollectionPackage.CATEGORIZED_ELEMENT__CATEGORIES);
-		}
-		return categories;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -157,12 +136,12 @@ public abstract class CategorizedElementImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case CollectionPackage.CATEGORIZED_ELEMENT__CATEGORIES:
-			return ((InternalEList<?>) getCategories()).basicRemove(otherEnd, msgs);
+	public EList<Category> getCategory() {
+		if (category == null) {
+			category = new EObjectResolvingEList<Category>(Category.class, this,
+					CollectionPackage.CATEGORIZED_ELEMENT__CATEGORY);
 		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		return category;
 	}
 
 	/**
@@ -175,10 +154,10 @@ public abstract class CategorizedElementImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 		case CollectionPackage.CATEGORIZED_ELEMENT__ARTISTS:
 			return getArtists();
-		case CollectionPackage.CATEGORIZED_ELEMENT__CATEGORIES:
-			return getCategories();
 		case CollectionPackage.CATEGORIZED_ELEMENT__NAME:
 			return getName();
+		case CollectionPackage.CATEGORIZED_ELEMENT__CATEGORY:
+			return getCategory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -196,12 +175,12 @@ public abstract class CategorizedElementImpl extends MinimalEObjectImpl.Containe
 			getArtists().clear();
 			getArtists().addAll((Collection<? extends Artist>) newValue);
 			return;
-		case CollectionPackage.CATEGORIZED_ELEMENT__CATEGORIES:
-			getCategories().clear();
-			getCategories().addAll((Collection<? extends Category>) newValue);
-			return;
 		case CollectionPackage.CATEGORIZED_ELEMENT__NAME:
 			setName((String) newValue);
+			return;
+		case CollectionPackage.CATEGORIZED_ELEMENT__CATEGORY:
+			getCategory().clear();
+			getCategory().addAll((Collection<? extends Category>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -218,11 +197,11 @@ public abstract class CategorizedElementImpl extends MinimalEObjectImpl.Containe
 		case CollectionPackage.CATEGORIZED_ELEMENT__ARTISTS:
 			getArtists().clear();
 			return;
-		case CollectionPackage.CATEGORIZED_ELEMENT__CATEGORIES:
-			getCategories().clear();
-			return;
 		case CollectionPackage.CATEGORIZED_ELEMENT__NAME:
 			setName(NAME_EDEFAULT);
+			return;
+		case CollectionPackage.CATEGORIZED_ELEMENT__CATEGORY:
+			getCategory().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -238,10 +217,10 @@ public abstract class CategorizedElementImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 		case CollectionPackage.CATEGORIZED_ELEMENT__ARTISTS:
 			return artists != null && !artists.isEmpty();
-		case CollectionPackage.CATEGORIZED_ELEMENT__CATEGORIES:
-			return categories != null && !categories.isEmpty();
 		case CollectionPackage.CATEGORIZED_ELEMENT__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case CollectionPackage.CATEGORIZED_ELEMENT__CATEGORY:
+			return category != null && !category.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -2,7 +2,6 @@
  */
 package collection.impl;
 
-import collection.Artist;
 import collection.CategorizedElement;
 import collection.Collection;
 import collection.CollectionPackage;
@@ -30,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link collection.impl.CollectionImpl#getCategorizedelements <em>Categorizedelements</em>}</li>
  *   <li>{@link collection.impl.CollectionImpl#getName <em>Name</em>}</li>
- *   <li>{@link collection.impl.CollectionImpl#getArtist <em>Artist</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,15 +61,6 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getArtist() <em>Artist</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArtist()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Artist> artist;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -133,25 +122,10 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	 * @generated
 	 */
 	@Override
-	public EList<Artist> getArtist() {
-		if (artist == null) {
-			artist = new EObjectContainmentEList<Artist>(Artist.class, this, CollectionPackage.COLLECTION__ARTIST);
-		}
-		return artist;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case CollectionPackage.COLLECTION__CATEGORIZEDELEMENTS:
 				return ((InternalEList<?>)getCategorizedelements()).basicRemove(otherEnd, msgs);
-			case CollectionPackage.COLLECTION__ARTIST:
-				return ((InternalEList<?>)getArtist()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -168,8 +142,6 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 				return getCategorizedelements();
 			case CollectionPackage.COLLECTION__NAME:
 				return getName();
-			case CollectionPackage.COLLECTION__ARTIST:
-				return getArtist();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -190,10 +162,6 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 			case CollectionPackage.COLLECTION__NAME:
 				setName((String)newValue);
 				return;
-			case CollectionPackage.COLLECTION__ARTIST:
-				getArtist().clear();
-				getArtist().addAll((java.util.Collection<? extends Artist>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -212,9 +180,6 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 			case CollectionPackage.COLLECTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case CollectionPackage.COLLECTION__ARTIST:
-				getArtist().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -231,8 +196,6 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 				return categorizedelements != null && !categorizedelements.isEmpty();
 			case CollectionPackage.COLLECTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case CollectionPackage.COLLECTION__ARTIST:
-				return artist != null && !artist.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

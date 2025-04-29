@@ -86,22 +86,13 @@ public interface CollectionPackage extends EPackage {
 	int COLLECTION__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Artist</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION__ARTIST = 2;
-
-	/**
 	 * The number of structural features of the '<em>Collection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_FEATURE_COUNT = 3;
+	int COLLECTION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Collection</em>' class.
@@ -132,22 +123,22 @@ public interface CollectionPackage extends EPackage {
 	int CATEGORIZED_ELEMENT__ARTISTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Categories</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORIZED_ELEMENT__CATEGORIES = 1;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIZED_ELEMENT__NAME = 2;
+	int CATEGORIZED_ELEMENT__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORIZED_ELEMENT__CATEGORY = 2;
 
 	/**
 	 * The number of structural features of the '<em>Categorized Element</em>' class.
@@ -187,15 +178,6 @@ public interface CollectionPackage extends EPackage {
 	int TRACK__ARTISTS = CATEGORIZED_ELEMENT__ARTISTS;
 
 	/**
-	 * The feature id for the '<em><b>Categories</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACK__CATEGORIES = CATEGORIZED_ELEMENT__CATEGORIES;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -203,6 +185,15 @@ public interface CollectionPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRACK__NAME = CATEGORIZED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACK__CATEGORY = CATEGORIZED_ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Compositions</b></em>' reference list.
@@ -251,15 +242,6 @@ public interface CollectionPackage extends EPackage {
 	int ALBUM__ARTISTS = CATEGORIZED_ELEMENT__ARTISTS;
 
 	/**
-	 * The feature id for the '<em><b>Categories</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALBUM__CATEGORIES = CATEGORIZED_ELEMENT__CATEGORIES;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -267,6 +249,15 @@ public interface CollectionPackage extends EPackage {
 	 * @ordered
 	 */
 	int ALBUM__NAME = CATEGORIZED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALBUM__CATEGORY = CATEGORIZED_ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Tracks</b></em>' reference list.
@@ -315,15 +306,6 @@ public interface CollectionPackage extends EPackage {
 	int COMPOSITION__ARTISTS = CATEGORIZED_ELEMENT__ARTISTS;
 
 	/**
-	 * The feature id for the '<em><b>Categories</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITION__CATEGORIES = CATEGORIZED_ELEMENT__CATEGORIES;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -331,6 +313,15 @@ public interface CollectionPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITION__NAME = CATEGORIZED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITION__CATEGORY = CATEGORIZED_ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Tracks</b></em>' reference list.
@@ -443,6 +434,61 @@ public interface CollectionPackage extends EPackage {
 	int CATEGORY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link collection.impl.CollectionRootImpl <em>Root</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see collection.impl.CollectionRootImpl
+	 * @see collection.impl.CollectionPackageImpl#getCollectionRoot()
+	 * @generated
+	 */
+	int COLLECTION_ROOT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Collection</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_ROOT__COLLECTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Artist</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_ROOT__ARTIST = 1;
+
+	/**
+	 * The feature id for the '<em><b>Categories</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_ROOT__CATEGORIES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Root</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_ROOT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Root</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_ROOT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link collection.CategoryType <em>Category Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -450,7 +496,7 @@ public interface CollectionPackage extends EPackage {
 	 * @see collection.impl.CollectionPackageImpl#getCategoryType()
 	 * @generated
 	 */
-	int CATEGORY_TYPE = 7;
+	int CATEGORY_TYPE = 8;
 
 	/**
 	 * Returns the meta object for class '{@link collection.Collection <em>Collection</em>}'.
@@ -483,17 +529,6 @@ public interface CollectionPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCollection_Name();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link collection.Collection#getArtist <em>Artist</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Artist</em>'.
-	 * @see collection.Collection#getArtist()
-	 * @see #getCollection()
-	 * @generated
-	 */
-	EReference getCollection_Artist();
 
 	/**
 	 * Returns the meta object for class '{@link collection.Track <em>Track</em>}'.
@@ -601,17 +636,6 @@ public interface CollectionPackage extends EPackage {
 	EReference getCategorizedElement_Artists();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link collection.CategorizedElement#getCategories <em>Categories</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Categories</em>'.
-	 * @see collection.CategorizedElement#getCategories()
-	 * @see #getCategorizedElement()
-	 * @generated
-	 */
-	EReference getCategorizedElement_Categories();
-
-	/**
 	 * Returns the meta object for the attribute '{@link collection.CategorizedElement#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -621,6 +645,17 @@ public interface CollectionPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCategorizedElement_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link collection.CategorizedElement#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Category</em>'.
+	 * @see collection.CategorizedElement#getCategory()
+	 * @see #getCategorizedElement()
+	 * @generated
+	 */
+	EReference getCategorizedElement_Category();
 
 	/**
 	 * Returns the meta object for class '{@link collection.Category <em>Category</em>}'.
@@ -653,6 +688,49 @@ public interface CollectionPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCategory_Value();
+
+	/**
+	 * Returns the meta object for class '{@link collection.CollectionRoot <em>Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Root</em>'.
+	 * @see collection.CollectionRoot
+	 * @generated
+	 */
+	EClass getCollectionRoot();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link collection.CollectionRoot#getCollection <em>Collection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Collection</em>'.
+	 * @see collection.CollectionRoot#getCollection()
+	 * @see #getCollectionRoot()
+	 * @generated
+	 */
+	EReference getCollectionRoot_Collection();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link collection.CollectionRoot#getArtist <em>Artist</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Artist</em>'.
+	 * @see collection.CollectionRoot#getArtist()
+	 * @see #getCollectionRoot()
+	 * @generated
+	 */
+	EReference getCollectionRoot_Artist();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link collection.CollectionRoot#getCategories <em>Categories</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Categories</em>'.
+	 * @see collection.CollectionRoot#getCategories()
+	 * @see #getCollectionRoot()
+	 * @generated
+	 */
+	EReference getCollectionRoot_Categories();
 
 	/**
 	 * Returns the meta object for enum '{@link collection.CategoryType <em>Category Type</em>}'.
@@ -712,14 +790,6 @@ public interface CollectionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COLLECTION__NAME = eINSTANCE.getCollection_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Artist</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COLLECTION__ARTIST = eINSTANCE.getCollection_Artist();
 
 		/**
 		 * The meta object literal for the '{@link collection.impl.TrackImpl <em>Track</em>}' class.
@@ -812,20 +882,20 @@ public interface CollectionPackage extends EPackage {
 		EReference CATEGORIZED_ELEMENT__ARTISTS = eINSTANCE.getCategorizedElement_Artists();
 
 		/**
-		 * The meta object literal for the '<em><b>Categories</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CATEGORIZED_ELEMENT__CATEGORIES = eINSTANCE.getCategorizedElement_Categories();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute CATEGORIZED_ELEMENT__NAME = eINSTANCE.getCategorizedElement_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CATEGORIZED_ELEMENT__CATEGORY = eINSTANCE.getCategorizedElement_Category();
 
 		/**
 		 * The meta object literal for the '{@link collection.impl.CategoryImpl <em>Category</em>}' class.
@@ -852,6 +922,40 @@ public interface CollectionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CATEGORY__VALUE = eINSTANCE.getCategory_Value();
+
+		/**
+		 * The meta object literal for the '{@link collection.impl.CollectionRootImpl <em>Root</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see collection.impl.CollectionRootImpl
+		 * @see collection.impl.CollectionPackageImpl#getCollectionRoot()
+		 * @generated
+		 */
+		EClass COLLECTION_ROOT = eINSTANCE.getCollectionRoot();
+
+		/**
+		 * The meta object literal for the '<em><b>Collection</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLLECTION_ROOT__COLLECTION = eINSTANCE.getCollectionRoot_Collection();
+
+		/**
+		 * The meta object literal for the '<em><b>Artist</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLLECTION_ROOT__ARTIST = eINSTANCE.getCollectionRoot_Artist();
+
+		/**
+		 * The meta object literal for the '<em><b>Categories</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLLECTION_ROOT__CATEGORIES = eINSTANCE.getCollectionRoot_Categories();
 
 		/**
 		 * The meta object literal for the '{@link collection.CategoryType <em>Category Type</em>}' enum.

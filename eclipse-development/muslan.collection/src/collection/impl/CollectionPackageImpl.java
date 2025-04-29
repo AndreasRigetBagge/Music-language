@@ -10,6 +10,7 @@ import collection.CategoryType;
 import collection.Collection;
 import collection.CollectionFactory;
 import collection.CollectionPackage;
+import collection.CollectionRoot;
 import collection.Composition;
 import collection.Track;
 
@@ -76,6 +77,13 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 	 * @generated
 	 */
 	private EClass categoryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass collectionRootEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -172,16 +180,6 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 	@Override
 	public EAttribute getCollection_Name() {
 		return (EAttribute)collectionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getCollection_Artist() {
-		return (EReference)collectionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -290,8 +288,8 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 	 * @generated
 	 */
 	@Override
-	public EReference getCategorizedElement_Categories() {
-		return (EReference)categorizedElementEClass.getEStructuralFeatures().get(1);
+	public EAttribute getCategorizedElement_Name() {
+		return (EAttribute)categorizedElementEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -300,8 +298,8 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCategorizedElement_Name() {
-		return (EAttribute)categorizedElementEClass.getEStructuralFeatures().get(2);
+	public EReference getCategorizedElement_Category() {
+		return (EReference)categorizedElementEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -332,6 +330,46 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 	@Override
 	public EAttribute getCategory_Value() {
 		return (EAttribute)categoryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCollectionRoot() {
+		return collectionRootEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCollectionRoot_Collection() {
+		return (EReference)collectionRootEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCollectionRoot_Artist() {
+		return (EReference)collectionRootEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCollectionRoot_Categories() {
+		return (EReference)collectionRootEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -376,7 +414,6 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 		collectionEClass = createEClass(COLLECTION);
 		createEReference(collectionEClass, COLLECTION__CATEGORIZEDELEMENTS);
 		createEAttribute(collectionEClass, COLLECTION__NAME);
-		createEReference(collectionEClass, COLLECTION__ARTIST);
 
 		trackEClass = createEClass(TRACK);
 		createEReference(trackEClass, TRACK__COMPOSITIONS);
@@ -392,12 +429,17 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 
 		categorizedElementEClass = createEClass(CATEGORIZED_ELEMENT);
 		createEReference(categorizedElementEClass, CATEGORIZED_ELEMENT__ARTISTS);
-		createEReference(categorizedElementEClass, CATEGORIZED_ELEMENT__CATEGORIES);
 		createEAttribute(categorizedElementEClass, CATEGORIZED_ELEMENT__NAME);
+		createEReference(categorizedElementEClass, CATEGORIZED_ELEMENT__CATEGORY);
 
 		categoryEClass = createEClass(CATEGORY);
 		createEAttribute(categoryEClass, CATEGORY__CATEGORY_TYPE);
 		createEAttribute(categoryEClass, CATEGORY__VALUE);
+
+		collectionRootEClass = createEClass(COLLECTION_ROOT);
+		createEReference(collectionRootEClass, COLLECTION_ROOT__COLLECTION);
+		createEReference(collectionRootEClass, COLLECTION_ROOT__ARTIST);
+		createEReference(collectionRootEClass, COLLECTION_ROOT__CATEGORIES);
 
 		// Create enums
 		categoryTypeEEnum = createEEnum(CATEGORY_TYPE);
@@ -439,7 +481,6 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 		initEClass(collectionEClass, Collection.class, "Collection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCollection_Categorizedelements(), this.getCategorizedElement(), null, "categorizedelements", null, 0, -1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollection_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCollection_Artist(), this.getArtist(), null, "artist", null, 0, -1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trackEClass, Track.class, "Track", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTrack_Compositions(), this.getComposition(), this.getComposition_Tracks(), "compositions", null, 1, -1, Track.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -455,12 +496,17 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 
 		initEClass(categorizedElementEClass, CategorizedElement.class, "CategorizedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCategorizedElement_Artists(), this.getArtist(), null, "artists", null, 0, -1, CategorizedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCategorizedElement_Categories(), this.getCategory(), null, "categories", null, 0, -1, CategorizedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCategorizedElement_Name(), ecorePackage.getEString(), "Name", null, 0, 1, CategorizedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCategorizedElement_Category(), this.getCategory(), null, "category", null, 0, -1, CategorizedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(categoryEClass, Category.class, "Category", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCategory_CategoryType(), this.getCategoryType(), "CategoryType", "Genre", 1, 1, Category.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCategory_Value(), ecorePackage.getEString(), "Value", null, 0, 1, Category.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(collectionRootEClass, CollectionRoot.class, "CollectionRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCollectionRoot_Collection(), this.getCollection(), null, "collection", null, 0, -1, CollectionRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCollectionRoot_Artist(), this.getArtist(), null, "artist", null, 0, -1, CollectionRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCollectionRoot_Categories(), this.getCategory(), null, "categories", null, 0, -1, CollectionRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(categoryTypeEEnum, CategoryType.class, "CategoryType");

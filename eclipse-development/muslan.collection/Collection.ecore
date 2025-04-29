@@ -5,8 +5,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="categorizedelements" upperBound="-1"
         eType="#//CategorizedElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="artist" upperBound="-1"
-        eType="#//Artist" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//CategorizedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="compositions" lowerBound="1"
@@ -26,9 +24,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="CategorizedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="artists" upperBound="-1"
         eType="#//Artist"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="categories" upperBound="-1"
-        eType="#//Category" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="category" upperBound="-1"
+        eType="#//Category"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Category">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CategoryType" lowerBound="1"
@@ -39,5 +37,13 @@
     <eLiterals name="Rating"/>
     <eLiterals name="Genre" value="1"/>
     <eLiterals name="Tag" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CollectionRoot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collection" upperBound="-1"
+        eType="#//Collection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artist" upperBound="-1"
+        eType="#//Artist" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="categories" upperBound="-1"
+        eType="#//Category" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

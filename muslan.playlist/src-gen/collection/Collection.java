@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link collection.Collection#getCategorizedelements <em>Categorizedelements</em>}</li>
  *   <li>{@link collection.Collection#getName <em>Name</em>}</li>
- *   <li>{@link collection.Collection#getArtist <em>Artist</em>}</li>
  * </ul>
  *
  * @see collection.CollectionPackage#getCollection()
@@ -58,17 +57,5 @@ public interface Collection extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Artist</b></em>' containment reference list.
-	 * The list contents are of type {@link collection.Artist}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Artist</em>' containment reference list.
-	 * @see collection.CollectionPackage#getCollection_Artist()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Artist> getArtist();
 
 } // Collection
