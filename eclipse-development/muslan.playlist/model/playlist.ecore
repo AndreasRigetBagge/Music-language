@@ -5,12 +5,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="playitem" upperBound="-1"
         eType="#//PlayItem" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="configurationreference"
-        eType="#//ConfigurationReference" containment="true"/>
+        eType="#//Configuration" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="collection" lowerBound="1"
-        eType="#//Collection"/>
+        eType="ecore:EClass ../../muslan.collection/Collection.ecore#//Collection"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Query" eSuperTypes="#//PlayItem"/>
   <eClassifiers xsi:type="ecore:EClass" name="PlayItem"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationReference"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Collection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Configuration"/>
 </ecore:EPackage>

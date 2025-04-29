@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="query" nsURI="https://www.example.org/query" nsPrefix="query">
-  <eClassifiers xsi:type="ecore:EClass" name="Query">
+  <eClassifiers xsi:type="ecore:EClass" name="Query" eSuperTypes="../../muslan.playlist/model/playlist.ecore#//PlayItem">
     <eStructuralFeatures xsi:type="ecore:EReference" name="collection" lowerBound="1"
-        eType="ecore:EClass ../../muslan.collection/Collection.ecore#//Collection"
+        eType="ecore:EClass ../../muslan.collection/Collection.ecore#//Collection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filter" lowerBound="1"
+        eType="#//FilterClause" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FilterClause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AndClause" eSuperTypes="#//FilterClause">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filterclause" lowerBound="2"
+        upperBound="2" eType="#//FilterClause" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrClause" eSuperTypes="#//FilterClause">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filterclause" lowerBound="2"
+        upperBound="2" eType="#//FilterClause" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Clause" eSuperTypes="#//FilterClause">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
+        eType="#//Attribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Value"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Predicate" lowerBound="1"
+        eType="#//Operator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Value"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Operator"/>
 </ecore:EPackage>

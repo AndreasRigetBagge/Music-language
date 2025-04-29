@@ -15,10 +15,8 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference playlist.ecore#//Playlist/configurationreference"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playlist.ecore#//Playlist/collection"/>
     </genClasses>
-    <genClasses ecoreClass="playlist.ecore#//Query"/>
     <genClasses ecoreClass="playlist.ecore#//PlayItem"/>
-    <genClasses ecoreClass="playlist.ecore#//ConfigurationReference"/>
-    <genClasses ecoreClass="playlist.ecore#//Collection"/>
+    <genClasses ecoreClass="playlist.ecore#//Configuration"/>
   </genPackages>
   <genPackages prefix="Collection" ecorePackage="../../muslan.collection/Collection.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../muslan.collection/Collection.ecore#//CategoryType">
