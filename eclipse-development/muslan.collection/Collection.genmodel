@@ -44,4 +44,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Collection.ecore#//CollectionRoot/categories"/>
     </genClasses>
   </genPackages>
+  <genPackages prefix="Playlist" ecorePackage="../muslan.playlist/model/playlist.ecore#/">
+    <genClasses image="false" ecoreClass="../muslan.playlist/model/playlist.ecore#//Playlist">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../muslan.playlist/model/playlist.ecore#//Playlist/playitem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../muslan.playlist/model/playlist.ecore#//Playlist/configurationreference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../muslan.playlist/model/playlist.ecore#//Playlist/collection"/>
+    </genClasses>
+    <genClasses ecoreClass="../muslan.playlist/model/playlist.ecore#//Query"/>
+    <genClasses ecoreClass="../muslan.playlist/model/playlist.ecore#//PlayItem"/>
+    <genClasses ecoreClass="../muslan.playlist/model/playlist.ecore#//ConfigurationReference"/>
+    <genClasses ecoreClass="../muslan.playlist/model/playlist.ecore#//Collection"/>
+  </genPackages>
 </genmodel:GenModel>
