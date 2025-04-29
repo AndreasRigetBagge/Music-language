@@ -22,4 +22,12 @@
             genModel="model/queue.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated queue -->
+      <package
+            uri="http://www.example.org/playlist"
+            class="playlist.PlaylistPackage"
+            genModel="model/queue.genmodel"/>
+   </extension>
+
 </plugin>

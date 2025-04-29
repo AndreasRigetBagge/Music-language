@@ -6,7 +6,7 @@
     <categorizedelements xsi:type="collection:Track" artists="//@artist.1" Name="Bitch Lasanga" category="//@categories.1" compositions="//@collection.1/@categorizedelements.2"/>
     <categorizedelements xsi:type="collection:Composition" artists="//@artist.1" Name="Bitch Lasanga" category="//@categories.1" tracks="//@collection.1/@categorizedelements.1"/>
     <categorizedelements xsi:type="collection:Composition" artists="//@artist.1" Name="Song 2" category="//@categories.1 //@categories.0" tracks="//@collection.1/@categorizedelements.4"/>
-    <categorizedelements xsi:type="collection:Track" artists="//@artist.1" Name="Song 2" category="//@categories.1 //@categories.0" compositions="//@collection.1/@categorizedelements.3"/>
+    <categorizedelements xsi:type="collection:Track" artists="//@artist.1 //@artist.0" Name="Song 2" category="//@categories.1 //@categories.0" compositions="//@collection.1/@categorizedelements.3"/>
   </collection>
   <artist Name="The rock guy"/>
   <artist Name="PewDiePie 🎩"/>

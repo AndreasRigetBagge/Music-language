@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import playlist.PlaylistPackage;
+import playlist.impl.PlaylistPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -82,14 +84,20 @@ public class QueuePackageImpl extends EPackageImpl implements QueuePackage {
 		CollectionPackageImpl theCollectionPackage = (CollectionPackageImpl) (registeredPackage instanceof CollectionPackageImpl
 				? registeredPackage
 				: CollectionPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlaylistPackage.eNS_URI);
+		PlaylistPackageImpl thePlaylistPackage = (PlaylistPackageImpl) (registeredPackage instanceof PlaylistPackageImpl
+				? registeredPackage
+				: PlaylistPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theQueuePackage.createPackageContents();
 		theCollectionPackage.createPackageContents();
+		thePlaylistPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theQueuePackage.initializePackageContents();
 		theCollectionPackage.initializePackageContents();
+		thePlaylistPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theQueuePackage.freeze();

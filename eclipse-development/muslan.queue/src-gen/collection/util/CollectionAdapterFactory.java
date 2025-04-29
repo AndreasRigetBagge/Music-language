@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
+import playlist.PlayItem;
 
 /**
  * <!-- begin-user-doc -->
@@ -104,6 +105,11 @@ public class CollectionAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseCollectionRoot(CollectionRoot object) {
 			return createCollectionRootAdapter();
+		}
+
+		@Override
+		public Adapter casePlayItem(PlayItem object) {
+			return createPlayItemAdapter();
 		}
 
 		@Override
@@ -234,6 +240,20 @@ public class CollectionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCollectionRootAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link playlist.PlayItem <em>Play Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see playlist.PlayItem
+	 * @generated
+	 */
+	public Adapter createPlayItemAdapter() {
 		return null;
 	}
 

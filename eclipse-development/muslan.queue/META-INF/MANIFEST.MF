@@ -13,7 +13,10 @@ Export-Package: collection,
  collection.util,
  muslan.queue,
  muslan.queue.impl,
- muslan.queue.util
+ muslan.queue.util,
+ playlist,
+ playlist.impl,
+ playlist.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy

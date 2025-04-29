@@ -1,24 +1,34 @@
 
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
+<script src="https://cdn.tailwindcss.com"></script>
 
-<!--  -->
-<body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-<ol>
-	<li>
-		Bitch Lasanga
-	</li>
-	<li>
-		Song 2
-	</li>
-</ol>
-</body>
-</html>
+<div class="min-h-screen bg-gray-50 p-8">
+  <h1 class="text-3xl font-bold mb-8 text-center">🎶Your Amazing Queue🎷</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-xl transition-shadow">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+          <span class="text-2xl font-bold text-blue-600">🎵</span>
+        </div>
+        <h2 class="text-lg font-semibold mb-1">Bitch Lasanga</h2>
+          <div class="flex items-center mb-2 flex-col">
+              <p class="text-gray-500 mb-2">PewDiePie 🎩</p>
+          </div>
+        <div class="flex flex-wrap gap-2 mt-3 justify-center">
+            <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded">Baby Rock</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-xl transition-shadow">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+          <span class="text-2xl font-bold text-blue-600">🎵</span>
+        </div>
+        <h2 class="text-lg font-semibold mb-1">Song 2</h2>
+          <div class="flex items-center mb-2 flex-col">
+              <p class="text-gray-500 mb-2">PewDiePie 🎩</p>
+              <p class="text-gray-500 mb-2">The rock guy</p>
+          </div>
+        <div class="flex flex-wrap gap-2 mt-3 justify-center">
+            <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded">Baby Rock</span>
+            <span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded">⭐⭐⭐⭐⭐</span>
+        </div>
+      </div>
+  </div>
+</div>

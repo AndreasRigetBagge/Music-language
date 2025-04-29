@@ -25,6 +25,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import playlist.PlaylistPackage;
+import playlist.impl.PlaylistPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -151,14 +153,20 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 		QueuePackageImpl theQueuePackage = (QueuePackageImpl) (registeredPackage instanceof QueuePackageImpl
 				? registeredPackage
 				: QueuePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlaylistPackage.eNS_URI);
+		PlaylistPackageImpl thePlaylistPackage = (PlaylistPackageImpl) (registeredPackage instanceof PlaylistPackageImpl
+				? registeredPackage
+				: PlaylistPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theCollectionPackage.createPackageContents();
 		theQueuePackage.createPackageContents();
+		thePlaylistPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theCollectionPackage.initializePackageContents();
 		theQueuePackage.initializePackageContents();
+		thePlaylistPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theCollectionPackage.freeze();
@@ -486,12 +494,17 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		PlaylistPackage thePlaylistPackage = (PlaylistPackage) EPackage.Registry.INSTANCE
+				.getEPackage(PlaylistPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
 		trackEClass.getESuperTypes().add(this.getCategorizedElement());
+		trackEClass.getESuperTypes().add(thePlaylistPackage.getPlayItem());
 		albumEClass.getESuperTypes().add(this.getCategorizedElement());
 		compositionEClass.getESuperTypes().add(this.getCategorizedElement());
 
