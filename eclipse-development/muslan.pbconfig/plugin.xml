@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated pbconfig -->
       <package
-            uri="http://example.com"
+            uri="https://www.example.org/pbconfig"
             class="pbconfig.PbconfigPackage"
             genModel="model/pbconfig.genmodel"/>
    </extension>

@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated playlist -->
       <package
-            uri="http://www.example.org/playlist"
+            uri="https://www.example.org/playlist"
             class="muslan.playlist.PlaylistPackage"
             genModel="model/playlist.genmodel"/>
    </extension>
@@ -25,7 +25,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated playlist -->
       <package
-            uri="http://example.com"
+            uri="https://www.example.org/pbconfig"
             class="pbconfig.PbconfigPackage"
             genModel="model/playlist.genmodel"/>
    </extension>

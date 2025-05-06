@@ -31,4 +31,5 @@
   <categories Value="Nu metal"/>
   <categories Value="Folk Metal"/>
   <configuration default="true"/>
+  <defaultConfig href="ExampleCollection.collection#//@configuration.0"/>
 </collection:CollectionRoot>

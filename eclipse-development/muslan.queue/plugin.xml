@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated queue -->
       <package
-            uri="http://www.example.org/queue"
+            uri="https://www.example.org/queue"
             class="muslan.queue.QueuePackage"
             genModel="model/queue.genmodel"/>
    </extension>
@@ -25,7 +25,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated queue -->
       <package
-            uri="http://www.example.org/playlist"
+            uri="https://www.example.org/playlist"
             class="playlist.PlaylistPackage"
             genModel="model/queue.genmodel"/>
    </extension>
@@ -33,7 +33,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated queue -->
       <package
-            uri="http://example.com"
+            uri="https://www.example.org/pbconfig"
             class="pbconfig.PbconfigPackage"
             genModel="model/queue.genmodel"/>
    </extension>
