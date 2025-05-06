@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Artist extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -43,4 +42,5 @@ public interface Artist extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
 } // Artist

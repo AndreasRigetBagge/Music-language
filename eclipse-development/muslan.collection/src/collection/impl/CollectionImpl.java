@@ -5,6 +5,7 @@ package collection.impl;
 import collection.CategorizedElement;
 import collection.Collection;
 import collection.CollectionPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -43,6 +44,7 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	 * @ordered
 	 */
 	protected EList<CategorizedElement> categorizedelements;
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -52,6 +54,7 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,6 +64,7 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
