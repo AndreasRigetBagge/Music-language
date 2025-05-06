@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relation:RelationRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:relation="http://www.example.org/relation">
+  <links outgoing="//@providers.1" incoming="//@providers.2"/>
+  <links outgoing="//@providers.0" incoming="//@providers.1"/>
+  <links outgoing="//@providers.0" incoming="//@providers.3"/>
+  <providers xsi:type="relation:MainCollection" name="My Complete Collection">
+    <sources name="Spotify">
+      <locations location="Heimat on spotify">
+        <track href="ExampleCollection.collection#//@collection.1/@categorizedelements.5"/>
+      </locations>
+      <locations location="https://www.youtube.com/watch?v=kXYiU_JCYtU">
+        <track href="ExampleCollection.collection#//@collection.1/@categorizedelements.3"/>
+      </locations>
+    </sources>
+  </providers>
+  <providers xsi:type="relation:DerivedCollection" name="Nu Metal"/>
+  <providers xsi:type="relation:CollectionRerefence" name="When life isn't lifing">
+    <pointsTo href="ExampleCollection.collection#//@collection.1"/>
+  </providers>
+  <providers xsi:type="relation:CollectionRerefence" name="Y2K">
+    <pointsTo href="ExampleCollection.collection#//@collection.0"/>
+  </providers>
+</relation:RelationRoot>

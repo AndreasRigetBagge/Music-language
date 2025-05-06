@@ -16,8 +16,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="track" lowerBound="1" eType="ecore:EClass ../../muslan.collection/Collection.ecore#//Track"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="out" lowerBound="1" eType="#//DerivedCollection"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="in" upperBound="-1" eType="#//ICollection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" lowerBound="1"
+        eType="#//DerivedCollection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" lowerBound="1"
+        eType="#//ICollection"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DerivedCollection" eSuperTypes="#//ICollection"/>
   <eClassifiers xsi:type="ecore:EClass" name="CollectionRerefence" eSuperTypes="#//ICollection">

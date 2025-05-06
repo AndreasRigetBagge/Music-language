@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="graphical" version="12.0.0.2017041100">
+  <ownedViewpoints name="Collection Relation Viewpoint" modelFileExtension="relation">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CollectionRelationDiagramRepresentation" domainClass="relation::RelationRoot" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="MainCollectionNode" label="Main Collection" domainClass="relation::MainCollection">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="Create a main collection" labelPosition="node" resizeKind="NSEW" width="30" height="15">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DerivedCollectionNode" label="Derived Collected" semanticCandidatesExpression="[ eAllContents()->select(e | not e.oclIsTypeOf(MainCollection)) /]" domainClass="relation::DerivedCollection">
+          <style xsi:type="style:BundledImageDescription" borderSizeComputationExpression="2" labelSize="9" tooltipExpression="Create a derived collection" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="CollectionReferenceNode" label="Collection Reference" domainClass="relation::CollectionRerefence">
+          <style xsi:type="style:BundledImageDescription" borderSizeComputationExpression="2" labelSize="9" tooltipExpression="Create a collection reference that points to one of your already existing collections! \o/" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="SourceNode" label="Source" domainClass="relation::Source">
+          <style xsi:type="style:LozengeNodeDescription" borderSizeComputationExpression="2" labelSize="9" tooltipExpression="Create a new source entity" labelPosition="node" resizeKind="NSEW" widthComputationExpression="8" heightComputationExpression="10">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="LocationNode" label="Location" domainClass="relation::Location">
+          <style xsi:type="style:LozengeNodeDescription" borderSizeComputationExpression="2" borderLineStyle="dash" labelSize="9" labelExpression="['Location of \'' + self.track.Name + '\''/]" tooltipExpression="Create a new track location" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW" widthComputationExpression="6" heightComputationExpression="8">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="LinkEdge" label="Link" sourceMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode'] //@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']" targetMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode'] //@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']" targetFinderExpression="[ self.outgoing /]" sourceFinderExpression="[ self.incoming /]" domainClass="relation::Link" useDomainElement="true">
+          <style targetArrow="InputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="SourcesRelationEdge" label="SourcesRelation" sourceMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']" targetMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']" targetFinderExpression="feature:sources">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="SourceToLocationEdge" label="SourceToLocation" sourceMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']" targetMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']" targetFinderExpression="feature:locations">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="muslan.relation.graphical.Services"/>
+  </ownedViewpoints>
+</description:Group>
