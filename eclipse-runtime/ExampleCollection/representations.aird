@@ -5,7 +5,7 @@
     <semanticResources>ExampleCollection.collection</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_lnZ0sCqTEfCw9bHh1LeRiQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m55-YCqTEfCw9bHh1LeRiQ" name="ExampleRelationDiagram" repPath="#_m5tKECqTEfCw9bHh1LeRiQ" changeId="1746547985610">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m55-YCqTEfCw9bHh1LeRiQ" name="ExampleRelationDiagram" repPath="#_m5tKECqTEfCw9bHh1LeRiQ" changeId="1746558906189">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']"/>
         <target xmi:type="relation:RelationRoot" href="Example.relation#/"/>
       </ownedRepresentationDescriptors>
@@ -23,7 +23,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m819oiqTEfCw9bHh1LeRiQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_m8jpwSqTEfCw9bHh1LeRiQ" fontName="Fira Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m8jpwiqTEfCw9bHh1LeRiQ" x="645" y="20" width="226" height="111"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m8jpwiqTEfCw9bHh1LeRiQ" x="645" y="20" width="200" height="100"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_m8y6UiqTEfCw9bHh1LeRiQ" type="2001" element="_m6d_EiqTEfCw9bHh1LeRiQ">
           <children xmi:type="notation:Node" xmi:id="_m8y6VSqTEfCw9bHh1LeRiQ" type="5002">
@@ -56,7 +56,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m83y0iqTEfCw9bHh1LeRiQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_m8zhZiqTEfCw9bHh1LeRiQ" fontName="Fira Sans"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m8zhZyqTEfCw9bHh1LeRiQ" x="730" y="271" width="100" height="100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m8zhZyqTEfCw9bHh1LeRiQ" x="730" y="468" width="100" height="100"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_m80IciqTEfCw9bHh1LeRiQ" type="2001" element="_m6fNMiqTEfCw9bHh1LeRiQ">
           <children xmi:type="notation:Node" xmi:id="_m80IdSqTEfCw9bHh1LeRiQ" type="5002">
@@ -91,6 +91,39 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_m81WkSqTEfCw9bHh1LeRiQ" fontName="Fira Sans"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m81WkiqTEfCw9bHh1LeRiQ" x="180" y="255" width="136" height="110"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_P_C8cCqkEfCnDvVJ72pOng" type="2001" element="_P-XnACqkEfCnDvVJ72pOng">
+          <children xmi:type="notation:Node" xmi:id="_P_Gm0CqkEfCnDvVJ72pOng" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_P_Gm0SqkEfCnDvVJ72pOng" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_P_H08CqkEfCnDvVJ72pOng" type="3017" element="_P-YOECqkEfCnDvVJ72pOng">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_P_H08SqkEfCnDvVJ72pOng" fontName="Fira Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P_H08iqkEfCnDvVJ72pOng"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_P_C8cSqkEfCnDvVJ72pOng" fontName="Fira Sans"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P_C8ciqkEfCnDvVJ72pOng" x="995" y="220" width="101" height="116"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_UF5dECqkEfCnDvVJ72pOng" type="2001" element="_UFcxICqkEfCnDvVJ72pOng">
+          <children xmi:type="notation:Node" xmi:id="_UF6EICqkEfCnDvVJ72pOng" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_UF6EISqkEfCnDvVJ72pOng" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_UF6EIiqkEfCnDvVJ72pOng" type="3017" element="_UFi3wCqkEfCnDvVJ72pOng">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_UF6EIyqkEfCnDvVJ72pOng" fontName="Fira Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UF6EJCqkEfCnDvVJ72pOng"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_UF5dESqkEfCnDvVJ72pOng" fontName="Fira Sans"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UF5dEiqkEfCnDvVJ72pOng" x="885" y="415" width="146" height="116"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_WpyOwCqnEfC4IfDQpoGHPw" type="2001" element="_WpU7wCqnEfC4IfDQpoGHPw">
+          <children xmi:type="notation:Node" xmi:id="_Wp0rACqnEfC4IfDQpoGHPw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Wp0rASqnEfC4IfDQpoGHPw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Wp15ICqnEfC4IfDQpoGHPw" type="3004" element="_WpVi0CqnEfC4IfDQpoGHPw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Wp15ISqnEfC4IfDQpoGHPw" fontName="Fira Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wp15IiqnEfC4IfDQpoGHPw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_WpyOwSqnEfC4IfDQpoGHPw" fontName="Fira Sans"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WpyOwiqnEfC4IfDQpoGHPw" x="840" y="250" width="100" height="100"/>
+        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_m6LEIiqTEfCw9bHh1LeRiQ"/>
         <edges xmi:type="notation:Edge" xmi:id="_m9EnICqTEfCw9bHh1LeRiQ" type="4001" element="_m8SkACqTEfCw9bHh1LeRiQ" source="_m8zhYCqTEfCw9bHh1LeRiQ" target="_m8y6UiqTEfCw9bHh1LeRiQ">
           <children xmi:type="notation:Node" xmi:id="_m9FOMCqTEfCw9bHh1LeRiQ" type="6001">
@@ -123,22 +156,6 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_m9Mi-yqTEfCw9bHh1LeRiQ" points="[0, 0, -245, 95]$[158, -149, -87, -54]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_m9NKACqTEfCw9bHh1LeRiQ" id="(0.5,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_m9NKASqTEfCw9bHh1LeRiQ" id="(0.6637168141592921,1.3513513513513513)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_m9NxEiqTEfCw9bHh1LeRiQ" type="4001" element="_m8WOYiqTEfCw9bHh1LeRiQ" source="_m8zhZSqTEfCw9bHh1LeRiQ" target="_m8jpwCqTEfCw9bHh1LeRiQ">
-          <children xmi:type="notation:Node" xmi:id="_m9NxFiqTEfCw9bHh1LeRiQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m9NxFyqTEfCw9bHh1LeRiQ" x="6" y="-8"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_m9NxGCqTEfCw9bHh1LeRiQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m9NxGSqTEfCw9bHh1LeRiQ" x="-5" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_m9NxGiqTEfCw9bHh1LeRiQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m9NxGyqTEfCw9bHh1LeRiQ" x="-2" y="3"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_m9NxEyqTEfCw9bHh1LeRiQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_m9NxFCqTEfCw9bHh1LeRiQ" fontName="Fira Sans" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_m9NxFSqTEfCw9bHh1LeRiQ" points="[0, 0, -15, 101]$[9, -155, -6, -54]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_m9NxHCqTEfCw9bHh1LeRiQ" id="(0.5,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_m9NxHSqTEfCw9bHh1LeRiQ" id="(0.6637168141592921,1.3513513513513513)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_6NPa0CqUEfCtMbZih3mPng" type="4001" element="_6M41gCqUEfCtMbZih3mPng" source="_m8jpwCqTEfCw9bHh1LeRiQ" target="_m80IciqTEfCw9bHh1LeRiQ">
           <children xmi:type="notation:Node" xmi:id="_6NTFMCqUEfCtMbZih3mPng" type="6001">
@@ -188,15 +205,78 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6NeEViqUEfCtMbZih3mPng" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6NeEVyqUEfCtMbZih3mPng" id="(0.40808823529411764,0.4818181818181818)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_P_JDECqkEfCnDvVJ72pOng" type="4001" element="_P--D9CqkEfCnDvVJ72pOng" source="_m8jpwCqTEfCw9bHh1LeRiQ" target="_P_C8cCqkEfCnDvVJ72pOng">
+          <children xmi:type="notation:Node" xmi:id="_P_JqICqkEfCnDvVJ72pOng" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P_JqISqkEfCnDvVJ72pOng" x="1" y="-11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_P_KRMCqkEfCnDvVJ72pOng" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P_KRMSqkEfCnDvVJ72pOng" x="-2" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_P_K4QCqkEfCnDvVJ72pOng" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P_K4QSqkEfCnDvVJ72pOng" x="-3" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_P_JDESqkEfCnDvVJ72pOng"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_P_JDEiqkEfCnDvVJ72pOng" fontName="Fira Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_P_JDEyqkEfCnDvVJ72pOng" points="[79, 56, -198, -139]$[237, 166, -40, -29]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_P_N7kCqkEfCnDvVJ72pOng" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_P_N7kSqkEfCnDvVJ72pOng" id="(0.39603960396039606,0.43103448275862066)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_UF6rMCqkEfCnDvVJ72pOng" type="4001" element="_UF4PAyqkEfCnDvVJ72pOng" source="_P_C8cCqkEfCnDvVJ72pOng" target="_UF5dECqkEfCnDvVJ72pOng">
+          <children xmi:type="notation:Node" xmi:id="_UF6rNCqkEfCnDvVJ72pOng" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UF6rNSqkEfCnDvVJ72pOng" x="-2" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_UF7SQCqkEfCnDvVJ72pOng" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UF7SQSqkEfCnDvVJ72pOng" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_UF7SQiqkEfCnDvVJ72pOng" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UF7SQyqkEfCnDvVJ72pOng" x="-1" y="11"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_UF6rMSqkEfCnDvVJ72pOng"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_UF6rMiqkEfCnDvVJ72pOng" fontName="Fira Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UF6rMyqkEfCnDvVJ72pOng" points="[-43, 58, 87, -119]$[-101, 137, 29, -40]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UF7SRCqkEfCnDvVJ72pOng" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UF7SRSqkEfCnDvVJ72pOng" id="(0.2054794520547945,0.3448275862068966)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_XX8_gCqrEfCzNujEFnD0Bw" type="4001" element="_XXXJoSqrEfCzNujEFnD0Bw" source="_m8zhZSqTEfCw9bHh1LeRiQ" target="_WpyOwCqnEfC4IfDQpoGHPw">
+          <children xmi:type="notation:Node" xmi:id="_XYB4ACqrEfCzNujEFnD0Bw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XYB4ASqrEfCzNujEFnD0Bw" x="20" y="2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XYCfECqrEfCzNujEFnD0Bw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XYCfESqrEfCzNujEFnD0Bw" x="-18" y="-4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XYDGICqrEfCzNujEFnD0Bw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XYDGISqrEfCzNujEFnD0Bw" x="-7" y="-1"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XX8_gSqrEfCzNujEFnD0Bw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_XX8_giqrEfCzNujEFnD0Bw" fontName="Fira Sans"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XX8_gyqrEfCzNujEFnD0Bw" points="[-1, 0, -53, 168]$[50, -163, -2, 5]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XYEUQCqrEfCzNujEFnD0Bw" id="(1.0,0.44)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XYEUQSqrEfCzNujEFnD0Bw" id="(0.42,0.94)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_YqflcCqrEfCzNujEFnD0Bw" type="4001" element="_YqKOQCqrEfCzNujEFnD0Bw" source="_WpyOwCqnEfC4IfDQpoGHPw" target="_m8jpwCqTEfCw9bHh1LeRiQ">
+          <children xmi:type="notation:Node" xmi:id="_YqfldCqrEfCzNujEFnD0Bw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YqfldSqrEfCzNujEFnD0Bw" x="-31" y="-2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YqfldiqrEfCzNujEFnD0Bw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YqfldyqrEfCzNujEFnD0Bw" x="40" y="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YqgMgCqrEfCzNujEFnD0Bw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YqgMgSqrEfCzNujEFnD0Bw" x="-10" y="-1"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_YqflcSqrEfCzNujEFnD0Bw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YqflciqrEfCzNujEFnD0Bw" fontName="Fira Sans"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YqflcyqrEfCzNujEFnD0Bw" points="[-43, -50, 128, 152]$[-152, -180, 19, 22]"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YqgMgyqrEfCzNujEFnD0Bw" id="(0.37,0.78)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_m8W1cCqTEfCw9bHh1LeRiQ" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_m8XcgCqTEfCw9bHh1LeRiQ"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6Rx0CqTEfCw9bHh1LeRiQ" name="My Complete Collection" tooltipText="Create a main collection" outgoingEdges="_6M41gCqUEfCtMbZih3mPng" incomingEdges="_m8VARCqTEfCw9bHh1LeRiQ _m8WOYiqTEfCw9bHh1LeRiQ" width="30" height="15" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6Rx0CqTEfCw9bHh1LeRiQ" name="My Complete Collection" tooltipText="Create a main collection" outgoingEdges="_6M41gCqUEfCtMbZih3mPng _P--D9CqkEfCnDvVJ72pOng" incomingEdges="_m8VARCqTEfCw9bHh1LeRiQ _YqKOQCqrEfCzNujEFnD0Bw" width="20" height="10" resizeKind="NSEW">
       <target xmi:type="relation:MainCollection" href="Example.relation#//@providers.0"/>
       <semanticElements xmi:type="relation:MainCollection" href="Example.relation#//@providers.0"/>
-      <ownedStyle xmi:type="diagram:Square" uid="_m6ZtoCqTEfCw9bHh1LeRiQ" labelSize="12" borderSize="2" borderSizeComputationExpression="2" borderColor="39,76,114" labelPosition="node" width="30" height="15" color="194,239,255">
+      <ownedStyle xmi:type="diagram:Square" uid="_m6ZtoCqTEfCw9bHh1LeRiQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="39,76,114" labelPosition="node" width="20" height="10" color="194,239,255">
         <description xmi:type="style:SquareDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']"/>
@@ -204,7 +284,15 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6d_EiqTEfCw9bHh1LeRiQ" name="Nu Metal" tooltipText="Create a derived collection" outgoingEdges="_m8VARCqTEfCw9bHh1LeRiQ" incomingEdges="_m8SkACqTEfCw9bHh1LeRiQ" width="10" height="10" resizeKind="NSEW">
       <target xmi:type="relation:DerivedCollection" href="Example.relation#//@providers.1"/>
       <semanticElements xmi:type="relation:DerivedCollection" href="Example.relation#//@providers.1"/>
-      <ownedStyle xmi:type="diagram:BundledImage" uid="_m6d_EyqTEfCw9bHh1LeRiQ" labelSize="9" borderSize="2" borderSizeComputationExpression="2" borderColor="224,133,3" labelPosition="node" shape="ring" color="253,206,137">
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_m6d_EyqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="224,133,3" labelPosition="node" shape="ring" color="253,206,137">
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_WpU7wCqnEfC4IfDQpoGHPw" name="Bingo Songs" tooltipText="Create a derived collection" outgoingEdges="_YqKOQCqrEfCzNujEFnD0Bw" incomingEdges="_XXXJoSqrEfCzNujEFnD0Bw" width="10" height="10" resizeKind="NSEW">
+      <target xmi:type="relation:DerivedCollection" href="Example.relation#//@providers.4"/>
+      <semanticElements xmi:type="relation:DerivedCollection" href="Example.relation#//@providers.4"/>
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_WpVi0CqnEfC4IfDQpoGHPw" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="224,133,3" labelPosition="node" shape="ring" color="253,206,137">
         <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']"/>
@@ -212,15 +300,15 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6emISqTEfCw9bHh1LeRiQ" name="When life isn't lifing" tooltipText="Create a collection reference that points to one of your already existing collections! \o/" outgoingEdges="_m8SkACqTEfCw9bHh1LeRiQ" width="10" height="10" resizeKind="NSEW">
       <target xmi:type="relation:CollectionRerefence" href="Example.relation#//@providers.2"/>
       <semanticElements xmi:type="relation:CollectionRerefence" href="Example.relation#//@providers.2"/>
-      <ownedStyle xmi:type="diagram:BundledImage" uid="_m6emIiqTEfCw9bHh1LeRiQ" labelSize="9" borderSize="2" borderSizeComputationExpression="2" borderColor="114,73,110" labelPosition="node" shape="ring" color="217,196,215">
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_m6emIiqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,73,110" labelPosition="node" shape="ring" color="217,196,215">
         <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6emJCqTEfCw9bHh1LeRiQ" name="Y2K" tooltipText="Create a collection reference that points to one of your already existing collections! \o/" outgoingEdges="_m8WOYiqTEfCw9bHh1LeRiQ" width="10" height="10" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6emJCqTEfCw9bHh1LeRiQ" name="Y2K" tooltipText="Create a collection reference that points to one of your already existing collections! \o/" outgoingEdges="_XXXJoSqrEfCzNujEFnD0Bw" width="10" height="10" resizeKind="NSEW">
       <target xmi:type="relation:CollectionRerefence" href="Example.relation#//@providers.3"/>
       <semanticElements xmi:type="relation:CollectionRerefence" href="Example.relation#//@providers.3"/>
-      <ownedStyle xmi:type="diagram:BundledImage" uid="_m6fNMCqTEfCw9bHh1LeRiQ" labelSize="9" borderSize="2" borderSizeComputationExpression="2" borderColor="114,73,110" labelPosition="node" shape="ring" color="217,196,215">
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_m6fNMCqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,73,110" labelPosition="node" shape="ring" color="217,196,215">
         <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']"/>
@@ -228,7 +316,15 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6fNMiqTEfCw9bHh1LeRiQ" name="Spotify" tooltipText="Create a new source entity" outgoingEdges="_6M6qsCqUEfCtMbZih3mPng _6M7RxCqUEfCtMbZih3mPng" incomingEdges="_6M41gCqUEfCtMbZih3mPng" width="8" height="10" resizeKind="NSEW">
       <target xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.0"/>
       <semanticElements xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.0"/>
-      <ownedStyle xmi:type="diagram:Lozenge" uid="_m6f0QCqTEfCw9bHh1LeRiQ" labelSize="9" borderSize="2" borderSizeComputationExpression="2" borderColor="77,137,20" labelPosition="node" width="8" height="10" color="204,242,166">
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_m6f0QCqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="77,137,20" labelPosition="node" width="8" height="10" color="204,242,166">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_P-XnACqkEfCnDvVJ72pOng" name="Harddrive" tooltipText="Create a new source entity" outgoingEdges="_UF4PAyqkEfCnDvVJ72pOng" incomingEdges="_P--D9CqkEfCnDvVJ72pOng" width="8" height="10" resizeKind="NSEW">
+      <target xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.1"/>
+      <semanticElements xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.1"/>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_P-YOECqkEfCnDvVJ72pOng" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="77,137,20" labelPosition="node" width="8" height="10" color="204,242,166">
         <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']"/>
@@ -236,7 +332,7 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6f0QiqTEfCw9bHh1LeRiQ" name="Location of 'Heimat'" tooltipText="Create a new track location" incomingEdges="_6M6qsCqUEfCtMbZih3mPng" width="6" height="8" resizeKind="NSEW">
       <target xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.0"/>
       <semanticElements xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.0"/>
-      <ownedStyle xmi:type="diagram:Lozenge" uid="_m77XoCqTEfCw9bHh1LeRiQ" labelSize="9" borderSize="2" borderSizeComputationExpression="2" borderColor="255,255,255" borderLineStyle="dash" labelPosition="node" width="6" height="8" color="138,226,52">
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_m77XoCqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="255,255,255" borderLineStyle="dash" labelPosition="node" width="6" height="8" color="138,226,52">
         <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']"/>
@@ -244,7 +340,15 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m77-sSqTEfCw9bHh1LeRiQ" name="Location of 'Numb (Official Music Video) [4K UPGRADE] '" tooltipText="Create a new track location" incomingEdges="_6M7RxCqUEfCtMbZih3mPng" width="6" height="8" resizeKind="NSEW">
       <target xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.1"/>
       <semanticElements xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.1"/>
-      <ownedStyle xmi:type="diagram:Lozenge" uid="_m79M0CqTEfCw9bHh1LeRiQ" labelSize="9" borderSize="2" borderSizeComputationExpression="2" borderColor="255,255,255" borderLineStyle="dash" labelPosition="node" width="6" height="8" color="138,226,52">
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_m79M0CqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="255,255,255" borderLineStyle="dash" labelPosition="node" width="6" height="8" color="138,226,52">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UFcxICqkEfCnDvVJ72pOng" name="Location of 'Bring Me To Life (Official HD Music Video)'" tooltipText="Create a new track location" incomingEdges="_UF4PAyqkEfCnDvVJ72pOng" width="6" height="8" resizeKind="NSEW">
+      <target xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.1/@locations.0"/>
+      <semanticElements xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.1/@locations.0"/>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_UFi3wCqkEfCnDvVJ72pOng" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="255,255,255" borderLineStyle="dash" labelPosition="node" width="6" height="8" color="138,226,52">
         <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']"/>
@@ -264,15 +368,6 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_m8VnUCqTEfCw9bHh1LeRiQ" targetArrow="InputClosedArrow" size="2" strokeColor="173,127,168">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_m8VnUSqTEfCw9bHh1LeRiQ" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_m8WOYiqTEfCw9bHh1LeRiQ" sourceNode="_m6emJCqTEfCw9bHh1LeRiQ" targetNode="_m6Rx0CqTEfCw9bHh1LeRiQ">
-      <target xmi:type="relation:Link" href="Example.relation#//@links.2"/>
-      <semanticElements xmi:type="relation:Link" href="Example.relation#//@links.2"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_m8WOYyqTEfCw9bHh1LeRiQ" targetArrow="InputClosedArrow" size="2" strokeColor="173,127,168">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_m8WOZCqTEfCw9bHh1LeRiQ" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
     </ownedDiagramElements>
@@ -299,6 +394,38 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6M7RxiqUEfCtMbZih3mPng" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_P--D9CqkEfCnDvVJ72pOng" sourceNode="_m6Rx0CqTEfCw9bHh1LeRiQ" targetNode="_P-XnACqkEfCnDvVJ72pOng">
+      <target xmi:type="relation:MainCollection" href="Example.relation#//@providers.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_P--D9SqkEfCnDvVJ72pOng" size="2" strokeColor="138,226,52">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourcesRelationEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_P--D9iqkEfCnDvVJ72pOng" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourcesRelationEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_UF4PAyqkEfCnDvVJ72pOng" sourceNode="_P-XnACqkEfCnDvVJ72pOng" targetNode="_UFcxICqkEfCnDvVJ72pOng">
+      <target xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_UF42ACqkEfCnDvVJ72pOng" size="2" strokeColor="204,242,166">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_UF42ASqkEfCnDvVJ72pOng" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_XXXJoSqrEfCzNujEFnD0Bw" sourceNode="_m6emJCqTEfCw9bHh1LeRiQ" targetNode="_WpU7wCqnEfC4IfDQpoGHPw">
+      <target xmi:type="relation:Link" href="Example.relation#//@links.3"/>
+      <semanticElements xmi:type="relation:Link" href="Example.relation#//@links.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_XXXwsCqrEfCzNujEFnD0Bw" targetArrow="InputClosedArrow" size="2" strokeColor="173,127,168">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YqKOQCqrEfCzNujEFnD0Bw" sourceNode="_WpU7wCqnEfC4IfDQpoGHPw" targetNode="_m6Rx0CqTEfCw9bHh1LeRiQ">
+      <target xmi:type="relation:Link" href="Example.relation#//@links.4"/>
+      <semanticElements xmi:type="relation:Link" href="Example.relation#//@links.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YqKOQSqrEfCzNujEFnD0Bw" targetArrow="InputClosedArrow" size="2" strokeColor="173,127,168">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_m5zQsCqTEfCw9bHh1LeRiQ"/>

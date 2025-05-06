@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<relation:RelationRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:relation="http://www.example.org/relation">
+<relation:RelationRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:relation="http://www.example.org/relation" maincollection="//@providers.0">
   <links outgoing="//@providers.1" incoming="//@providers.2"/>
   <links outgoing="//@providers.0" incoming="//@providers.1"/>
-  <links outgoing="//@providers.0" incoming="//@providers.3"/>
+  <links/>
+  <links outgoing="//@providers.4" incoming="//@providers.3"/>
+  <links outgoing="//@providers.0" incoming="//@providers.4"/>
   <providers xsi:type="relation:MainCollection" name="My Complete Collection">
     <sources name="Spotify">
       <locations location="Heimat on spotify">
@@ -10,6 +12,11 @@
       </locations>
       <locations location="https://www.youtube.com/watch?v=kXYiU_JCYtU">
         <track href="ExampleCollection.collection#//@collection.1/@categorizedelements.3"/>
+      </locations>
+    </sources>
+    <sources name="Harddrive">
+      <locations location="https://www.youtube.com/watch?v=3YxaaGgTQYM">
+        <track href="ExampleCollection.collection#//@collection.1/@categorizedelements.1"/>
       </locations>
     </sources>
   </providers>
@@ -20,4 +27,5 @@
   <providers xsi:type="relation:CollectionRerefence" name="Y2K">
     <pointsTo href="ExampleCollection.collection#//@collection.0"/>
   </providers>
+  <providers xsi:type="relation:DerivedCollection" name="Bingo Songs"/>
 </relation:RelationRoot>

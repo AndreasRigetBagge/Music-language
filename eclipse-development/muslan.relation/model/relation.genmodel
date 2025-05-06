@@ -25,13 +25,13 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//Link/outgoing"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//Link/incoming"/>
     </genClasses>
-    <genClasses ecoreClass="relation.ecore#//DerivedCollection"/>
+    <genClasses ecoreClass="relation.ecore#//DerivedCollection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relation.ecore#//DerivedCollection/name"/>
+    </genClasses>
     <genClasses ecoreClass="relation.ecore#//CollectionRerefence">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//CollectionRerefence/pointsTo"/>
     </genClasses>
-    <genClasses ecoreClass="relation.ecore#//ICollection">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relation.ecore#//ICollection/name"/>
-    </genClasses>
+    <genClasses ecoreClass="relation.ecore#//ICollection"/>
     <genClasses ecoreClass="relation.ecore#//RelationRoot">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//RelationRoot/links"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//RelationRoot/providers"/>
