@@ -4,9 +4,12 @@
     <semanticResources>model/Query.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.collection/Collection.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.playlist/model/playlist.ecore</semanticResources>
+    <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
+    <semanticResources>model/Query.genmodel</semanticResources>
+    <semanticResources>platform:/resource/muslan.collection/Collection.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_77R0YCTKEfClaqb2N_ZnPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BWEpICTLEfClaqb2N_ZnPw" name="query class diagram" repPath="#_BV_woCTLEfClaqb2N_ZnPw" changeId="1745921362211">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BWEpICTLEfClaqb2N_ZnPw" name="query class diagram" repPath="#_BV_woCTLEfClaqb2N_ZnPw" changeId="1746513273793">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model/Query.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -57,7 +60,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_oxJukiTaEfCMJItMfH4yTg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_oxJHgSTaEfCMJItMfH4yTg" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oxJHgiTaEfCMJItMfH4yTg" x="315" y="285" width="90" height="62"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oxJHgiTaEfCMJItMfH4yTg" x="306" y="285" width="90" height="62"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_zcA5UCTbEfCMJItMfH4yTg" type="2003" element="_zb6ysCTbEfCMJItMfH4yTg">
           <children xmi:type="notation:Node" xmi:id="_zcBgYCTbEfCMJItMfH4yTg" type="5007"/>
@@ -117,7 +120,7 @@
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_fOzOkSTaEfCMJItMfH4yTg" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_fOzOkiTaEfCMJItMfH4yTg" fontColor="7490599" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fOzOkyTaEfCMJItMfH4yTg" points="[-17, 0, -19, -54]$[-17, 54, -19, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fOzOkyTaEfCMJItMfH4yTg" points="[1, 0, -1, -54]$[1, 54, -1, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fO0csCTaEfCMJItMfH4yTg" id="(0.4777777777777778,1.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fO0csSTaEfCMJItMfH4yTg" id="(0.5,0.0)"/>
         </edges>
@@ -155,17 +158,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_OTZLcCTcEfCMJItMfH4yTg" type="4001" element="_OTWILCTcEfCMJItMfH4yTg" source="_oxJHgCTaEfCMJItMfH4yTg" target="_eNN1wCTaEfCMJItMfH4yTg">
           <children xmi:type="notation:Node" xmi:id="_OTZLdCTcEfCMJItMfH4yTg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OTZLdSTcEfCMJItMfH4yTg" x="57" y="47"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OTZLdSTcEfCMJItMfH4yTg" x="62" y="47"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OTZLdiTcEfCMJItMfH4yTg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OTZLdyTcEfCMJItMfH4yTg" x="36" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OTZLdyTcEfCMJItMfH4yTg" x="43" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OTZLeCTcEfCMJItMfH4yTg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OTZLeSTcEfCMJItMfH4yTg" x="21" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OTZLeSTcEfCMJItMfH4yTg" x="23" y="-10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_OTZLcSTcEfCMJItMfH4yTg" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_OTZLciTcEfCMJItMfH4yTg" fontColor="7490599" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OTZLcyTcEfCMJItMfH4yTg" points="[-2, 60, 7, 121]$[-2, 83, 7, 144]$[204, 83, 213, 144]$[204, -91, 213, -30]$[41, -91, 50, -30]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OTZLcyTcEfCMJItMfH4yTg" points="[-2, 60, -2, 121]$[-2, 83, -2, 144]$[213, 83, 213, 144]$[213, -91, 213, -30]$[50, -91, 50, -30]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OTZygCTcEfCMJItMfH4yTg" id="(0.5340909090909091,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OTZygSTcEfCMJItMfH4yTg" id="(0.4318181818181818,1.0)"/>
         </edges>
@@ -351,9 +354,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_JD0A0iTfEfCMJItMfH4yTg" name=" Predicate : Operator" tooltipText="">
-        <target xmi:type="ecore:EReference" href="model/Query.ecore#//Clause/Predicate"/>
-        <semanticElements xmi:type="ecore:EReference" href="model/Query.ecore#//Clause/Predicate"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_JD0A0iTfEfCMJItMfH4yTg" name=" operator : Operator" tooltipText="">
+        <target xmi:type="ecore:EReference" href="model/Query.ecore#//Clause/operator"/>
+        <semanticElements xmi:type="ecore:EReference" href="model/Query.ecore#//Clause/operator"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_JD0A0yTfEfCMJItMfH4yTg" labelAlignment="LEFT" description="_8N9pYCTWEfCs95pUVcBpnw" color="114,159,207">
           <labelFormat>bold</labelFormat>
         </ownedStyle>

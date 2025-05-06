@@ -8,6 +8,7 @@ import collection.Collection;
 import collection.CollectionPackage;
 import collection.CollectionRoot;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,10 +16,12 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import pbconfig.Configuration;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +34,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link collection.impl.CollectionRootImpl#getCollection <em>Collection</em>}</li>
  *   <li>{@link collection.impl.CollectionRootImpl#getArtist <em>Artist</em>}</li>
  *   <li>{@link collection.impl.CollectionRootImpl#getCategories <em>Categories</em>}</li>
+ *   <li>{@link collection.impl.CollectionRootImpl#getConfiguration <em>Configuration</em>}</li>
+ *   <li>{@link collection.impl.CollectionRootImpl#getDefaultConfig <em>Default Config</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,6 +70,26 @@ public class CollectionRootImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<Category> categories;
+
+	/**
+	 * The cached value of the '{@link #getConfiguration() <em>Configuration</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConfiguration()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Configuration> configuration;
+
+	/**
+	 * The cached value of the '{@link #getDefaultConfig() <em>Default Config</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultConfig()
+	 * @generated
+	 * @ordered
+	 */
+	protected Configuration defaultConfig;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,6 +155,59 @@ public class CollectionRootImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
+	public EList<Configuration> getConfiguration() {
+		if (configuration == null) {
+			configuration = new EObjectContainmentEList<Configuration>(Configuration.class, this, CollectionPackage.COLLECTION_ROOT__CONFIGURATION);
+		}
+		return configuration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Configuration getDefaultConfig() {
+		if (defaultConfig != null && defaultConfig.eIsProxy()) {
+			InternalEObject oldDefaultConfig = (InternalEObject)defaultConfig;
+			defaultConfig = (Configuration)eResolveProxy(oldDefaultConfig);
+			if (defaultConfig != oldDefaultConfig) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CollectionPackage.COLLECTION_ROOT__DEFAULT_CONFIG, oldDefaultConfig, defaultConfig));
+			}
+		}
+		return defaultConfig;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Configuration basicGetDefaultConfig() {
+		return defaultConfig;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultConfig(Configuration newDefaultConfig) {
+		Configuration oldDefaultConfig = defaultConfig;
+		defaultConfig = newDefaultConfig;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CollectionPackage.COLLECTION_ROOT__DEFAULT_CONFIG, oldDefaultConfig, defaultConfig));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case CollectionPackage.COLLECTION_ROOT__COLLECTION:
@@ -138,6 +216,8 @@ public class CollectionRootImpl extends MinimalEObjectImpl.Container implements 
 				return ((InternalEList<?>)getArtist()).basicRemove(otherEnd, msgs);
 			case CollectionPackage.COLLECTION_ROOT__CATEGORIES:
 				return ((InternalEList<?>)getCategories()).basicRemove(otherEnd, msgs);
+			case CollectionPackage.COLLECTION_ROOT__CONFIGURATION:
+				return ((InternalEList<?>)getConfiguration()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -156,6 +236,11 @@ public class CollectionRootImpl extends MinimalEObjectImpl.Container implements 
 				return getArtist();
 			case CollectionPackage.COLLECTION_ROOT__CATEGORIES:
 				return getCategories();
+			case CollectionPackage.COLLECTION_ROOT__CONFIGURATION:
+				return getConfiguration();
+			case CollectionPackage.COLLECTION_ROOT__DEFAULT_CONFIG:
+				if (resolve) return getDefaultConfig();
+				return basicGetDefaultConfig();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -181,6 +266,13 @@ public class CollectionRootImpl extends MinimalEObjectImpl.Container implements 
 				getCategories().clear();
 				getCategories().addAll((java.util.Collection<? extends Category>)newValue);
 				return;
+			case CollectionPackage.COLLECTION_ROOT__CONFIGURATION:
+				getConfiguration().clear();
+				getConfiguration().addAll((java.util.Collection<? extends Configuration>)newValue);
+				return;
+			case CollectionPackage.COLLECTION_ROOT__DEFAULT_CONFIG:
+				setDefaultConfig((Configuration)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -202,6 +294,12 @@ public class CollectionRootImpl extends MinimalEObjectImpl.Container implements 
 			case CollectionPackage.COLLECTION_ROOT__CATEGORIES:
 				getCategories().clear();
 				return;
+			case CollectionPackage.COLLECTION_ROOT__CONFIGURATION:
+				getConfiguration().clear();
+				return;
+			case CollectionPackage.COLLECTION_ROOT__DEFAULT_CONFIG:
+				setDefaultConfig((Configuration)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -220,6 +318,10 @@ public class CollectionRootImpl extends MinimalEObjectImpl.Container implements 
 				return artist != null && !artist.isEmpty();
 			case CollectionPackage.COLLECTION_ROOT__CATEGORIES:
 				return categories != null && !categories.isEmpty();
+			case CollectionPackage.COLLECTION_ROOT__CONFIGURATION:
+				return configuration != null && !configuration.isEmpty();
+			case CollectionPackage.COLLECTION_ROOT__DEFAULT_CONFIG:
+				return defaultConfig != null;
 		}
 		return super.eIsSet(featureID);
 	}

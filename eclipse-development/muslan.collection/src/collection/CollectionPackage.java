@@ -472,13 +472,31 @@ public interface CollectionPackage extends EPackage {
 	int COLLECTION_ROOT__CATEGORIES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_ROOT__CONFIGURATION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Default Config</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_ROOT__DEFAULT_CONFIG = 4;
+
+	/**
 	 * The number of structural features of the '<em>Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_ROOT_FEATURE_COUNT = 3;
+	int COLLECTION_ROOT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Root</em>' class.
@@ -735,6 +753,28 @@ public interface CollectionPackage extends EPackage {
 	EReference getCollectionRoot_Categories();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link collection.CollectionRoot#getConfiguration <em>Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Configuration</em>'.
+	 * @see collection.CollectionRoot#getConfiguration()
+	 * @see #getCollectionRoot()
+	 * @generated
+	 */
+	EReference getCollectionRoot_Configuration();
+
+	/**
+	 * Returns the meta object for the reference '{@link collection.CollectionRoot#getDefaultConfig <em>Default Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Config</em>'.
+	 * @see collection.CollectionRoot#getDefaultConfig()
+	 * @see #getCollectionRoot()
+	 * @generated
+	 */
+	EReference getCollectionRoot_DefaultConfig();
+
+	/**
 	 * Returns the meta object for enum '{@link collection.CategoryType <em>Category Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -958,6 +998,22 @@ public interface CollectionPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COLLECTION_ROOT__CATEGORIES = eINSTANCE.getCollectionRoot_Categories();
+
+		/**
+		 * The meta object literal for the '<em><b>Configuration</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLLECTION_ROOT__CONFIGURATION = eINSTANCE.getCollectionRoot_Configuration();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Config</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLLECTION_ROOT__DEFAULT_CONFIG = eINSTANCE.getCollectionRoot_DefaultConfig();
 
 		/**
 		 * The meta object literal for the '{@link collection.CategoryType <em>Category Type</em>}' enum.

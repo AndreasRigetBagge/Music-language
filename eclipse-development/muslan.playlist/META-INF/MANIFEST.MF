@@ -7,7 +7,10 @@ Export-Package: collection,
  collection.util,
  muslan.playlist,
  muslan.playlist.impl,
- muslan.playlist.util
+ muslan.playlist.util,
+ pbconfig,
+ pbconfig.impl,
+ pbconfig.util
 Bundle-SymbolicName: muslan.playlist;singleton:=true
 Automatic-Module-Name: muslan.playlist
 Bundle-Version: 0.1.0.qualifier

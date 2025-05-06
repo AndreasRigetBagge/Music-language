@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="playlist" nsURI="http://www.example.org/playlist" nsPrefix="playlist">
-  <eClassifiers xsi:type="ecore:EClass" name="Playlist" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Playlist">
     <eStructuralFeatures xsi:type="ecore:EReference" name="playitem" upperBound="-1"
         eType="#//PlayItem" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="configurationreference"
-        eType="#//Configuration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" eType="ecore:EClass ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="collection" lowerBound="1"
         eType="ecore:EClass ../../muslan.collection/Collection.ecore#//Collection"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlayItem"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Configuration"/>
 </ecore:EPackage>

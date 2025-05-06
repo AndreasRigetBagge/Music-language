@@ -42,17 +42,25 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//CollectionRoot/collection"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Collection.ecore#//CollectionRoot/artist"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Collection.ecore#//CollectionRoot/categories"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//CollectionRoot/configuration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Collection.ecore#//CollectionRoot/defaultConfig"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Playlist" ecorePackage="../muslan.playlist/model/playlist.ecore#/">
     <genClasses image="false" ecoreClass="../muslan.playlist/model/playlist.ecore#//Playlist">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../muslan.playlist/model/playlist.ecore#//Playlist/playitem"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../muslan.playlist/model/playlist.ecore#//Playlist/configurationreference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../muslan.playlist/model/playlist.ecore#//Playlist/configuration"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../muslan.playlist/model/playlist.ecore#//Playlist/collection"/>
     </genClasses>
-    <genClasses ecoreClass="../muslan.playlist/model/playlist.ecore#//Query"/>
     <genClasses ecoreClass="../muslan.playlist/model/playlist.ecore#//PlayItem"/>
-    <genClasses ecoreClass="../muslan.playlist/model/playlist.ecore#//ConfigurationReference"/>
-    <genClasses ecoreClass="../muslan.playlist/model/playlist.ecore#//Collection"/>
+  </genPackages>
+  <genPackages prefix="Pbconfig" ecorePackage="../muslan.pbconfig/model/pbconfig.ecore#/">
+    <genClasses ecoreClass="../muslan.pbconfig/model/pbconfig.ecore#//Configuration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../muslan.pbconfig/model/pbconfig.ecore#//Configuration/option"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../muslan.pbconfig/model/pbconfig.ecore#//Configuration/default"/>
+    </genClasses>
+    <genClasses ecoreClass="../muslan.pbconfig/model/pbconfig.ecore#//Option"/>
+    <genClasses ecoreClass="../muslan.pbconfig/model/pbconfig.ecore#//FlagOption"/>
+    <genClasses ecoreClass="../muslan.pbconfig/model/pbconfig.ecore#//ValueOption"/>
   </genPackages>
 </genmodel:GenModel>

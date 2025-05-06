@@ -21,6 +21,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import pbconfig.PbconfigPackage;
+import pbconfig.impl.PbconfigPackageImpl;
+import playlist.PlaylistPackage;
+import playlist.impl.PlaylistPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -138,11 +142,21 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 
 		isInited = true;
 
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlaylistPackage.eNS_URI);
+		PlaylistPackageImpl thePlaylistPackage = (PlaylistPackageImpl)(registeredPackage instanceof PlaylistPackageImpl ? registeredPackage : PlaylistPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PbconfigPackage.eNS_URI);
+		PbconfigPackageImpl thePbconfigPackage = (PbconfigPackageImpl)(registeredPackage instanceof PbconfigPackageImpl ? registeredPackage : PbconfigPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theCollectionPackage.createPackageContents();
+		thePlaylistPackage.createPackageContents();
+		thePbconfigPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theCollectionPackage.initializePackageContents();
+		thePlaylistPackage.initializePackageContents();
+		thePbconfigPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theCollectionPackage.freeze();
@@ -378,6 +392,26 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 	 * @generated
 	 */
 	@Override
+	public EReference getCollectionRoot_Configuration() {
+		return (EReference)collectionRootEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCollectionRoot_DefaultConfig() {
+		return (EReference)collectionRootEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getCategoryType() {
 		return categoryTypeEEnum;
 	}
@@ -440,6 +474,8 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 		createEReference(collectionRootEClass, COLLECTION_ROOT__COLLECTION);
 		createEReference(collectionRootEClass, COLLECTION_ROOT__ARTIST);
 		createEReference(collectionRootEClass, COLLECTION_ROOT__CATEGORIES);
+		createEReference(collectionRootEClass, COLLECTION_ROOT__CONFIGURATION);
+		createEReference(collectionRootEClass, COLLECTION_ROOT__DEFAULT_CONFIG);
 
 		// Create enums
 		categoryTypeEEnum = createEEnum(CATEGORY_TYPE);
@@ -468,12 +504,17 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		PlaylistPackage thePlaylistPackage = (PlaylistPackage)EPackage.Registry.INSTANCE.getEPackage(PlaylistPackage.eNS_URI);
+		PbconfigPackage thePbconfigPackage = (PbconfigPackage)EPackage.Registry.INSTANCE.getEPackage(PbconfigPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
 		trackEClass.getESuperTypes().add(this.getCategorizedElement());
+		trackEClass.getESuperTypes().add(thePlaylistPackage.getPlayItem());
 		albumEClass.getESuperTypes().add(this.getCategorizedElement());
 		compositionEClass.getESuperTypes().add(this.getCategorizedElement());
 
@@ -507,6 +548,8 @@ public class CollectionPackageImpl extends EPackageImpl implements CollectionPac
 		initEReference(getCollectionRoot_Collection(), this.getCollection(), null, "collection", null, 0, -1, CollectionRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionRoot_Artist(), this.getArtist(), null, "artist", null, 0, -1, CollectionRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionRoot_Categories(), this.getCategory(), null, "categories", null, 0, -1, CollectionRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCollectionRoot_Configuration(), thePbconfigPackage.getConfiguration(), null, "configuration", null, 1, -1, CollectionRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCollectionRoot_DefaultConfig(), thePbconfigPackage.getConfiguration(), null, "defaultConfig", null, 1, 1, CollectionRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(categoryTypeEEnum, CategoryType.class, "CategoryType");

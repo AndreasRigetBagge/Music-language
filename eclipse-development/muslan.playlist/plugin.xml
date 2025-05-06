@@ -22,4 +22,12 @@
             genModel="model/playlist.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated playlist -->
+      <package
+            uri="http://example.com"
+            class="pbconfig.PbconfigPackage"
+            genModel="model/playlist.genmodel"/>
+   </extension>
+
 </plugin>
