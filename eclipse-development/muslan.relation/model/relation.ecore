@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="relation" nsURI="http://www.example.org/relation" nsPrefix="relation">
+  <eClassifiers xsi:type="ecore:EClass" name="MainCollection" eSuperTypes="#//DerivedCollection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sources" upperBound="-1"
+        eType="#//Source" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Source">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
+        eType="#//Location" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Location">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="track" lowerBound="1" eType="ecore:EClass ../../muslan.collection/Collection.ecore#//Track"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="out" lowerBound="1" eType="#//DerivedCollection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="in" upperBound="-1" eType="#//ICollection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DerivedCollection" eSuperTypes="#//ICollection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CollectionRerefence" eSuperTypes="#//ICollection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pointsTo" lowerBound="1"
+        eType="ecore:EClass ../../muslan.collection/Collection.ecore#//Collection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ICollection" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RelationRoot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//Link" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providers" upperBound="-1"
+        eType="#//ICollection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maincollection" lowerBound="1"
+        eType="#//MainCollection"/>
+  </eClassifiers>
+</ecore:EPackage>

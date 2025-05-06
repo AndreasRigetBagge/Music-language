@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: muslan.queue;singleton:=true
-Automatic-Module-Name: muslan.queue
+Bundle-SymbolicName: muslan.relation;singleton:=true
+Automatic-Module-Name: muslan.relation
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -11,9 +11,9 @@ Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: collection,
  collection.impl,
  collection.util,
- muslan.queue,
- muslan.queue.impl,
- muslan.queue.util,
+ muslan.relation,
+ muslan.relation.impl,
+ muslan.relation.util,
  pbconfig,
  pbconfig.impl,
  pbconfig.util,

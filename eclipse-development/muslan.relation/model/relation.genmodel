@@ -1,17 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/muslan.queue/src-gen" creationIcons="false" editDirectory="/muslan.queue.edit/src-gen"
-    editorDirectory="/muslan.queue.editor/src-gen" modelPluginID="muslan.queue" modelName="Queue"
-    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
-  <foreignModel>queue.ecore</foreignModel>
+    modelDirectory="/muslan.relation/src-gen" creationIcons="false"
+    editDirectory="/muslan.relation.edit/src-gen" editorDirectory="/muslan.relation.editor/src-gen"
+    modelPluginID="muslan.relation" modelName="Relation" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>relation.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Queue" basePackage="muslan" disposableProviderFactory="true"
-      ecorePackage="queue.ecore#/">
-    <genClasses ecoreClass="queue.ecore#//Queue">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference queue.ecore#//Queue/tracks"/>
+  <genPackages prefix="Relation" basePackage="muslan" disposableProviderFactory="true"
+      ecorePackage="relation.ecore#/">
+    <genClasses ecoreClass="relation.ecore#//MainCollection">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//MainCollection/sources"/>
+    </genClasses>
+    <genClasses ecoreClass="relation.ecore#//Source">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//Source/locations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relation.ecore#//Source/name"/>
+    </genClasses>
+    <genClasses ecoreClass="relation.ecore#//Location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relation.ecore#//Location/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference relation.ecore#//Location/track"/>
+    </genClasses>
+    <genClasses ecoreClass="relation.ecore#//Link">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//Link/out"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//Link/in"/>
+    </genClasses>
+    <genClasses ecoreClass="relation.ecore#//DerivedCollection"/>
+    <genClasses ecoreClass="relation.ecore#//CollectionRerefence">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//CollectionRerefence/pointsTo"/>
+    </genClasses>
+    <genClasses ecoreClass="relation.ecore#//ICollection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relation.ecore#//ICollection/name"/>
+    </genClasses>
+    <genClasses ecoreClass="relation.ecore#//RelationRoot">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//RelationRoot/links"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//RelationRoot/providers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//RelationRoot/maincollection"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Collection" ecorePackage="../../muslan.collection/Collection.ecore#/">
@@ -54,7 +78,7 @@
     </genClasses>
   </genPackages>
   <genPackages prefix="Playlist" ecorePackage="../../muslan.playlist/model/playlist.ecore#/">
-    <genClasses image="false" ecoreClass="../../muslan.playlist/model/playlist.ecore#//Playlist">
+    <genClasses ecoreClass="../../muslan.playlist/model/playlist.ecore#//Playlist">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.playlist/model/playlist.ecore#//Playlist/playitem"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.playlist/model/playlist.ecore#//Playlist/configuration"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../muslan.playlist/model/playlist.ecore#//Playlist/collection"/>
