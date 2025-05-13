@@ -21,10 +21,10 @@
     </sources>
   </providers>
   <providers xsi:type="relation:DerivedCollection" name="Nu Metal"/>
-  <providers xsi:type="relation:CollectionRerefence" name="When life isn't lifing">
+  <providers xsi:type="relation:CollectionRerefence">
     <pointsTo href="ExampleCollection.collection#//@collection.1"/>
   </providers>
-  <providers xsi:type="relation:CollectionRerefence" name="Y2K">
+  <providers xsi:type="relation:CollectionRerefence">
     <pointsTo href="ExampleCollection.collection#//@collection.0"/>
   </providers>
   <providers xsi:type="relation:DerivedCollection" name="Bingo Songs"/>
