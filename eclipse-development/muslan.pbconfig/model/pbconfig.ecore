@@ -3,10 +3,23 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pbconfig" nsURI="https://www.example.org/pbconfig" nsPrefix="pbconfig">
   <eClassifiers xsi:type="ecore:EClass" name="Configuration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="option" upperBound="-1"
-        eType="#//Option" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="default" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        eType="#//ConfigItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Option"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FlagOption" eSuperTypes="#//Option"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ValueOption" eSuperTypes="#//Option"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigItem" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FlagConfig" eSuperTypes="#//ConfigItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Kind" eType="#//BooleanConfig"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NumberConfig" eSuperTypes="#//ConfigItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Kind" eType="#//IntegerConfig"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BooleanConfig">
+    <eLiterals name="Shuffle"/>
+    <eLiterals name="SkipUnavailable" value="1" literal="SkipUnavailable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="IntegerConfig">
+    <eLiterals name="SleepTimer"/>
+  </eClassifiers>
 </ecore:EPackage>

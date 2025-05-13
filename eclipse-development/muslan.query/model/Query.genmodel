@@ -7,10 +7,14 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>Query.ecore</foreignModel>
   <genPackages prefix="Query" disposableProviderFactory="true" ecorePackage="Query.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Query.ecore#//PlayItemType">
+      <genEnumLiterals ecoreEnumLiteral="Query.ecore#//PlayItemType/Track"/>
+      <genEnumLiterals ecoreEnumLiteral="Query.ecore#//PlayItemType/Album"/>
+    </genEnums>
     <genClasses ecoreClass="Query.ecore#//Query">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Query.ecore#//Query/collection"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Query.ecore#//Query/filter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Query.ecore#//Query/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Query.ecore#//Query/typpe"/>
     </genClasses>
     <genClasses ecoreClass="Query.ecore#//FilterClause"/>
     <genClasses ecoreClass="Query.ecore#//AndClause">

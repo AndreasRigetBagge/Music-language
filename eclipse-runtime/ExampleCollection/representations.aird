@@ -3,6 +3,7 @@
   <viewpoint:DAnalysis uid="_avw8wCqTEfCw9bHh1LeRiQ" selectedViews="_lnZ0sCqTEfCw9bHh1LeRiQ" version="15.4.1.202403191723">
     <semanticResources>Example.relation</semanticResources>
     <semanticResources>ExampleCollection.collection</semanticResources>
+    <semanticResources>My.pbconfig</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_lnZ0sCqTEfCw9bHh1LeRiQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m55-YCqTEfCw9bHh1LeRiQ" name="ExampleRelationDiagram" repPath="#_m5tKECqTEfCw9bHh1LeRiQ" changeId="1746558906189">
@@ -114,7 +115,7 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WpyOwiqnEfC4IfDQpoGHPw" x="840" y="250" width="100" height="100"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_m6LEIiqTEfCw9bHh1LeRiQ"/>
-        <edges xmi:type="notation:Edge" xmi:id="_m9EnICqTEfCw9bHh1LeRiQ" type="4001" element="_m8SkACqTEfCw9bHh1LeRiQ" source="_m8zhYCqTEfCw9bHh1LeRiQ" target="_m8y6UiqTEfCw9bHh1LeRiQ">
+        <edges xmi:type="notation:Edge" xmi:id="_m9EnICqTEfCw9bHh1LeRiQ" type="4001" element="_m8SkACqTEfCw9bHh1LeRiQ" source="_m8zhYCqTEfCw9bHh1LeRiQ">
           <children xmi:type="notation:Node" xmi:id="_m9FOMCqTEfCw9bHh1LeRiQ" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m9FOMSqTEfCw9bHh1LeRiQ" x="-42" y="-2"/>
           </children>
@@ -130,7 +131,7 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_m9L74CqTEfCw9bHh1LeRiQ" id="(0.3424657534246575,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_m9L74SqTEfCw9bHh1LeRiQ" id="(0.5,1.0)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_m9Mi-CqTEfCw9bHh1LeRiQ" type="4001" element="_m8VARCqTEfCw9bHh1LeRiQ" source="_m8y6UiqTEfCw9bHh1LeRiQ" target="_m8jpwCqTEfCw9bHh1LeRiQ">
+        <edges xmi:type="notation:Edge" xmi:id="_m9Mi-CqTEfCw9bHh1LeRiQ" type="4001" element="_m8VARCqTEfCw9bHh1LeRiQ" target="_m8jpwCqTEfCw9bHh1LeRiQ">
           <children xmi:type="notation:Node" xmi:id="_m9Mi_CqTEfCw9bHh1LeRiQ" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m9Mi_SqTEfCw9bHh1LeRiQ" x="2" y="-11"/>
           </children>
