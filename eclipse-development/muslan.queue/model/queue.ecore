@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="queue" nsURI="http://www.example.org/queue" nsPrefix="queue">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="queue" nsURI="https://www.example.org/queue" nsPrefix="queue">
   <eClassifiers xsi:type="ecore:EClass" name="Queue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tracks" upperBound="-1"
         eType="ecore:EClass ../../muslan.collection/Collection.ecore#//Track"/>

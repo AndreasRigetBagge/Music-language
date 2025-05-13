@@ -3,8 +3,8 @@
 package collection;
 
 import org.eclipse.emf.common.util.EList;
-import playlist.PlayItem;
 
+import playlist.PlayItem;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,6 @@ import playlist.PlayItem;
  * @generated
  */
 public interface Track extends CategorizedElement, PlayItem {
-
 	/**
 	 * Returns the value of the '<em><b>Compositions</b></em>' reference list.
 	 * The list contents are of type {@link collection.Composition}.
@@ -37,4 +36,5 @@ public interface Track extends CategorizedElement, PlayItem {
 	 * @generated
 	 */
 	EList<Composition> getCompositions();
+
 } // Track

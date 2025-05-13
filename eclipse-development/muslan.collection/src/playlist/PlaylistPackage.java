@@ -37,7 +37,7 @@ public interface PlaylistPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.example.org/playlist";
+	String eNS_URI = "https://www.example.org/playlist";
 
 	/**
 	 * The package namespace name.

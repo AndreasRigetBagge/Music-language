@@ -21,9 +21,13 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import pbconfig.PbconfigPackage;
+
 import pbconfig.impl.PbconfigPackageImpl;
+
 import playlist.PlaylistPackage;
+
 import playlist.impl.PlaylistPackageImpl;
 
 /**

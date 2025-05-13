@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<queue:Queue xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:queue="http://www.example.org/queue">
-  <tracks href="Root.collection#//@collection.1/@categorizedelements.1"/>
-  <tracks href="Root.collection#//@collection.1/@categorizedelements.4"/>
+<queue:Queue xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:queue="https://www.example.org/queue">
+  <tracks href="ExampleCollection.collection#//@collection.1/@categorizedelements.1"/>
+  <tracks href="ExampleCollection.collection#//@collection.1/@categorizedelements.5"/>
 </queue:Queue>
