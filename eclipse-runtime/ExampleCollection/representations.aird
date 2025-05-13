@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:relation="http://www.example.org/relation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:relation="https://www.example.org/relation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_avw8wCqTEfCw9bHh1LeRiQ" selectedViews="_lnZ0sCqTEfCw9bHh1LeRiQ" version="15.4.1.202403191723">
     <semanticResources>Example.relation</semanticResources>
     <semanticResources>ExampleCollection.collection</semanticResources>
@@ -24,17 +24,6 @@
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_m8jpwSqTEfCw9bHh1LeRiQ" fontName="Fira Sans" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m8jpwiqTEfCw9bHh1LeRiQ" x="645" y="20" width="200" height="100"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_m8y6UiqTEfCw9bHh1LeRiQ" type="2001" element="_m6d_EiqTEfCw9bHh1LeRiQ">
-          <children xmi:type="notation:Node" xmi:id="_m8y6VSqTEfCw9bHh1LeRiQ" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_m8y6ViqTEfCw9bHh1LeRiQ" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_m83LwCqTEfCw9bHh1LeRiQ" type="3004" element="_m6d_EyqTEfCw9bHh1LeRiQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_m83LwSqTEfCw9bHh1LeRiQ" fontName="Fira Sans"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m83LwiqTEfCw9bHh1LeRiQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_m8y6UyqTEfCw9bHh1LeRiQ" fontName="Fira Sans"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m8y6VCqTEfCw9bHh1LeRiQ" x="500" y="265" width="100" height="100"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_m8zhYCqTEfCw9bHh1LeRiQ" type="2001" element="_m6emISqTEfCw9bHh1LeRiQ">
           <children xmi:type="notation:Node" xmi:id="_m8zhYyqTEfCw9bHh1LeRiQ" type="5002">
@@ -329,7 +318,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6f0QiqTEfCw9bHh1LeRiQ" name="Location of 'Heimat'" tooltipText="Create a new track location" incomingEdges="_6M6qsCqUEfCtMbZih3mPng" width="6" height="8" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6f0QiqTEfCw9bHh1LeRiQ" name="['Location of \'' + self.track.Name + '\''/]" tooltipText="Create a new track location" incomingEdges="_6M6qsCqUEfCtMbZih3mPng" width="6" height="8" resizeKind="NSEW">
       <target xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.0"/>
       <semanticElements xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.0"/>
       <ownedStyle xmi:type="diagram:Lozenge" uid="_m77XoCqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="255,255,255" borderLineStyle="dash" labelPosition="node" width="6" height="8" color="138,226,52">
@@ -337,7 +326,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m77-sSqTEfCw9bHh1LeRiQ" name="Location of 'Numb (Official Music Video) [4K UPGRADE] '" tooltipText="Create a new track location" incomingEdges="_6M7RxCqUEfCtMbZih3mPng" width="6" height="8" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m77-sSqTEfCw9bHh1LeRiQ" name="['Location of \'' + self.track.Name + '\''/]" tooltipText="Create a new track location" incomingEdges="_6M7RxCqUEfCtMbZih3mPng" width="6" height="8" resizeKind="NSEW">
       <target xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.1"/>
       <semanticElements xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.1"/>
       <ownedStyle xmi:type="diagram:Lozenge" uid="_m79M0CqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="255,255,255" borderLineStyle="dash" labelPosition="node" width="6" height="8" color="138,226,52">

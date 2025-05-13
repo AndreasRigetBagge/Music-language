@@ -222,7 +222,6 @@ public interface CollectionPackage extends EPackage {
 	 */
 	int TRACK_OPERATION_COUNT = CATEGORIZED_ELEMENT_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link collection.impl.AlbumImpl <em>Album</em>}' class.
 	 * <!-- begin-user-doc -->

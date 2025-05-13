@@ -38,7 +38,7 @@ public interface PbconfigPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://example.com";
+	String eNS_URI = "https://www.example.org/pbconfig";
 
 	/**
 	 * The package namespace name.
@@ -46,7 +46,7 @@ public interface PbconfigPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "muslan";
+	String eNS_PREFIX = "pbconfig";
 
 	/**
 	 * The singleton instance of the package.
