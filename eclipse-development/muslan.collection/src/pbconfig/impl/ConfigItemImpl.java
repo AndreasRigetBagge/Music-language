@@ -4,23 +4,25 @@ package pbconfig.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import pbconfig.ConfigItem;
 import pbconfig.PbconfigPackage;
-import pbconfig.ValueOption;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Value Option</b></em>'.
+ * An implementation of the model object '<em><b>Config Item</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ValueOptionImpl extends OptionImpl implements ValueOption {
+public abstract class ConfigItemImpl extends MinimalEObjectImpl.Container implements ConfigItem {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ValueOptionImpl() {
+	protected ConfigItemImpl() {
 		super();
 	}
 
@@ -31,7 +33,7 @@ public class ValueOptionImpl extends OptionImpl implements ValueOption {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PbconfigPackage.Literals.VALUE_OPTION;
+		return PbconfigPackage.Literals.CONFIG_ITEM;
 	}
 
-} //ValueOptionImpl
+} //ConfigItemImpl

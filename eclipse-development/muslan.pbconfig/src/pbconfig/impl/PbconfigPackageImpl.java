@@ -4,17 +4,20 @@ package pbconfig.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import pbconfig.BooleanConfig;
+import pbconfig.ConfigItem;
 import pbconfig.Configuration;
-import pbconfig.FlagOption;
-import pbconfig.Option;
+import pbconfig.FlagConfig;
+import pbconfig.IntegerConfig;
+import pbconfig.NumberConfig;
 import pbconfig.PbconfigFactory;
 import pbconfig.PbconfigPackage;
-import pbconfig.ValueOption;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,21 +38,35 @@ public class PbconfigPackageImpl extends EPackageImpl implements PbconfigPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass optionEClass = null;
+	private EClass configItemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass flagOptionEClass = null;
+	private EClass flagConfigEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass valueOptionEClass = null;
+	private EClass numberConfigEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum booleanConfigEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum integerConfigEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -137,7 +154,7 @@ public class PbconfigPackageImpl extends EPackageImpl implements PbconfigPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getConfiguration_Default() {
+	public EAttribute getConfiguration_Name() {
 		return (EAttribute)configurationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -147,8 +164,8 @@ public class PbconfigPackageImpl extends EPackageImpl implements PbconfigPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getOption() {
-		return optionEClass;
+	public EClass getConfigItem() {
+		return configItemEClass;
 	}
 
 	/**
@@ -157,8 +174,8 @@ public class PbconfigPackageImpl extends EPackageImpl implements PbconfigPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getFlagOption() {
-		return flagOptionEClass;
+	public EClass getFlagConfig() {
+		return flagConfigEClass;
 	}
 
 	/**
@@ -167,8 +184,68 @@ public class PbconfigPackageImpl extends EPackageImpl implements PbconfigPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getValueOption() {
-		return valueOptionEClass;
+	public EAttribute getFlagConfig_Value() {
+		return (EAttribute)flagConfigEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFlagConfig_Kind() {
+		return (EAttribute)flagConfigEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNumberConfig() {
+		return numberConfigEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNumberConfig_Value() {
+		return (EAttribute)numberConfigEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNumberConfig_Kind() {
+		return (EAttribute)numberConfigEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getBooleanConfig() {
+		return booleanConfigEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getIntegerConfig() {
+		return integerConfigEEnum;
 	}
 
 	/**
@@ -202,13 +279,21 @@ public class PbconfigPackageImpl extends EPackageImpl implements PbconfigPackage
 		// Create classes and their features
 		configurationEClass = createEClass(CONFIGURATION);
 		createEReference(configurationEClass, CONFIGURATION__OPTION);
-		createEAttribute(configurationEClass, CONFIGURATION__DEFAULT);
+		createEAttribute(configurationEClass, CONFIGURATION__NAME);
 
-		optionEClass = createEClass(OPTION);
+		configItemEClass = createEClass(CONFIG_ITEM);
 
-		flagOptionEClass = createEClass(FLAG_OPTION);
+		flagConfigEClass = createEClass(FLAG_CONFIG);
+		createEAttribute(flagConfigEClass, FLAG_CONFIG__VALUE);
+		createEAttribute(flagConfigEClass, FLAG_CONFIG__KIND);
 
-		valueOptionEClass = createEClass(VALUE_OPTION);
+		numberConfigEClass = createEClass(NUMBER_CONFIG);
+		createEAttribute(numberConfigEClass, NUMBER_CONFIG__VALUE);
+		createEAttribute(numberConfigEClass, NUMBER_CONFIG__KIND);
+
+		// Create enums
+		booleanConfigEEnum = createEEnum(BOOLEAN_CONFIG);
+		integerConfigEEnum = createEEnum(INTEGER_CONFIG);
 	}
 
 	/**
@@ -239,19 +324,31 @@ public class PbconfigPackageImpl extends EPackageImpl implements PbconfigPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		flagOptionEClass.getESuperTypes().add(this.getOption());
-		valueOptionEClass.getESuperTypes().add(this.getOption());
+		flagConfigEClass.getESuperTypes().add(this.getConfigItem());
+		numberConfigEClass.getESuperTypes().add(this.getConfigItem());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(configurationEClass, Configuration.class, "Configuration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConfiguration_Option(), this.getOption(), null, "option", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConfiguration_Default(), ecorePackage.getEBoolean(), "default", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfiguration_Option(), this.getConfigItem(), null, "option", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConfiguration_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(optionEClass, Option.class, "Option", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(configItemEClass, ConfigItem.class, "ConfigItem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(flagOptionEClass, FlagOption.class, "FlagOption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(flagConfigEClass, FlagConfig.class, "FlagConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFlagConfig_Value(), ecorePackage.getEBoolean(), "Value", null, 0, 1, FlagConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFlagConfig_Kind(), this.getBooleanConfig(), "Kind", null, 0, 1, FlagConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(valueOptionEClass, ValueOption.class, "ValueOption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(numberConfigEClass, NumberConfig.class, "NumberConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNumberConfig_Value(), ecorePackage.getEInt(), "Value", null, 0, 1, NumberConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNumberConfig_Kind(), this.getIntegerConfig(), "Kind", null, 0, 1, NumberConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(booleanConfigEEnum, BooleanConfig.class, "BooleanConfig");
+		addEEnumLiteral(booleanConfigEEnum, BooleanConfig.SHUFFLE);
+		addEEnumLiteral(booleanConfigEEnum, BooleanConfig.SKIP_UNAVAILABLE);
+
+		initEEnum(integerConfigEEnum, IntegerConfig.class, "IntegerConfig");
+		addEEnumLiteral(integerConfigEEnum, IntegerConfig.SLEEP_TIMER);
 
 		// Create resource
 		createResource(eNS_URI);

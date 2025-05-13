@@ -6,12 +6,25 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>pbconfig.ecore</foreignModel>
   <genPackages prefix="Pbconfig" disposableProviderFactory="true" ecorePackage="pbconfig.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="pbconfig.ecore#//BooleanConfig">
+      <genEnumLiterals ecoreEnumLiteral="pbconfig.ecore#//BooleanConfig/Shuffle"/>
+      <genEnumLiterals ecoreEnumLiteral="pbconfig.ecore#//BooleanConfig/SkipUnavailable"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="pbconfig.ecore#//IntegerConfig">
+      <genEnumLiterals ecoreEnumLiteral="pbconfig.ecore#//IntegerConfig/SleepTimer"/>
+    </genEnums>
     <genClasses ecoreClass="pbconfig.ecore#//Configuration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pbconfig.ecore#//Configuration/option"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pbconfig.ecore#//Configuration/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pbconfig.ecore#//Configuration/Name"/>
     </genClasses>
-    <genClasses ecoreClass="pbconfig.ecore#//Option"/>
-    <genClasses ecoreClass="pbconfig.ecore#//FlagOption"/>
-    <genClasses ecoreClass="pbconfig.ecore#//ValueOption"/>
+    <genClasses ecoreClass="pbconfig.ecore#//ConfigItem"/>
+    <genClasses ecoreClass="pbconfig.ecore#//FlagConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pbconfig.ecore#//FlagConfig/Value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pbconfig.ecore#//FlagConfig/Kind"/>
+    </genClasses>
+    <genClasses ecoreClass="pbconfig.ecore#//NumberConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pbconfig.ecore#//NumberConfig/Value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pbconfig.ecore#//NumberConfig/Kind"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

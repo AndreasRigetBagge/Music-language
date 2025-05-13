@@ -72,23 +72,23 @@ public class PbconfigSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PbconfigPackage.OPTION: {
-				Option option = (Option)theEObject;
-				T result = caseOption(option);
+			case PbconfigPackage.CONFIG_ITEM: {
+				ConfigItem configItem = (ConfigItem)theEObject;
+				T result = caseConfigItem(configItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PbconfigPackage.FLAG_OPTION: {
-				FlagOption flagOption = (FlagOption)theEObject;
-				T result = caseFlagOption(flagOption);
-				if (result == null) result = caseOption(flagOption);
+			case PbconfigPackage.FLAG_CONFIG: {
+				FlagConfig flagConfig = (FlagConfig)theEObject;
+				T result = caseFlagConfig(flagConfig);
+				if (result == null) result = caseConfigItem(flagConfig);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PbconfigPackage.VALUE_OPTION: {
-				ValueOption valueOption = (ValueOption)theEObject;
-				T result = caseValueOption(valueOption);
-				if (result == null) result = caseOption(valueOption);
+			case PbconfigPackage.NUMBER_CONFIG: {
+				NumberConfig numberConfig = (NumberConfig)theEObject;
+				T result = caseNumberConfig(numberConfig);
+				if (result == null) result = caseConfigItem(numberConfig);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,47 +112,47 @@ public class PbconfigSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Option</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Config Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Option</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Config Item</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOption(Option object) {
+	public T caseConfigItem(ConfigItem object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Flag Option</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Flag Config</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Flag Option</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Flag Config</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFlagOption(FlagOption object) {
+	public T caseFlagConfig(FlagConfig object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Value Option</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Number Config</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Value Option</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Number Config</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseValueOption(ValueOption object) {
+	public T caseNumberConfig(NumberConfig object) {
 		return null;
 	}
 

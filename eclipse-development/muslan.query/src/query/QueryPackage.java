@@ -2,7 +2,9 @@
  */
 package query;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -86,13 +88,13 @@ public interface QueryPackage extends EPackage {
 	int QUERY__FILTER = PlaylistPackage.PLAY_ITEM_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * The feature id for the '<em><b>Typpe</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY__TYPE = PlaylistPackage.PLAY_ITEM_FEATURE_COUNT + 2;
+	int QUERY__TYPPE = PlaylistPackage.PLAY_ITEM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Query</em>' class.
@@ -381,6 +383,16 @@ public interface QueryPackage extends EPackage {
 	 */
 	int OPERATOR_OPERATION_COUNT = 0;
 
+	/**
+	 * The meta object id for the '{@link query.PlayItemType <em>Play Item Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see query.PlayItemType
+	 * @see query.impl.QueryPackageImpl#getPlayItemType()
+	 * @generated
+	 */
+	int PLAY_ITEM_TYPE = 9;
+
 
 	/**
 	 * Returns the meta object for class '{@link query.Query <em>Query</em>}'.
@@ -415,15 +427,15 @@ public interface QueryPackage extends EPackage {
 	EReference getQuery_Filter();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link query.Query#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link query.Query#getTyppe <em>Typpe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see query.Query#getType()
+	 * @return the meta object for the attribute '<em>Typpe</em>'.
+	 * @see query.Query#getTyppe()
 	 * @see #getQuery()
 	 * @generated
 	 */
-	EReference getQuery_Type();
+	EAttribute getQuery_Typpe();
 
 	/**
 	 * Returns the meta object for class '{@link query.FilterClause <em>Filter Clause</em>}'.
@@ -561,6 +573,16 @@ public interface QueryPackage extends EPackage {
 	EClass getOperator();
 
 	/**
+	 * Returns the meta object for enum '{@link query.PlayItemType <em>Play Item Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Play Item Type</em>'.
+	 * @see query.PlayItemType
+	 * @generated
+	 */
+	EEnum getPlayItemType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -610,12 +632,12 @@ public interface QueryPackage extends EPackage {
 		EReference QUERY__FILTER = eINSTANCE.getQuery_Filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Typpe</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference QUERY__TYPE = eINSTANCE.getQuery_Type();
+		EAttribute QUERY__TYPPE = eINSTANCE.getQuery_Typpe();
 
 		/**
 		 * The meta object literal for the '{@link query.impl.FilterClauseImpl <em>Filter Clause</em>}' class.
@@ -736,6 +758,16 @@ public interface QueryPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OPERATOR = eINSTANCE.getOperator();
+
+		/**
+		 * The meta object literal for the '{@link query.PlayItemType <em>Play Item Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see query.PlayItemType
+		 * @see query.impl.QueryPackageImpl#getPlayItemType()
+		 * @generated
+		 */
+		EEnum PLAY_ITEM_TYPE = eINSTANCE.getPlayItemType();
 
 	}
 

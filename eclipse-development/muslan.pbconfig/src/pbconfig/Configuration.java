@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link pbconfig.Configuration#getOption <em>Option</em>}</li>
- *   <li>{@link pbconfig.Configuration#isDefault <em>Default</em>}</li>
+ *   <li>{@link pbconfig.Configuration#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see pbconfig.PbconfigPackage#getConfiguration()
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Configuration extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Option</b></em>' containment reference list.
-	 * The list contents are of type {@link pbconfig.Option}.
+	 * The list contents are of type {@link pbconfig.ConfigItem}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Option</em>' containment reference list.
@@ -34,28 +34,28 @@ public interface Configuration extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Option> getOption();
+	EList<ConfigItem> getOption();
 
 	/**
-	 * Returns the value of the '<em><b>Default</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default</em>' attribute.
-	 * @see #setDefault(boolean)
-	 * @see pbconfig.PbconfigPackage#getConfiguration_Default()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see pbconfig.PbconfigPackage#getConfiguration_Name()
 	 * @model
 	 * @generated
 	 */
-	boolean isDefault();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link pbconfig.Configuration#isDefault <em>Default</em>}' attribute.
+	 * Sets the value of the '{@link pbconfig.Configuration#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default</em>' attribute.
-	 * @see #isDefault()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setDefault(boolean value);
+	void setName(String value);
 
 } // Configuration

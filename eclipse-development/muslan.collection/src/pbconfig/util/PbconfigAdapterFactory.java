@@ -72,16 +72,16 @@ public class PbconfigAdapterFactory extends AdapterFactoryImpl {
 				return createConfigurationAdapter();
 			}
 			@Override
-			public Adapter caseOption(Option object) {
-				return createOptionAdapter();
+			public Adapter caseConfigItem(ConfigItem object) {
+				return createConfigItemAdapter();
 			}
 			@Override
-			public Adapter caseFlagOption(FlagOption object) {
-				return createFlagOptionAdapter();
+			public Adapter caseFlagConfig(FlagConfig object) {
+				return createFlagConfigAdapter();
 			}
 			@Override
-			public Adapter caseValueOption(ValueOption object) {
-				return createValueOptionAdapter();
+			public Adapter caseNumberConfig(NumberConfig object) {
+				return createNumberConfigAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -118,44 +118,44 @@ public class PbconfigAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pbconfig.Option <em>Option</em>}'.
+	 * Creates a new adapter for an object of class '{@link pbconfig.ConfigItem <em>Config Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pbconfig.Option
+	 * @see pbconfig.ConfigItem
 	 * @generated
 	 */
-	public Adapter createOptionAdapter() {
+	public Adapter createConfigItemAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pbconfig.FlagOption <em>Flag Option</em>}'.
+	 * Creates a new adapter for an object of class '{@link pbconfig.FlagConfig <em>Flag Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pbconfig.FlagOption
+	 * @see pbconfig.FlagConfig
 	 * @generated
 	 */
-	public Adapter createFlagOptionAdapter() {
+	public Adapter createFlagConfigAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pbconfig.ValueOption <em>Value Option</em>}'.
+	 * Creates a new adapter for an object of class '{@link pbconfig.NumberConfig <em>Number Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pbconfig.ValueOption
+	 * @see pbconfig.NumberConfig
 	 * @generated
 	 */
-	public Adapter createValueOptionAdapter() {
+	public Adapter createNumberConfigAdapter() {
 		return null;
 	}
 

@@ -4,7 +4,9 @@ package query.impl;
 
 import collection.CollectionPackage;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -20,6 +22,7 @@ import query.Clause;
 import query.FilterClause;
 import query.Operator;
 import query.OrClause;
+import query.PlayItemType;
 import query.Query;
 import query.QueryFactory;
 import query.QueryPackage;
@@ -95,6 +98,13 @@ public class QueryPackageImpl extends EPackageImpl implements QueryPackage {
 	 * @generated
 	 */
 	private EClass operatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum playItemTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -197,8 +207,8 @@ public class QueryPackageImpl extends EPackageImpl implements QueryPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getQuery_Type() {
-		return (EReference)queryEClass.getEStructuralFeatures().get(2);
+	public EAttribute getQuery_Typpe() {
+		return (EAttribute)queryEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -337,6 +347,16 @@ public class QueryPackageImpl extends EPackageImpl implements QueryPackage {
 	 * @generated
 	 */
 	@Override
+	public EEnum getPlayItemType() {
+		return playItemTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public QueryFactory getQueryFactory() {
 		return (QueryFactory)getEFactoryInstance();
 	}
@@ -363,7 +383,7 @@ public class QueryPackageImpl extends EPackageImpl implements QueryPackage {
 		queryEClass = createEClass(QUERY);
 		createEReference(queryEClass, QUERY__COLLECTION);
 		createEReference(queryEClass, QUERY__FILTER);
-		createEReference(queryEClass, QUERY__TYPE);
+		createEAttribute(queryEClass, QUERY__TYPPE);
 
 		filterClauseEClass = createEClass(FILTER_CLAUSE);
 
@@ -385,6 +405,9 @@ public class QueryPackageImpl extends EPackageImpl implements QueryPackage {
 		valueEClass = createEClass(VALUE);
 
 		operatorEClass = createEClass(OPERATOR);
+
+		// Create enums
+		playItemTypeEEnum = createEEnum(PLAY_ITEM_TYPE);
 	}
 
 	/**
@@ -428,7 +451,7 @@ public class QueryPackageImpl extends EPackageImpl implements QueryPackage {
 		initEClass(queryEClass, Query.class, "Query", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQuery_Collection(), theCollectionPackage.getCollection(), null, "collection", null, 1, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuery_Filter(), this.getFilterClause(), null, "filter", null, 1, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuery_Type(), this.getType(), null, "type", null, 1, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuery_Typpe(), this.getPlayItemType(), "typpe", null, 0, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(filterClauseEClass, FilterClause.class, "FilterClause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -450,6 +473,11 @@ public class QueryPackageImpl extends EPackageImpl implements QueryPackage {
 		initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(operatorEClass, Operator.class, "Operator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
+		initEEnum(playItemTypeEEnum, PlayItemType.class, "PlayItemType");
+		addEEnumLiteral(playItemTypeEEnum, PlayItemType.TRACK);
+		addEEnumLiteral(playItemTypeEEnum, PlayItemType.ALBUM);
 
 		// Create resource
 		createResource(eNS_URI);

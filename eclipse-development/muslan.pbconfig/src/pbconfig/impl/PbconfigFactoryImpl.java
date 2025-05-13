@@ -3,6 +3,7 @@
 package pbconfig.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -57,11 +58,44 @@ public class PbconfigFactoryImpl extends EFactoryImpl implements PbconfigFactory
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case PbconfigPackage.CONFIGURATION: return createConfiguration();
-			case PbconfigPackage.OPTION: return createOption();
-			case PbconfigPackage.FLAG_OPTION: return createFlagOption();
-			case PbconfigPackage.VALUE_OPTION: return createValueOption();
+			case PbconfigPackage.FLAG_CONFIG: return createFlagConfig();
+			case PbconfigPackage.NUMBER_CONFIG: return createNumberConfig();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case PbconfigPackage.BOOLEAN_CONFIG:
+				return createBooleanConfigFromString(eDataType, initialValue);
+			case PbconfigPackage.INTEGER_CONFIG:
+				return createIntegerConfigFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case PbconfigPackage.BOOLEAN_CONFIG:
+				return convertBooleanConfigToString(eDataType, instanceValue);
+			case PbconfigPackage.INTEGER_CONFIG:
+				return convertIntegerConfigToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -82,9 +116,9 @@ public class PbconfigFactoryImpl extends EFactoryImpl implements PbconfigFactory
 	 * @generated
 	 */
 	@Override
-	public Option createOption() {
-		OptionImpl option = new OptionImpl();
-		return option;
+	public FlagConfig createFlagConfig() {
+		FlagConfigImpl flagConfig = new FlagConfigImpl();
+		return flagConfig;
 	}
 
 	/**
@@ -93,9 +127,9 @@ public class PbconfigFactoryImpl extends EFactoryImpl implements PbconfigFactory
 	 * @generated
 	 */
 	@Override
-	public FlagOption createFlagOption() {
-		FlagOptionImpl flagOption = new FlagOptionImpl();
-		return flagOption;
+	public NumberConfig createNumberConfig() {
+		NumberConfigImpl numberConfig = new NumberConfigImpl();
+		return numberConfig;
 	}
 
 	/**
@@ -103,10 +137,39 @@ public class PbconfigFactoryImpl extends EFactoryImpl implements PbconfigFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ValueOption createValueOption() {
-		ValueOptionImpl valueOption = new ValueOptionImpl();
-		return valueOption;
+	public BooleanConfig createBooleanConfigFromString(EDataType eDataType, String initialValue) {
+		BooleanConfig result = BooleanConfig.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBooleanConfigToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntegerConfig createIntegerConfigFromString(EDataType eDataType, String initialValue) {
+		IntegerConfig result = IntegerConfig.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertIntegerConfigToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

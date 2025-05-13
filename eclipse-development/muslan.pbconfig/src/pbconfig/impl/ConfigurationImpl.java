@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import pbconfig.ConfigItem;
 import pbconfig.Configuration;
-import pbconfig.Option;
 import pbconfig.PbconfigPackage;
 
 /**
@@ -31,7 +31,7 @@ import pbconfig.PbconfigPackage;
  * </p>
  * <ul>
  *   <li>{@link pbconfig.impl.ConfigurationImpl#getOption <em>Option</em>}</li>
- *   <li>{@link pbconfig.impl.ConfigurationImpl#isDefault <em>Default</em>}</li>
+ *   <li>{@link pbconfig.impl.ConfigurationImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,27 +45,27 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Option> option;
+	protected EList<ConfigItem> option;
 
 	/**
-	 * The default value of the '{@link #isDefault() <em>Default</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isDefault()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean DEFAULT_EDEFAULT = false;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isDefault() <em>Default</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isDefault()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean default_ = DEFAULT_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,9 +92,9 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 * @generated
 	 */
 	@Override
-	public EList<Option> getOption() {
+	public EList<ConfigItem> getOption() {
 		if (option == null) {
-			option = new EObjectContainmentEList<Option>(Option.class, this, PbconfigPackage.CONFIGURATION__OPTION);
+			option = new EObjectContainmentEList<ConfigItem>(ConfigItem.class, this, PbconfigPackage.CONFIGURATION__OPTION);
 		}
 		return option;
 	}
@@ -105,8 +105,8 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 * @generated
 	 */
 	@Override
-	public boolean isDefault() {
-		return default_;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -115,11 +115,11 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 * @generated
 	 */
 	@Override
-	public void setDefault(boolean newDefault) {
-		boolean oldDefault = default_;
-		default_ = newDefault;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PbconfigPackage.CONFIGURATION__DEFAULT, oldDefault, default_));
+			eNotify(new ENotificationImpl(this, Notification.SET, PbconfigPackage.CONFIGURATION__NAME, oldName, name));
 	}
 
 	/**
@@ -146,8 +146,8 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 		switch (featureID) {
 			case PbconfigPackage.CONFIGURATION__OPTION:
 				return getOption();
-			case PbconfigPackage.CONFIGURATION__DEFAULT:
-				return isDefault();
+			case PbconfigPackage.CONFIGURATION__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -163,10 +163,10 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 		switch (featureID) {
 			case PbconfigPackage.CONFIGURATION__OPTION:
 				getOption().clear();
-				getOption().addAll((Collection<? extends Option>)newValue);
+				getOption().addAll((Collection<? extends ConfigItem>)newValue);
 				return;
-			case PbconfigPackage.CONFIGURATION__DEFAULT:
-				setDefault((Boolean)newValue);
+			case PbconfigPackage.CONFIGURATION__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -183,8 +183,8 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 			case PbconfigPackage.CONFIGURATION__OPTION:
 				getOption().clear();
 				return;
-			case PbconfigPackage.CONFIGURATION__DEFAULT:
-				setDefault(DEFAULT_EDEFAULT);
+			case PbconfigPackage.CONFIGURATION__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -200,8 +200,8 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 		switch (featureID) {
 			case PbconfigPackage.CONFIGURATION__OPTION:
 				return option != null && !option.isEmpty();
-			case PbconfigPackage.CONFIGURATION__DEFAULT:
-				return default_ != DEFAULT_EDEFAULT;
+			case PbconfigPackage.CONFIGURATION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -216,8 +216,8 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (default: ");
-		result.append(default_);
+		result.append(" (Name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

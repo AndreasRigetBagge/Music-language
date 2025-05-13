@@ -17,7 +17,7 @@ import playlist.PlayItem;
  * <ul>
  *   <li>{@link query.Query#getCollection <em>Collection</em>}</li>
  *   <li>{@link query.Query#getFilter <em>Filter</em>}</li>
- *   <li>{@link query.Query#getType <em>Type</em>}</li>
+ *   <li>{@link query.Query#getTyppe <em>Typpe</em>}</li>
  * </ul>
  *
  * @see query.QueryPackage#getQuery()
@@ -70,25 +70,28 @@ public interface Query extends PlayItem {
 	void setFilter(FilterClause value);
 
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Typpe</b></em>' attribute.
+	 * The literals are from the enumeration {@link query.PlayItemType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' containment reference.
-	 * @see #setType(Type)
-	 * @see query.QueryPackage#getQuery_Type()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Typpe</em>' attribute.
+	 * @see query.PlayItemType
+	 * @see #setTyppe(PlayItemType)
+	 * @see query.QueryPackage#getQuery_Typpe()
+	 * @model
 	 * @generated
 	 */
-	Type getType();
+	PlayItemType getTyppe();
 
 	/**
-	 * Sets the value of the '{@link query.Query#getType <em>Type</em>}' containment reference.
+	 * Sets the value of the '{@link query.Query#getTyppe <em>Typpe</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' containment reference.
-	 * @see #getType()
+	 * @param value the new value of the '<em>Typpe</em>' attribute.
+	 * @see query.PlayItemType
+	 * @see #getTyppe()
 	 * @generated
 	 */
-	void setType(Type value);
+	void setTyppe(PlayItemType value);
 
 } // Query

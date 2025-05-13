@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import playlist.impl.PlayItemImpl;
 
 import query.FilterClause;
+import query.PlayItemType;
 import query.Query;
 import query.QueryPackage;
-import query.Type;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import query.Type;
  * <ul>
  *   <li>{@link query.impl.QueryImpl#getCollection <em>Collection</em>}</li>
  *   <li>{@link query.impl.QueryImpl#getFilter <em>Filter</em>}</li>
- *   <li>{@link query.impl.QueryImpl#getType <em>Type</em>}</li>
+ *   <li>{@link query.impl.QueryImpl#getTyppe <em>Typpe</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,14 +56,24 @@ public class QueryImpl extends PlayItemImpl implements Query {
 	protected FilterClause filter;
 
 	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+	 * The default value of the '{@link #getTyppe() <em>Typpe</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getTyppe()
 	 * @generated
 	 * @ordered
 	 */
-	protected Type type;
+	protected static final PlayItemType TYPPE_EDEFAULT = PlayItemType.TRACK;
+
+	/**
+	 * The cached value of the '{@link #getTyppe() <em>Typpe</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTyppe()
+	 * @generated
+	 * @ordered
+	 */
+	protected PlayItemType typpe = TYPPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,23 +185,8 @@ public class QueryImpl extends PlayItemImpl implements Query {
 	 * @generated
 	 */
 	@Override
-	public Type getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
-		Type oldType = type;
-		type = newType;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, QueryPackage.QUERY__TYPE, oldType, newType);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public PlayItemType getTyppe() {
+		return typpe;
 	}
 
 	/**
@@ -200,18 +195,11 @@ public class QueryImpl extends PlayItemImpl implements Query {
 	 * @generated
 	 */
 	@Override
-	public void setType(Type newType) {
-		if (newType != type) {
-			NotificationChain msgs = null;
-			if (type != null)
-				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - QueryPackage.QUERY__TYPE, null, msgs);
-			if (newType != null)
-				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - QueryPackage.QUERY__TYPE, null, msgs);
-			msgs = basicSetType(newType, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, QueryPackage.QUERY__TYPE, newType, newType));
+	public void setTyppe(PlayItemType newTyppe) {
+		PlayItemType oldTyppe = typpe;
+		typpe = newTyppe == null ? TYPPE_EDEFAULT : newTyppe;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QueryPackage.QUERY__TYPPE, oldTyppe, typpe));
 	}
 
 	/**
@@ -224,8 +212,6 @@ public class QueryImpl extends PlayItemImpl implements Query {
 		switch (featureID) {
 			case QueryPackage.QUERY__FILTER:
 				return basicSetFilter(null, msgs);
-			case QueryPackage.QUERY__TYPE:
-				return basicSetType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -243,8 +229,8 @@ public class QueryImpl extends PlayItemImpl implements Query {
 				return basicGetCollection();
 			case QueryPackage.QUERY__FILTER:
 				return getFilter();
-			case QueryPackage.QUERY__TYPE:
-				return getType();
+			case QueryPackage.QUERY__TYPPE:
+				return getTyppe();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -263,8 +249,8 @@ public class QueryImpl extends PlayItemImpl implements Query {
 			case QueryPackage.QUERY__FILTER:
 				setFilter((FilterClause)newValue);
 				return;
-			case QueryPackage.QUERY__TYPE:
-				setType((Type)newValue);
+			case QueryPackage.QUERY__TYPPE:
+				setTyppe((PlayItemType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -284,8 +270,8 @@ public class QueryImpl extends PlayItemImpl implements Query {
 			case QueryPackage.QUERY__FILTER:
 				setFilter((FilterClause)null);
 				return;
-			case QueryPackage.QUERY__TYPE:
-				setType((Type)null);
+			case QueryPackage.QUERY__TYPPE:
+				setTyppe(TYPPE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -303,10 +289,26 @@ public class QueryImpl extends PlayItemImpl implements Query {
 				return collection != null;
 			case QueryPackage.QUERY__FILTER:
 				return filter != null;
-			case QueryPackage.QUERY__TYPE:
-				return type != null;
+			case QueryPackage.QUERY__TYPPE:
+				return typpe != TYPPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (typpe: ");
+		result.append(typpe);
+		result.append(')');
+		return result.toString();
 	}
 
 } //QueryImpl

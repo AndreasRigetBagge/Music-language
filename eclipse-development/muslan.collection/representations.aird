@@ -8,7 +8,7 @@
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_tNybEBRJEfCiPZXAA1bMQw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tp-AwBRJEfCiPZXAA1bMQw" name=" class diagram" repPath="#_tptiEBRJEfCiPZXAA1bMQw" changeId="1746516199248">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tp-AwBRJEfCiPZXAA1bMQw" name=" class diagram" repPath="#_tptiEBRJEfCiPZXAA1bMQw" changeId="1747123307200">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="Collection.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -133,10 +133,6 @@
         <children xmi:type="notation:Node" xmi:id="_2GHNGCpKEfC81fij5N4-ug" type="2003" element="_2GEJsCpKEfC81fij5N4-ug">
           <children xmi:type="notation:Node" xmi:id="_2GH0ECpKEfC81fij5N4-ug" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_2GH0ESpKEfC81fij5N4-ug" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_2GH0FCpKEfC81fij5N4-ug" type="3010" element="_2GF-5CpKEfC81fij5N4-ug">
-              <styles xmi:type="notation:FontStyle" xmi:id="_2GH0FSpKEfC81fij5N4-ug" fontName=".AppleSystemUIFont" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_2GH0FipKEfC81fij5N4-ug"/>
-            </children>
             <children xmi:type="notation:Node" xmi:id="_2GH0FypKEfC81fij5N4-ug" type="3010" element="_2GF-5ipKEfC81fij5N4-ug">
               <styles xmi:type="notation:FontStyle" xmi:id="_2GH0GCpKEfC81fij5N4-ug" fontName=".AppleSystemUIFont" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_2GH0GSpKEfC81fij5N4-ug"/>
@@ -672,15 +668,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_2GF-5CpKEfC81fij5N4-ug" name="default : EBoolean = false" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="platform:/resource/muslan.pbconfig/model/pbconfig.ecore#//Configuration/default"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/muslan.pbconfig/model/pbconfig.ecore#//Configuration/default"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_2GF-5SpKEfC81fij5N4-ug" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_2GF-5ipKEfC81fij5N4-ug" name=" option : Option" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_2GF-5ipKEfC81fij5N4-ug" name=" option : ConfigItem" tooltipText="">
         <target xmi:type="ecore:EReference" href="platform:/resource/muslan.pbconfig/model/pbconfig.ecore#//Configuration/option"/>
         <semanticElements xmi:type="ecore:EReference" href="platform:/resource/muslan.pbconfig/model/pbconfig.ecore#//Configuration/option"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_2GF-5ypKEfC81fij5N4-ug" labelAlignment="LEFT" color="114,159,207">

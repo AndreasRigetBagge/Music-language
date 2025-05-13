@@ -86,12 +86,25 @@
     <genClasses ecoreClass="../../muslan.playlist/model/playlist.ecore#//PlayItem"/>
   </genPackages>
   <genPackages prefix="Pbconfig" ecorePackage="../../muslan.pbconfig/model/pbconfig.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../muslan.pbconfig/model/pbconfig.ecore#//BooleanConfig">
+      <genEnumLiterals ecoreEnumLiteral="../../muslan.pbconfig/model/pbconfig.ecore#//BooleanConfig/Shuffle"/>
+      <genEnumLiterals ecoreEnumLiteral="../../muslan.pbconfig/model/pbconfig.ecore#//BooleanConfig/SkipUnavailable"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../muslan.pbconfig/model/pbconfig.ecore#//IntegerConfig">
+      <genEnumLiterals ecoreEnumLiteral="../../muslan.pbconfig/model/pbconfig.ecore#//IntegerConfig/SleepTimer"/>
+    </genEnums>
     <genClasses ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//Configuration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration/option"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration/Name"/>
     </genClasses>
-    <genClasses ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//Option"/>
-    <genClasses ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//FlagOption"/>
-    <genClasses ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//ValueOption"/>
+    <genClasses image="false" ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//ConfigItem"/>
+    <genClasses ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//FlagConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//FlagConfig/Value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//FlagConfig/Kind"/>
+    </genClasses>
+    <genClasses ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//NumberConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//NumberConfig/Value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//NumberConfig/Kind"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

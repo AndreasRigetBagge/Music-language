@@ -31,31 +31,22 @@ public interface PbconfigFactory extends EFactory {
 	Configuration createConfiguration();
 
 	/**
-	 * Returns a new object of class '<em>Option</em>'.
+	 * Returns a new object of class '<em>Flag Config</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Option</em>'.
+	 * @return a new object of class '<em>Flag Config</em>'.
 	 * @generated
 	 */
-	Option createOption();
+	FlagConfig createFlagConfig();
 
 	/**
-	 * Returns a new object of class '<em>Flag Option</em>'.
+	 * Returns a new object of class '<em>Number Config</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Flag Option</em>'.
+	 * @return a new object of class '<em>Number Config</em>'.
 	 * @generated
 	 */
-	FlagOption createFlagOption();
-
-	/**
-	 * Returns a new object of class '<em>Value Option</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Value Option</em>'.
-	 * @generated
-	 */
-	ValueOption createValueOption();
+	NumberConfig createNumberConfig();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -4,6 +4,7 @@ package pbconfig;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -76,13 +77,13 @@ public interface PbconfigPackage extends EPackage {
 	int CONFIGURATION__OPTION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Default</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFIGURATION__DEFAULT = 1;
+	int CONFIGURATION__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Configuration</em>' class.
@@ -103,88 +104,144 @@ public interface PbconfigPackage extends EPackage {
 	int CONFIGURATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link pbconfig.impl.OptionImpl <em>Option</em>}' class.
+	 * The meta object id for the '{@link pbconfig.impl.ConfigItemImpl <em>Config Item</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see pbconfig.impl.OptionImpl
-	 * @see pbconfig.impl.PbconfigPackageImpl#getOption()
+	 * @see pbconfig.impl.ConfigItemImpl
+	 * @see pbconfig.impl.PbconfigPackageImpl#getConfigItem()
 	 * @generated
 	 */
-	int OPTION = 1;
+	int CONFIG_ITEM = 1;
 
 	/**
-	 * The number of structural features of the '<em>Option</em>' class.
+	 * The number of structural features of the '<em>Config Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPTION_FEATURE_COUNT = 0;
+	int CONFIG_ITEM_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Option</em>' class.
+	 * The number of operations of the '<em>Config Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPTION_OPERATION_COUNT = 0;
+	int CONFIG_ITEM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link pbconfig.impl.FlagOptionImpl <em>Flag Option</em>}' class.
+	 * The meta object id for the '{@link pbconfig.impl.FlagConfigImpl <em>Flag Config</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see pbconfig.impl.FlagOptionImpl
-	 * @see pbconfig.impl.PbconfigPackageImpl#getFlagOption()
+	 * @see pbconfig.impl.FlagConfigImpl
+	 * @see pbconfig.impl.PbconfigPackageImpl#getFlagConfig()
 	 * @generated
 	 */
-	int FLAG_OPTION = 2;
+	int FLAG_CONFIG = 2;
 
 	/**
-	 * The number of structural features of the '<em>Flag Option</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLAG_OPTION_FEATURE_COUNT = OPTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Flag Option</em>' class.
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLAG_OPTION_OPERATION_COUNT = OPTION_OPERATION_COUNT + 0;
+	int FLAG_CONFIG__VALUE = CONFIG_ITEM_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link pbconfig.impl.ValueOptionImpl <em>Value Option</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pbconfig.impl.ValueOptionImpl
-	 * @see pbconfig.impl.PbconfigPackageImpl#getValueOption()
-	 * @generated
-	 */
-	int VALUE_OPTION = 3;
-
-	/**
-	 * The number of structural features of the '<em>Value Option</em>' class.
+	 * The feature id for the '<em><b>Kind</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_OPTION_FEATURE_COUNT = OPTION_FEATURE_COUNT + 0;
+	int FLAG_CONFIG__KIND = CONFIG_ITEM_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Value Option</em>' class.
+	 * The number of structural features of the '<em>Flag Config</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_OPTION_OPERATION_COUNT = OPTION_OPERATION_COUNT + 0;
+	int FLAG_CONFIG_FEATURE_COUNT = CONFIG_ITEM_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Flag Config</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLAG_CONFIG_OPERATION_COUNT = CONFIG_ITEM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pbconfig.impl.NumberConfigImpl <em>Number Config</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pbconfig.impl.NumberConfigImpl
+	 * @see pbconfig.impl.PbconfigPackageImpl#getNumberConfig()
+	 * @generated
+	 */
+	int NUMBER_CONFIG = 3;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER_CONFIG__VALUE = CONFIG_ITEM_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER_CONFIG__KIND = CONFIG_ITEM_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Number Config</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER_CONFIG_FEATURE_COUNT = CONFIG_ITEM_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Number Config</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER_CONFIG_OPERATION_COUNT = CONFIG_ITEM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pbconfig.BooleanConfig <em>Boolean Config</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pbconfig.BooleanConfig
+	 * @see pbconfig.impl.PbconfigPackageImpl#getBooleanConfig()
+	 * @generated
+	 */
+	int BOOLEAN_CONFIG = 4;
+
+	/**
+	 * The meta object id for the '{@link pbconfig.IntegerConfig <em>Integer Config</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pbconfig.IntegerConfig
+	 * @see pbconfig.impl.PbconfigPackageImpl#getIntegerConfig()
+	 * @generated
+	 */
+	int INTEGER_CONFIG = 5;
 
 
 	/**
@@ -209,45 +266,109 @@ public interface PbconfigPackage extends EPackage {
 	EReference getConfiguration_Option();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pbconfig.Configuration#isDefault <em>Default</em>}'.
+	 * Returns the meta object for the attribute '{@link pbconfig.Configuration#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default</em>'.
-	 * @see pbconfig.Configuration#isDefault()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pbconfig.Configuration#getName()
 	 * @see #getConfiguration()
 	 * @generated
 	 */
-	EAttribute getConfiguration_Default();
+	EAttribute getConfiguration_Name();
 
 	/**
-	 * Returns the meta object for class '{@link pbconfig.Option <em>Option</em>}'.
+	 * Returns the meta object for class '{@link pbconfig.ConfigItem <em>Config Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Option</em>'.
-	 * @see pbconfig.Option
+	 * @return the meta object for class '<em>Config Item</em>'.
+	 * @see pbconfig.ConfigItem
 	 * @generated
 	 */
-	EClass getOption();
+	EClass getConfigItem();
 
 	/**
-	 * Returns the meta object for class '{@link pbconfig.FlagOption <em>Flag Option</em>}'.
+	 * Returns the meta object for class '{@link pbconfig.FlagConfig <em>Flag Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Flag Option</em>'.
-	 * @see pbconfig.FlagOption
+	 * @return the meta object for class '<em>Flag Config</em>'.
+	 * @see pbconfig.FlagConfig
 	 * @generated
 	 */
-	EClass getFlagOption();
+	EClass getFlagConfig();
 
 	/**
-	 * Returns the meta object for class '{@link pbconfig.ValueOption <em>Value Option</em>}'.
+	 * Returns the meta object for the attribute '{@link pbconfig.FlagConfig#isValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Value Option</em>'.
-	 * @see pbconfig.ValueOption
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see pbconfig.FlagConfig#isValue()
+	 * @see #getFlagConfig()
 	 * @generated
 	 */
-	EClass getValueOption();
+	EAttribute getFlagConfig_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pbconfig.FlagConfig#getKind <em>Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Kind</em>'.
+	 * @see pbconfig.FlagConfig#getKind()
+	 * @see #getFlagConfig()
+	 * @generated
+	 */
+	EAttribute getFlagConfig_Kind();
+
+	/**
+	 * Returns the meta object for class '{@link pbconfig.NumberConfig <em>Number Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Number Config</em>'.
+	 * @see pbconfig.NumberConfig
+	 * @generated
+	 */
+	EClass getNumberConfig();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pbconfig.NumberConfig#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see pbconfig.NumberConfig#getValue()
+	 * @see #getNumberConfig()
+	 * @generated
+	 */
+	EAttribute getNumberConfig_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pbconfig.NumberConfig#getKind <em>Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Kind</em>'.
+	 * @see pbconfig.NumberConfig#getKind()
+	 * @see #getNumberConfig()
+	 * @generated
+	 */
+	EAttribute getNumberConfig_Kind();
+
+	/**
+	 * Returns the meta object for enum '{@link pbconfig.BooleanConfig <em>Boolean Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Boolean Config</em>'.
+	 * @see pbconfig.BooleanConfig
+	 * @generated
+	 */
+	EEnum getBooleanConfig();
+
+	/**
+	 * Returns the meta object for enum '{@link pbconfig.IntegerConfig <em>Integer Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Integer Config</em>'.
+	 * @see pbconfig.IntegerConfig
+	 * @generated
+	 */
+	EEnum getIntegerConfig();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -291,42 +412,94 @@ public interface PbconfigPackage extends EPackage {
 		EReference CONFIGURATION__OPTION = eINSTANCE.getConfiguration_Option();
 
 		/**
-		 * The meta object literal for the '<em><b>Default</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONFIGURATION__DEFAULT = eINSTANCE.getConfiguration_Default();
+		EAttribute CONFIGURATION__NAME = eINSTANCE.getConfiguration_Name();
 
 		/**
-		 * The meta object literal for the '{@link pbconfig.impl.OptionImpl <em>Option</em>}' class.
+		 * The meta object literal for the '{@link pbconfig.impl.ConfigItemImpl <em>Config Item</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pbconfig.impl.OptionImpl
-		 * @see pbconfig.impl.PbconfigPackageImpl#getOption()
+		 * @see pbconfig.impl.ConfigItemImpl
+		 * @see pbconfig.impl.PbconfigPackageImpl#getConfigItem()
 		 * @generated
 		 */
-		EClass OPTION = eINSTANCE.getOption();
+		EClass CONFIG_ITEM = eINSTANCE.getConfigItem();
 
 		/**
-		 * The meta object literal for the '{@link pbconfig.impl.FlagOptionImpl <em>Flag Option</em>}' class.
+		 * The meta object literal for the '{@link pbconfig.impl.FlagConfigImpl <em>Flag Config</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pbconfig.impl.FlagOptionImpl
-		 * @see pbconfig.impl.PbconfigPackageImpl#getFlagOption()
+		 * @see pbconfig.impl.FlagConfigImpl
+		 * @see pbconfig.impl.PbconfigPackageImpl#getFlagConfig()
 		 * @generated
 		 */
-		EClass FLAG_OPTION = eINSTANCE.getFlagOption();
+		EClass FLAG_CONFIG = eINSTANCE.getFlagConfig();
 
 		/**
-		 * The meta object literal for the '{@link pbconfig.impl.ValueOptionImpl <em>Value Option</em>}' class.
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pbconfig.impl.ValueOptionImpl
-		 * @see pbconfig.impl.PbconfigPackageImpl#getValueOption()
 		 * @generated
 		 */
-		EClass VALUE_OPTION = eINSTANCE.getValueOption();
+		EAttribute FLAG_CONFIG__VALUE = eINSTANCE.getFlagConfig_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Kind</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FLAG_CONFIG__KIND = eINSTANCE.getFlagConfig_Kind();
+
+		/**
+		 * The meta object literal for the '{@link pbconfig.impl.NumberConfigImpl <em>Number Config</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pbconfig.impl.NumberConfigImpl
+		 * @see pbconfig.impl.PbconfigPackageImpl#getNumberConfig()
+		 * @generated
+		 */
+		EClass NUMBER_CONFIG = eINSTANCE.getNumberConfig();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NUMBER_CONFIG__VALUE = eINSTANCE.getNumberConfig_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Kind</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NUMBER_CONFIG__KIND = eINSTANCE.getNumberConfig_Kind();
+
+		/**
+		 * The meta object literal for the '{@link pbconfig.BooleanConfig <em>Boolean Config</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pbconfig.BooleanConfig
+		 * @see pbconfig.impl.PbconfigPackageImpl#getBooleanConfig()
+		 * @generated
+		 */
+		EEnum BOOLEAN_CONFIG = eINSTANCE.getBooleanConfig();
+
+		/**
+		 * The meta object literal for the '{@link pbconfig.IntegerConfig <em>Integer Config</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pbconfig.IntegerConfig
+		 * @see pbconfig.impl.PbconfigPackageImpl#getIntegerConfig()
+		 * @generated
+		 */
+		EEnum INTEGER_CONFIG = eINSTANCE.getIntegerConfig();
 
 	}
 
