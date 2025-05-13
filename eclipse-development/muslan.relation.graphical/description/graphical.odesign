@@ -11,14 +11,14 @@
           </style>
         </nodeMappings>
         <nodeMappings name="DerivedCollectionNode" label="Derived Collected" labelDirectEdit="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" semanticCandidatesExpression="[ eAllContents()->select(e | not e.oclIsTypeOf(MainCollection)) /]" domainClass="relation::DerivedCollection">
-          <style xsi:type="style:BundledImageDescription" labelSize="9" showIcon="false" tooltipExpression="Create a derived collection" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
+          <style xsi:type="style:BundledImageDescription" labelSize="9" showIcon="false" tooltipExpression="[ self.name /]" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="CollectionReferenceNode" label="Collection Reference" domainClass="relation::CollectionRerefence">
-          <style xsi:type="style:BundledImageDescription" labelSize="9" showIcon="false" labelExpression="[ if self.pointsTo &lt;> null then self.pointsTo.Name else '' endif /]" tooltipExpression="Create a collection reference that points to one of your already existing collections! \o/" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
+          <style xsi:type="style:BundledImageDescription" labelSize="9" showIcon="false" labelExpression="[ if self.pointsTo &lt;> null then self.pointsTo.Name else '' endif /]" tooltipExpression="[ 'Reference to ' + (if self.pointsTo &lt;> null then self.pointsTo.Name else '' endif) /]" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
@@ -29,13 +29,6 @@
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="LocationNode" label="Location" domainClass="relation::Location">
-          <style xsi:type="style:LozengeNodeDescription" borderSizeComputationExpression="2" borderLineStyle="dash" labelSize="9" showIcon="false" labelExpression="[if self.track &lt;> null then 'Location of \'' + self.track.Name + '\'' else 'No Track selected' endif /]" tooltipExpression="Create a new track location" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW" widthComputationExpression="6" heightComputationExpression="8">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
           </style>
         </nodeMappings>
         <edgeMappings name="LinkEdge" label="Link" sourceMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode'] //@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']" targetMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode'] //@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']" targetFinderExpression="[ self.outgoing /]" sourceFinderExpression="[ self.incoming /]" domainClass="relation::Link" useDomainElement="true">
@@ -51,7 +44,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="SourceToLocationEdge" label="SourceToLocation" sourceMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']" targetMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']" targetFinderExpression="feature:locations">
+        <edgeMappings name="SourceToLocationEdge" label="SourceToLocation" sourceMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']" targetFinderExpression="feature:locations">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -78,17 +71,6 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="relation::DerivedCollection" referenceName="providers"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="LocationCreationTool" label="Location Creator" nodeMappings="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']">
-            <variable name="container">
-              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="selectedSource" candidatesExpression="[ eAllContents()->select(c | c.oclIsTypeOf(Source))/]"/>
-            </variable>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[ selectedSource /]">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="relation::Location" referenceName="locations"/>
-              </firstModelOperations>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="CollectionReferenceCreationTool" label="Collection Reference Creator" nodeMappings="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']">
