@@ -8,7 +8,7 @@
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_D9PDICpyEfCKdpz83_C8QQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_D9locCpyEfCKdpz83_C8QQ" name="relation" repPath="#_D9gI4CpyEfCKdpz83_C8QQ" changeId="1746554873756">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_D9locCpyEfCKdpz83_C8QQ" name="relation" repPath="#_D9gI4CpyEfCKdpz83_C8QQ" changeId="1747126713379">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="relation.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -109,20 +109,110 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_gPQm8Sp1EfCKdpz83_C8QQ" fontName="Fira Sans" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gPQm8ip1EfCKdpz83_C8QQ" x="60" y="35" width="120" height="100"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_0StuMCp1EfCKdpz83_C8QQ" type="Note" fontName="Fira Sans" description="Should MainCollection own sources?" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0StuMSp1EfCKdpz83_C8QQ" source="specificStyles">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0StuMip1EfCKdpz83_C8QQ" key="verticalAlignment" value="8"/>
+        <children xmi:type="notation:Shape" xmi:id="_0IpEYC_UEfCf0bMf2denbQ" type="Note" fontName="Fira Sans" description="No link may have&#xA;maincollection as&#xA;an incoming&#xA;connection" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0IpEYS_UEfCf0bMf2denbQ" source="specificStyles">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0IpEYi_UEfCf0bMf2denbQ" key="verticalAlignment" value="8"/>
           </eAnnotations>
-          <children xmi:type="notation:BasicDecorationNode" xmi:id="_0SuVQCp1EfCKdpz83_C8QQ" type="DiagramName">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_0Iq5kC_UEfCf0bMf2denbQ" type="DiagramName">
             <element xsi:nil="true"/>
           </children>
-          <children xmi:type="notation:BasicDecorationNode" xmi:id="_0SuVQSp1EfCKdpz83_C8QQ" type="Description">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_0Iq5kS_UEfCf0bMf2denbQ" type="Description">
             <element xsi:nil="true"/>
           </children>
-          <styles xmi:type="notation:TextStyle" xmi:id="_0StuMyp1EfCKdpz83_C8QQ" textAlignment="Center"/>
-          <styles xmi:type="notation:LineTypeStyle" xmi:id="_0StuNCp1EfCKdpz83_C8QQ"/>
+          <styles xmi:type="notation:TextStyle" xmi:id="_0IpEYy_UEfCf0bMf2denbQ" textAlignment="Center"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_0IpEZC_UEfCf0bMf2denbQ"/>
           <element xsi:nil="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0StuNSp1EfCKdpz83_C8QQ" x="470" y="25"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0IpEZS_UEfCf0bMf2denbQ" x="-51" y="280"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_6upIAC_UEfCf0bMf2denbQ" type="Note" fontName="Fira Sans" description="A link cannot&#xA;have same incoming&#xA;and outgoing" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6upIAS_UEfCf0bMf2denbQ" source="specificStyles">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6upIAi_UEfCf0bMf2denbQ" key="verticalAlignment" value="8"/>
+          </eAnnotations>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_6upvEC_UEfCf0bMf2denbQ" type="DiagramName">
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_6uqWIC_UEfCf0bMf2denbQ" type="Description">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:TextStyle" xmi:id="_6upIAy_UEfCf0bMf2denbQ" textAlignment="Center"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_6upIBC_UEfCf0bMf2denbQ"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6upIBS_UEfCf0bMf2denbQ" x="-47" y="377" width="108"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_VAttoC_VEfCf0bMf2denbQ" type="Note" fontName="Fira Sans" description="All ICollections&#xA;must be eventually&#xA;flow into the&#xA;MainCollection" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VAttoS_VEfCf0bMf2denbQ" source="specificStyles">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VAttoi_VEfCf0bMf2denbQ" key="verticalAlignment" value="8"/>
+          </eAnnotations>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_VAuUsC_VEfCf0bMf2denbQ" type="DiagramName">
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_VAuUsS_VEfCf0bMf2denbQ" type="Description">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:TextStyle" xmi:id="_VAttoy_VEfCf0bMf2denbQ" textAlignment="Center"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_VAttpC_VEfCf0bMf2denbQ"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VAttpS_VEfCf0bMf2denbQ" x="-75" y="35"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_Z6-BIC_VEfCf0bMf2denbQ" type="Note" fontName="Fira Sans" description="There may only&#xA;exists one single &#xA;instance of &#xA;MainCollection" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Z6-BIS_VEfCf0bMf2denbQ" source="specificStyles">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Z6-BIi_VEfCf0bMf2denbQ" key="verticalAlignment" value="8"/>
+          </eAnnotations>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_Z6-BJi_VEfCf0bMf2denbQ" type="DiagramName">
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_Z6-BJy_VEfCf0bMf2denbQ" type="Description">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:TextStyle" xmi:id="_Z6-BIy_VEfCf0bMf2denbQ" textAlignment="Center"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_Z6-BJC_VEfCf0bMf2denbQ"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z6-BJS_VEfCf0bMf2denbQ" x="-69" y="125"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_hbFjoC_VEfCf0bMf2denbQ" type="Note" fontName="Fira Sans" description="Every Track with&#xA;an associated Location&#xA;must be part of the&#xA;MainCollection" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hbFjoS_VEfCf0bMf2denbQ" source="specificStyles">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hbFjoi_VEfCf0bMf2denbQ" key="verticalAlignment" value="8"/>
+          </eAnnotations>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_hbFjpi_VEfCf0bMf2denbQ" type="DiagramName">
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_hbFjpy_VEfCf0bMf2denbQ" type="Description">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:TextStyle" xmi:id="_hbFjoy_VEfCf0bMf2denbQ" textAlignment="Center"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_hbFjpC_VEfCf0bMf2denbQ"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hbFjpS_VEfCf0bMf2denbQ" x="970" y="94"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_9-M-0C_VEfCf0bMf2denbQ" type="Note" fontName="Fira Sans" description="The name&#xA; (either explicitly given&#xA;or inherited from a reference) &#xA;of an ICollection must be&#xA;unique&#xA;" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9-M-0S_VEfCf0bMf2denbQ" source="specificStyles">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9-M-0i_VEfCf0bMf2denbQ" key="verticalAlignment" value="8"/>
+          </eAnnotations>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_9-Nl4C_VEfCf0bMf2denbQ" type="DiagramName">
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_9-Nl4S_VEfCf0bMf2denbQ" type="Description">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:TextStyle" xmi:id="_9-M-0y_VEfCf0bMf2denbQ" textAlignment="Center"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_9-M-1C_VEfCf0bMf2denbQ"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9-M-1S_VEfCf0bMf2denbQ" x="635" y="431"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_LGttMC_WEfCf0bMf2denbQ" type="Note" fontName="Fira Sans" description="The name of a&#xA;Source must be&#xA;unique" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LGttMS_WEfCf0bMf2denbQ" source="specificStyles">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LGttMi_WEfCf0bMf2denbQ" key="verticalAlignment" value="8"/>
+          </eAnnotations>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_LGuUQC_WEfCf0bMf2denbQ" type="DiagramName">
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_LGuUQS_WEfCf0bMf2denbQ" type="Description">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:TextStyle" xmi:id="_LGttMy_WEfCf0bMf2denbQ" textAlignment="Center"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_LGttNC_WEfCf0bMf2denbQ"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LGttNS_WEfCf0bMf2denbQ" x="675" y="200"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_D9qg8ipyEfCKdpz83_C8QQ"/>
         <edges xmi:type="notation:Edge" xmi:id="_QeTXACpyEfCKdpz83_C8QQ" type="4001" element="_QeMpUCpyEfCKdpz83_C8QQ" source="_Fux5QCpyEfCKdpz83_C8QQ" target="_KENBYCpyEfCKdpz83_C8QQ">
