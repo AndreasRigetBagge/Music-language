@@ -8,7 +8,7 @@
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_D9PDICpyEfCKdpz83_C8QQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_D9locCpyEfCKdpz83_C8QQ" name="relation" repPath="#_D9gI4CpyEfCKdpz83_C8QQ" changeId="1747126713379">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_D9locCpyEfCKdpz83_C8QQ" name="relation" repPath="#_D9gI4CpyEfCKdpz83_C8QQ" changeId="1747150068812">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="relation.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -169,7 +169,7 @@
           <element xsi:nil="true"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z6-BJS_VEfCf0bMf2denbQ" x="-69" y="125"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_hbFjoC_VEfCf0bMf2denbQ" type="Note" fontName="Fira Sans" description="Every Track with&#xA;an associated Location&#xA;must be part of the&#xA;MainCollection" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+        <children xmi:type="notation:Shape" xmi:id="_hbFjoC_VEfCf0bMf2denbQ" type="Note" fontName="Fira Sans" description="root.maincollection&#xA;must be part of providers" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hbFjoS_VEfCf0bMf2denbQ" source="specificStyles">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hbFjoi_VEfCf0bMf2denbQ" key="verticalAlignment" value="8"/>
           </eAnnotations>
@@ -182,7 +182,7 @@
           <styles xmi:type="notation:TextStyle" xmi:id="_hbFjoy_VEfCf0bMf2denbQ" textAlignment="Center"/>
           <styles xmi:type="notation:LineTypeStyle" xmi:id="_hbFjpC_VEfCf0bMf2denbQ"/>
           <element xsi:nil="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hbFjpS_VEfCf0bMf2denbQ" x="970" y="94"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hbFjpS_VEfCf0bMf2denbQ" x="185" y="5"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_9-M-0C_VEfCf0bMf2denbQ" type="Note" fontName="Fira Sans" description="The name&#xA; (either explicitly given&#xA;or inherited from a reference) &#xA;of an ICollection must be&#xA;unique&#xA;" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9-M-0S_VEfCf0bMf2denbQ" source="specificStyles">
