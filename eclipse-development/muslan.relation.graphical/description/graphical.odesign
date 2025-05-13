@@ -4,28 +4,28 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CollectionRelationDiagramRepresentation" domainClass="relation::RelationRoot" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="MainCollectionNode" label="Main Collection" labelDirectEdit="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" domainClass="relation::MainCollection">
-          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" tooltipExpression="Create a main collection" labelPosition="node" resizeKind="NSEW" width="20" height="10">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" tooltipExpression="['Main Collection: ' + self.name /]" labelPosition="node" resizeKind="NSEW" width="20" height="10">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="DerivedCollectionNode" label="Derived Collected" labelDirectEdit="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" semanticCandidatesExpression="[ eAllContents()->select(e | not e.oclIsTypeOf(MainCollection)) /]" domainClass="relation::DerivedCollection">
-          <style xsi:type="style:BundledImageDescription" borderSizeComputationExpression="2" labelSize="9" showIcon="false" tooltipExpression="Create a derived collection" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
+          <style xsi:type="style:BundledImageDescription" labelSize="9" showIcon="false" tooltipExpression="Create a derived collection" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="CollectionReferenceNode" label="Collection Reference" domainClass="relation::CollectionRerefence">
-          <style xsi:type="style:BundledImageDescription" borderSizeComputationExpression="2" labelSize="9" showIcon="false" labelExpression="[ if self.pointsTo &lt;> null then self.pointsTo.Name else '' endif /]" tooltipExpression="Create a collection reference that points to one of your already existing collections! \o/" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
+          <style xsi:type="style:BundledImageDescription" labelSize="9" showIcon="false" labelExpression="[ if self.pointsTo &lt;> null then self.pointsTo.Name else '' endif /]" tooltipExpression="Create a collection reference that points to one of your already existing collections! \o/" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="SourceNode" label="Source" labelDirectEdit="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" domainClass="relation::Source">
-          <style xsi:type="style:LozengeNodeDescription" borderSizeComputationExpression="2" labelSize="9" showIcon="false" tooltipExpression="Create a new source entity" labelPosition="node" resizeKind="NSEW" widthComputationExpression="8" heightComputationExpression="10">
+          <style xsi:type="style:LozengeNodeDescription" borderSizeComputationExpression="2" labelSize="9" showIcon="false" tooltipExpression="[ 'Source: ' + self.name /]" labelPosition="node" resizeKind="NSEW" widthComputationExpression="8" heightComputationExpression="10">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
@@ -64,7 +64,13 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="relation::MainCollection" referenceName="maincollection"/>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="relation::MainCollection" referenceName="providers">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[ container /]">
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="[ self.maincollection = null /]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="maincollection" valueExpression="var:instance"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="DerivedCollectionCreationTool" label="Derived Collection Creator" nodeMappings="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']">
