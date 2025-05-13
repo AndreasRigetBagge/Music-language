@@ -17,10 +17,13 @@ create OUT : MMCollection
 
 rule DerivedCollection2Collection {
 	from 
-		s : MMRelation!DerivedCollection
+		s : MMRelation!DerivedCollection (
+			s.oclIsTypeOf(MMRelation!DerivedCollection)
+	)
 	to
 		t : MMCollection!"Collection" (
-		Name <- s.name
+		Name <- s.name,
+		categorizedelements <- s.getAllTracks()
 	)
 }
 
@@ -29,26 +32,27 @@ rule MainCollection2DerivedCollection {
 		s : MMRelation!RelationRoot
 	to
 		t : MMCollection!CollectionRoot (
-		collection <- s -> derivedCollections()
+		collection <- s.derivedCollections()
 	)
 }
 
 helper context MMRelation!RelationRoot def: derivedCollections() : Sequence(MMCollection!DerivedCollection) =
-        MMCollection!DerivedCollection.allInstances()
-            ->collect(derivedCollection | derivedCollection.oclIsTypeOf(MMCollection!DerivedCollection) and derivedCollection.name = self.name)
+        self.providers->select(p | not p.oclIsTypeOf(MMRelation!DerivedCollection));
+
+helper context MMRelation!DerivedCollection def: getAllTracks() : Sequence(MMCollection!Track) =
+    MMRelation!RelationRoot.allInstances()->collect(r | r.links)->flatten()->select(link | link.outgoing.oclIsTypeOf(MMRelation!DerivedCollection))
+        ->collect(link | link.incoming)
+        ->select(c | c.oclIsTypeOf(MMRelation!CollectionReference) or c.oclIsTypeOf(MMRelation!DerivedCollection))
+        ->collect(c | 
+            if c.oclIsTypeOf(MMRelation!CollectionReference) then
+                c.pointsTo.categorizedelements->select(t | t.oclIsTypeOf(MMCollection!Track)) -- oclAsType does not exist in ATL
+            else
+                c.oclAsType(MMRelation!DerivedCollection).getAllTracks()
+            endif
+        )->flatten();
+
+helper context MMRelation!ICollection def: getTracks() : Sequence(MMCollection!Track) =
+    self.tracks->select(t | t.oclIsTypeOf(MMCollection!Track));
 
 
-rule ICollection2Collection {
-    from 
-        s : MMRelation!CollectionRerefence
-    to
-        t : MMRelation!"Collection" (
-            Name <- s.pointsTo.name
-    )
-}
-
-
-helper context MMRelation!CollectionRoot def: derivedCollections() : Sequence(MMRelation!DerivedCollection) =
-        MMRelation!DerivedCollection.allInstances()
-            ->select(derivedCollection | derivedCollection.oclIsTypeOf(MMRelation!DerivedCollection))
 
