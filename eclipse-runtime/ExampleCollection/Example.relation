@@ -2,7 +2,6 @@
 <relation:RelationRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:relation="https://www.example.org/relation" maincollection="//@providers.0">
   <links outgoing="//@providers.1" incoming="//@providers.2"/>
   <links outgoing="//@providers.0" incoming="//@providers.1"/>
-  <links/>
   <links outgoing="//@providers.4" incoming="//@providers.3"/>
   <links outgoing="//@providers.0" incoming="//@providers.4"/>
   <providers xsi:type="relation:MainCollection" name="My Complete Collection">

@@ -21,8 +21,5 @@ Export-Package: collection,
  playlist.impl,
  playlist.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport,
- muslan.collection;visibility:=reexport,
- muslan.pbconfig;visibility:=reexport,
- muslan.playlist;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

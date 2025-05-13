@@ -1,0 +1,54 @@
+-- @nsURI MMRelation=https://www.example.org/relation
+-- @nsURI MMCollection=https://www.example.org/collection
+
+module Rel2Col;
+
+
+create OUT : MMCollection
+  from IN : MMRelation;
+
+--rule 2 {
+	--from s : MMRelation!
+	--to t : MMCollection! (
+--		 <- ,
+		
+--	)
+--}
+
+rule DerivedCollection2Collection {
+	from 
+		s : MMRelation!DerivedCollection
+	to
+		t : MMCollection!"Collection" (
+		Name <- s.name
+	)
+}
+
+rule MainCollection2DerivedCollection {
+	from 
+		s : MMRelation!RelationRoot
+	to
+		t : MMCollection!CollectionRoot (
+		collection <- s -> derivedCollections()
+	)
+}
+
+helper context MMRelation!RelationRoot def: derivedCollections() : Sequence(MMCollection!DerivedCollection) =
+        MMCollection!DerivedCollection.allInstances()
+            ->collect(derivedCollection | derivedCollection.oclIsTypeOf(MMCollection!DerivedCollection) and derivedCollection.name = self.name)
+
+
+rule ICollection2Collection {
+    from 
+        s : MMRelation!CollectionRerefence
+    to
+        t : MMRelation!"Collection" (
+            Name <- s.pointsTo.name
+    )
+}
+
+
+helper context MMRelation!CollectionRoot def: derivedCollections() : Sequence(MMRelation!DerivedCollection) =
+        MMRelation!DerivedCollection.allInstances()
+            ->select(derivedCollection | derivedCollection.oclIsTypeOf(MMRelation!DerivedCollection))
+
