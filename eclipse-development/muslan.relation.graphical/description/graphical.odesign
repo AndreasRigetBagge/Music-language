@@ -11,7 +11,7 @@
           </style>
         </nodeMappings>
         <nodeMappings name="DerivedCollectionNode" label="Derived Collected" labelDirectEdit="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" semanticCandidatesExpression="[ eAllContents()->select(e | not e.oclIsTypeOf(MainCollection)) /]" domainClass="relation::DerivedCollection">
-          <style xsi:type="style:BundledImageDescription" labelSize="9" showIcon="false" tooltipExpression="[ self.name /]" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
+          <style xsi:type="style:BundledImageDescription" labelSize="9" showIcon="false" tooltipExpression="[ self.name /]" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="triangle">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
