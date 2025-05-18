@@ -11,26 +11,32 @@
       <genEnumLiterals ecoreEnumLiteral="Query.ecore#//PlayItemType/Track"/>
       <genEnumLiterals ecoreEnumLiteral="Query.ecore#//PlayItemType/Album"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Query.ecore#//OperatorType">
+      <genEnumLiterals ecoreEnumLiteral="Query.ecore#//OperatorType/SameAs"/>
+      <genEnumLiterals ecoreEnumLiteral="Query.ecore#//OperatorType/DifferentFrom"/>
+      <genEnumLiterals ecoreEnumLiteral="Query.ecore#//OperatorType/LessThan"/>
+      <genEnumLiterals ecoreEnumLiteral="Query.ecore#//OperatorType/GreaterThan"/>
+    </genEnums>
     <genClasses ecoreClass="Query.ecore#//Query">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Query.ecore#//Query/collection"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Query.ecore#//Query/filter"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Query.ecore#//Query/typpe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Query.ecore#//Query/type"/>
     </genClasses>
     <genClasses ecoreClass="Query.ecore#//FilterClause"/>
     <genClasses ecoreClass="Query.ecore#//AndClause">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Query.ecore#//AndClause/filterclause"/>
     </genClasses>
-    <genClasses ecoreClass="Query.ecore#//Type"/>
     <genClasses ecoreClass="Query.ecore#//OrClause">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Query.ecore#//OrClause/filterclause"/>
     </genClasses>
     <genClasses ecoreClass="Query.ecore#//Clause">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Query.ecore#//Clause/attribute"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Query.ecore#//Clause/value"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Query.ecore#//Clause/operator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Query.ecore#//Clause/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Query.ecore#//Clause/operator"/>
     </genClasses>
-    <genClasses ecoreClass="Query.ecore#//Attribute"/>
-    <genClasses ecoreClass="Query.ecore#//Value"/>
-    <genClasses ecoreClass="Query.ecore#//Operator"/>
+    <genClasses ecoreClass="Query.ecore#//CategoryClause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Query.ecore#//CategoryClause/category"/>
+    </genClasses>
+    <genClasses ecoreClass="Query.ecore#//ArtistClause"/>
+    <genClasses ecoreClass="Query.ecore#//TitleClause"/>
   </genPackages>
 </genmodel:GenModel>

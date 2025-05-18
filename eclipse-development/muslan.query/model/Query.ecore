@@ -6,31 +6,36 @@
         eType="ecore:EClass ../../muslan.collection/Collection.ecore#//Collection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" lowerBound="1"
         eType="#//FilterClause" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typpe" eType="#//PlayItemType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//PlayItemType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FilterClause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FilterClause" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="AndClause" eSuperTypes="#//FilterClause">
     <eStructuralFeatures xsi:type="ecore:EReference" name="filterclause" lowerBound="2"
         upperBound="2" eType="#//FilterClause" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Type"/>
   <eClassifiers xsi:type="ecore:EClass" name="OrClause" eSuperTypes="#//FilterClause">
     <eStructuralFeatures xsi:type="ecore:EReference" name="filterclause" lowerBound="2"
         upperBound="2" eType="#//FilterClause" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Clause" eSuperTypes="#//FilterClause">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
-        eType="#//Attribute" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Value"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" lowerBound="1"
-        eType="#//Operator" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Clause" abstract="true" eSuperTypes="#//FilterClause">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
+        eType="#//OperatorType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Attribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Value"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Operator"/>
   <eClassifiers xsi:type="ecore:EEnum" name="PlayItemType">
     <eLiterals name="Track"/>
     <eLiterals name="Album" value="1"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OperatorType">
+    <eLiterals name="SameAs"/>
+    <eLiterals name="DifferentFrom" value="1"/>
+    <eLiterals name="LessThan" value="2"/>
+    <eLiterals name="GreaterThan" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CategoryClause" eSuperTypes="#//Clause">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" lowerBound="1"
+        eType="ecore:EEnum ../../muslan.collection/Collection.ecore#//CategoryType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArtistClause" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TitleClause" eSuperTypes="#//Clause"/>
 </ecore:EPackage>
