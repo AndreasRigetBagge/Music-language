@@ -1,0 +1,4 @@
+module query2queue;
+
+create OUT : QUEUE
+	from IN : QUERY;

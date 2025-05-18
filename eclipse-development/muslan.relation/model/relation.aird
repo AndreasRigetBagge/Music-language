@@ -8,7 +8,7 @@
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_D9PDICpyEfCKdpz83_C8QQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_D9locCpyEfCKdpz83_C8QQ" name="relation" repPath="#_D9gI4CpyEfCKdpz83_C8QQ" changeId="1747571131623">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_D9locCpyEfCKdpz83_C8QQ" name="relation" repPath="#_D9gI4CpyEfCKdpz83_C8QQ" changeId="1747571543712">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="relation.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -214,7 +214,7 @@
           <element xsi:nil="true"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LGttNS_WEfCf0bMf2denbQ" x="333" y="259"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_h2adgDPiEfCqrqvKKfNlsg" type="Note" fontName="Fira Sans" description="The name&#xA; (either explicitly given&#xA;or inherited from a reference) &#xA;of an ICollection must be&#xA;unique&#xA;" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+        <children xmi:type="notation:Shape" xmi:id="_h2adgDPiEfCqrqvKKfNlsg" type="Note" fontName="Fira Sans" description=" " fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h2adgTPiEfCqrqvKKfNlsg" source="specificStyles">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h2adgjPiEfCqrqvKKfNlsg" key="verticalAlignment" value="8"/>
           </eAnnotations>
