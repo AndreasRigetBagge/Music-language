@@ -28,8 +28,8 @@
     <genClasses ecoreClass="relation.ecore#//DerivedCollection">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relation.ecore#//DerivedCollection/name"/>
     </genClasses>
-    <genClasses ecoreClass="relation.ecore#//CollectionRerefence">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//CollectionRerefence/pointsTo"/>
+    <genClasses ecoreClass="relation.ecore#//CollectionReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//CollectionReference/pointsTo"/>
     </genClasses>
     <genClasses ecoreClass="relation.ecore#//ICollection"/>
     <genClasses ecoreClass="relation.ecore#//RelationRoot">

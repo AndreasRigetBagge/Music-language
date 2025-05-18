@@ -177,7 +177,7 @@ public class RelationValidator extends EObjectValidator implements IStartup {
 		return switch(c)
 		{
 		case DerivedCollection dc -> dc.getName();
-		case CollectionRerefence ref -> ref.getPointsTo().getName();
+		case CollectionReference ref -> ref.getPointsTo().getName();
 		default -> "";
 		};
 	}

@@ -4,6 +4,7 @@
     <semanticResources>Example.relation</semanticResources>
     <semanticResources>ExampleCollection.collection</semanticResources>
     <semanticResources>My.pbconfig</semanticResources>
+    <semanticResources>My.collection</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_lnZ0sCqTEfCw9bHh1LeRiQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m55-YCqTEfCw9bHh1LeRiQ" name="ExampleRelationDiagram" repPath="#_m5tKECqTEfCw9bHh1LeRiQ" changeId="1746558906189">
@@ -288,16 +289,16 @@
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6emISqTEfCw9bHh1LeRiQ" name="When life isn't lifing" tooltipText="Create a collection reference that points to one of your already existing collections! \o/" outgoingEdges="_m8SkACqTEfCw9bHh1LeRiQ" width="10" height="10" resizeKind="NSEW">
-      <target xmi:type="relation:CollectionRerefence" href="Example.relation#//@providers.2"/>
-      <semanticElements xmi:type="relation:CollectionRerefence" href="Example.relation#//@providers.2"/>
+      <target xmi:type="relation:CollectionReference" href="Example.relation#//@providers.2"/>
+      <semanticElements xmi:type="relation:CollectionReference" href="Example.relation#//@providers.2"/>
       <ownedStyle xmi:type="diagram:BundledImage" uid="_m6emIiqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,73,110" labelPosition="node" shape="ring" color="217,196,215">
         <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6emJCqTEfCw9bHh1LeRiQ" name="Y2K" tooltipText="Create a collection reference that points to one of your already existing collections! \o/" outgoingEdges="_XXXJoSqrEfCzNujEFnD0Bw" width="10" height="10" resizeKind="NSEW">
-      <target xmi:type="relation:CollectionRerefence" href="Example.relation#//@providers.3"/>
-      <semanticElements xmi:type="relation:CollectionRerefence" href="Example.relation#//@providers.3"/>
+      <target xmi:type="relation:CollectionReference" href="Example.relation#//@providers.3"/>
+      <semanticElements xmi:type="relation:CollectionReference" href="Example.relation#//@providers.3"/>
       <ownedStyle xmi:type="diagram:BundledImage" uid="_m6fNMCqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,73,110" labelPosition="node" shape="ring" color="217,196,215">
         <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']/@style"/>
       </ownedStyle>
