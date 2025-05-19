@@ -6,9 +6,9 @@
     <semanticResources>platform:/resource/muslan.playlist/model/playlist.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.collection/model/Collection.ecore</semanticResources>
-    <semanticResources>Relation.genmodel</semanticResources>
     <semanticResources>platform:/resource/muslan.collection/model/Collection.genmodel</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.genmodel</semanticResources>
+    <semanticResources>relation.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_D9PDICpyEfCKdpz83_C8QQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_D9locCpyEfCKdpz83_C8QQ" name="relation" repPath="#_D9gI4CpyEfCKdpz83_C8QQ" changeId="1747571543712">

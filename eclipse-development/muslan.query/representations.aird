@@ -5,10 +5,10 @@
     <semanticResources>platform:/resource/muslan.playlist/model/playlist.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.collection/model/Collection.ecore</semanticResources>
-    <semanticResources>model/Query.genmodel</semanticResources>
     <semanticResources>platform:/resource/muslan.collection/model/Collection.genmodel</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.genmodel</semanticResources>
-    <semanticResources>platform:/resource/muslan.playlist/model/Playlist.genmodel</semanticResources>
+    <semanticResources>model/Query.genmodel</semanticResources>
+    <semanticResources>platform:/resource/muslan.playlist/model/playlist.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_77R0YCTKEfClaqb2N_ZnPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BWEpICTLEfClaqb2N_ZnPw" name="query class diagram" repPath="#_BV_woCTLEfClaqb2N_ZnPw" changeId="1747584377295">
