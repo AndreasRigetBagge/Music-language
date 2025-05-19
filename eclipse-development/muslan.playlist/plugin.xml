@@ -10,8 +10,8 @@
       <!-- @generated playlist -->
       <package
             uri="https://www.example.org/playlist"
-            class="muslan.playlist.PlaylistPackage"
-            genModel="model/playlist.genmodel"/>
+            class="playlist.PlaylistPackage"
+            genModel="model/Playlist.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -19,7 +19,7 @@
       <package
             uri="https://www.example.org/collection"
             class="collection.CollectionPackage"
-            genModel="model/playlist.genmodel"/>
+            genModel="model/Playlist.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -27,7 +27,8 @@
       <package
             uri="https://www.example.org/pbconfig"
             class="pbconfig.PbconfigPackage"
-            genModel="model/playlist.genmodel"/>
+            genModel="model/Playlist.genmodel"/>
    </extension>
 
+null
 </plugin>

@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<query:Query xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:query="https://www.example.org/query"/>
+<query:Query xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:query="https://www.example.org/query">
+  <collection href="ExampleCollection.collection#//@collection.1"/>
+</query:Query>

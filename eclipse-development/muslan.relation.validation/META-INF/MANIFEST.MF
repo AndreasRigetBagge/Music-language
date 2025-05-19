@@ -5,7 +5,7 @@ Bundle-SymbolicName: muslan.relation.validation;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.eclipse.swt,
  org.eclipse.jface,
- muslan.relation;bundle-version="0.1.0",
+ muslan.relation;bundle-version="0.1.0";visibility:=reexport,
  org.eclipse.emf.validation;bundle-version="1.9.0",
  org.eclipse.emf.ecore,
  org.eclipse.ui.workbench

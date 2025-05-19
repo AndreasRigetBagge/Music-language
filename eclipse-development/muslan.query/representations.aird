@@ -2,11 +2,13 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_cWq-ICTKEfClaqb2N_ZnPw" selectedViews="_77R0YCTKEfClaqb2N_ZnPw _77X7ACTKEfClaqb2N_ZnPw _77ZJICTKEfClaqb2N_ZnPw _77blYCTKEfClaqb2N_ZnPw" version="15.4.1.202403191723">
     <semanticResources>model/Query.ecore</semanticResources>
-    <semanticResources>platform:/resource/muslan.collection/Collection.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.playlist/model/playlist.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
+    <semanticResources>platform:/resource/muslan.collection/model/Collection.ecore</semanticResources>
     <semanticResources>model/Query.genmodel</semanticResources>
-    <semanticResources>platform:/resource/muslan.collection/Collection.genmodel</semanticResources>
+    <semanticResources>platform:/resource/muslan.collection/model/Collection.genmodel</semanticResources>
+    <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.genmodel</semanticResources>
+    <semanticResources>platform:/resource/muslan.playlist/model/Playlist.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_77R0YCTKEfClaqb2N_ZnPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BWEpICTLEfClaqb2N_ZnPw" name="query class diagram" repPath="#_BV_woCTLEfClaqb2N_ZnPw" changeId="1747584377295">

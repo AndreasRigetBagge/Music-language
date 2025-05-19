@@ -6,9 +6,9 @@
         eType="#//CategorizedElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//CategorizedElement ../muslan.playlist/model/playlist.ecore#//PlayItem">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="compositions" lowerBound="1"
-        upperBound="-1" eType="#//Composition" eOpposite="#//Composition/tracks"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//CategorizedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compositions" upperBound="-1"
+        eType="#//Composition" eOpposite="#//Composition/tracks"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Album" eSuperTypes="#//CategorizedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tracks" lowerBound="1"
@@ -46,9 +46,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="categories" upperBound="-1"
         eType="#//Category" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass ../muslan.pbconfig/model/pbconfig.ecore#//Configuration"
+        upperBound="-1" eType="ecore:EClass ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultConfig" lowerBound="1"
-        eType="ecore:EClass ../muslan.pbconfig/model/pbconfig.ecore#//Configuration"/>
+        eType="ecore:EClass ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration"/>
   </eClassifiers>
 </ecore:EPackage>

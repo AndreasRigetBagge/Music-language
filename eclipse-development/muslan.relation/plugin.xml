@@ -10,8 +10,8 @@
       <!-- @generated relation -->
       <package
             uri="https://www.example.org/relation"
-            class="muslan.relation.RelationPackage"
-            genModel="model/relation.genmodel"/>
+            class="relation.RelationPackage"
+            genModel="model/Relation.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -19,15 +19,7 @@
       <package
             uri="https://www.example.org/collection"
             class="collection.CollectionPackage"
-            genModel="model/relation.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated relation -->
-      <package
-            uri="https://www.example.org/playlist"
-            class="playlist.PlaylistPackage"
-            genModel="model/relation.genmodel"/>
+            genModel="model/Relation.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -35,7 +27,15 @@
       <package
             uri="https://www.example.org/pbconfig"
             class="pbconfig.PbconfigPackage"
-            genModel="model/relation.genmodel"/>
+            genModel="model/Relation.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Relation -->
+      <package
+            uri="https://www.example.org/relation"
+            class="relation.RelationPackage"
+            genModel="model/Relation.genmodel"/>
    </extension>
 
 </plugin>

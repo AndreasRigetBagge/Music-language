@@ -3,6 +3,6 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="queue" nsURI="https://www.example.org/queue" nsPrefix="queue">
   <eClassifiers xsi:type="ecore:EClass" name="Queue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tracks" upperBound="-1"
-        eType="ecore:EClass ../../muslan.collection/Collection.ecore#//Track"/>
+        eType="ecore:EClass ../../muslan.collection/model/Collection.ecore#//Track"/>
   </eClassifiers>
 </ecore:EPackage>

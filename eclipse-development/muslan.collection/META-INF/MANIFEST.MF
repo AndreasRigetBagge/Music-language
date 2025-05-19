@@ -10,13 +10,8 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: collection,
  collection.impl,
- collection.util,
- pbconfig,
- pbconfig.impl,
- pbconfig.util,
- playlist,
- playlist.impl,
- playlist.util
+ collection.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ muslan.pbconfig;visibility:=reexport
 Bundle-ActivationPolicy: lazy

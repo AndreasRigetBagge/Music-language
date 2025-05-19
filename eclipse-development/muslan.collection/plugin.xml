@@ -11,23 +11,7 @@
       <package
             uri="https://www.example.org/collection"
             class="collection.CollectionPackage"
-            genModel="Collection.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated Collection -->
-      <package
-            uri="https://www.example.org/playlist"
-            class="playlist.PlaylistPackage"
-            genModel="Collection.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated Collection -->
-      <package
-            uri="https://www.example.org/pbconfig"
-            class="pbconfig.PbconfigPackage"
-            genModel="Collection.genmodel"/>
+            genModel="model/Collection.genmodel"/>
    </extension>
 
 </plugin>

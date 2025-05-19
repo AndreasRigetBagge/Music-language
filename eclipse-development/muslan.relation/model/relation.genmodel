@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/muslan.relation/src-gen" creationIcons="false"
-    editDirectory="/muslan.relation.edit/src-gen" editorDirectory="/muslan.relation.editor/src-gen"
-    modelPluginID="muslan.relation" modelName="Relation" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0"
-    copyrightFields="false" operationReflection="true" importOrganizing="true">
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/muslan.relation/src" modelPluginID="muslan.relation"
+    modelName="Relation" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
+    usedGenPackages="../../muslan.collection/model/Collection.genmodel#//collection ../../muslan.pbconfig/model/pbconfig.genmodel#//pbconfig"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>relation.ecore</foreignModel>
-  <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Relation" basePackage="muslan" disposableProviderFactory="true"
-      ecorePackage="relation.ecore#/">
+  <genPackages prefix="Relation" disposableProviderFactory="true" ecorePackage="relation.ecore#/">
     <genClasses ecoreClass="relation.ecore#//MainCollection">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//MainCollection/sources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relation.ecore#//MainCollection/sources"/>
     </genClasses>
     <genClasses ecoreClass="relation.ecore#//Source">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//Source/locations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relation.ecore#//Source/locations"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relation.ecore#//Source/name"/>
     </genClasses>
     <genClasses ecoreClass="relation.ecore#//Location">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relation.ecore#//Location/location"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference relation.ecore#//Location/track"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//Location/track"/>
     </genClasses>
     <genClasses ecoreClass="relation.ecore#//Link">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//Link/outgoing"/>
@@ -31,80 +28,11 @@
     <genClasses ecoreClass="relation.ecore#//CollectionReference">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//CollectionReference/pointsTo"/>
     </genClasses>
-    <genClasses ecoreClass="relation.ecore#//ICollection"/>
+    <genClasses image="false" ecoreClass="relation.ecore#//ICollection"/>
     <genClasses ecoreClass="relation.ecore#//RelationRoot">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//RelationRoot/links"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//RelationRoot/providers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relation.ecore#//RelationRoot/links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relation.ecore#//RelationRoot/providers"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relation.ecore#//RelationRoot/maincollection"/>
-    </genClasses>
-  </genPackages>
-  <genPackages prefix="Collection" ecorePackage="../../muslan.collection/Collection.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../muslan.collection/Collection.ecore#//CategoryType">
-      <genEnumLiterals ecoreEnumLiteral="../../muslan.collection/Collection.ecore#//CategoryType/Rating"/>
-      <genEnumLiterals ecoreEnumLiteral="../../muslan.collection/Collection.ecore#//CategoryType/Genre"/>
-      <genEnumLiterals ecoreEnumLiteral="../../muslan.collection/Collection.ecore#//CategoryType/Tag"/>
-    </genEnums>
-    <genClasses ecoreClass="../../muslan.collection/Collection.ecore#//Collection">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//Collection/categorizedelements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.collection/Collection.ecore#//Collection/Name"/>
-    </genClasses>
-    <genClasses ecoreClass="../../muslan.collection/Collection.ecore#//Track">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//Track/compositions"/>
-    </genClasses>
-    <genClasses ecoreClass="../../muslan.collection/Collection.ecore#//Album">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//Album/tracks"/>
-    </genClasses>
-    <genClasses ecoreClass="../../muslan.collection/Collection.ecore#//Composition">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//Composition/tracks"/>
-    </genClasses>
-    <genClasses ecoreClass="../../muslan.collection/Collection.ecore#//Artist">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.collection/Collection.ecore#//Artist/Name"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="../../muslan.collection/Collection.ecore#//CategorizedElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//CategorizedElement/artists"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.collection/Collection.ecore#//CategorizedElement/Name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//CategorizedElement/category"/>
-    </genClasses>
-    <genClasses ecoreClass="../../muslan.collection/Collection.ecore#//Category">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.collection/Collection.ecore#//Category/CategoryType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.collection/Collection.ecore#//Category/Value"/>
-    </genClasses>
-    <genClasses ecoreClass="../../muslan.collection/Collection.ecore#//CollectionRoot">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//CollectionRoot/collection"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//CollectionRoot/artist"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//CollectionRoot/categories"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//CollectionRoot/configuration"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../muslan.collection/Collection.ecore#//CollectionRoot/defaultConfig"/>
-    </genClasses>
-  </genPackages>
-  <genPackages prefix="Playlist" ecorePackage="../../muslan.playlist/model/playlist.ecore#/">
-    <genClasses ecoreClass="../../muslan.playlist/model/playlist.ecore#//Playlist">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.playlist/model/playlist.ecore#//Playlist/playitem"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.playlist/model/playlist.ecore#//Playlist/configuration"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../muslan.playlist/model/playlist.ecore#//Playlist/collection"/>
-    </genClasses>
-    <genClasses ecoreClass="../../muslan.playlist/model/playlist.ecore#//PlayItem"/>
-  </genPackages>
-  <genPackages prefix="Pbconfig" ecorePackage="../../muslan.pbconfig/model/pbconfig.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../muslan.pbconfig/model/pbconfig.ecore#//BooleanConfig">
-      <genEnumLiterals ecoreEnumLiteral="../../muslan.pbconfig/model/pbconfig.ecore#//BooleanConfig/Shuffle"/>
-      <genEnumLiterals ecoreEnumLiteral="../../muslan.pbconfig/model/pbconfig.ecore#//BooleanConfig/SkipUnavailable"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../muslan.pbconfig/model/pbconfig.ecore#//IntegerConfig">
-      <genEnumLiterals ecoreEnumLiteral="../../muslan.pbconfig/model/pbconfig.ecore#//IntegerConfig/SleepTimer"/>
-    </genEnums>
-    <genClasses ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//Configuration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration/option"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration/Name"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//ConfigItem"/>
-    <genClasses ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//FlagConfig">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//FlagConfig/Value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//FlagConfig/Kind"/>
-    </genClasses>
-    <genClasses ecoreClass="../../muslan.pbconfig/model/pbconfig.ecore#//NumberConfig">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//NumberConfig/Value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.pbconfig/model/pbconfig.ecore#//NumberConfig/Kind"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

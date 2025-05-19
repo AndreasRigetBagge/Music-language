@@ -2,15 +2,9 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-RequiredExecutionEnvironment: JavaSE-21
-Export-Package: collection,
- collection.impl,
- collection.util,
- muslan.playlist,
- muslan.playlist.impl,
- muslan.playlist.util,
- pbconfig,
- pbconfig.impl,
- pbconfig.util
+Export-Package: playlist,
+ playlist.impl,
+ playlist.util
 Bundle-SymbolicName: muslan.playlist;singleton:=true
 Automatic-Module-Name: muslan.playlist
 Bundle-Version: 0.1.0.qualifier
@@ -18,5 +12,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ muslan.collection;visibility:=reexport,
+ muslan.pbconfig;visibility:=reexport
 Bundle-ActivationPolicy: lazy
