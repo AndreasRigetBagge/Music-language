@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: muslan.query.dsl.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: muslan.query.dsl.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: muslan.query.dsl.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: muslan.query.dsl,
+ muslan.query,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-21
