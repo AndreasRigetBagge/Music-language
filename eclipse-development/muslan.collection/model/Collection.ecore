@@ -6,7 +6,7 @@
         eType="#//CategorizedElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//CategorizedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//CategorizedElement ../../muslan.playlist/model/playlist.ecore#//PlayItem">
     <eStructuralFeatures xsi:type="ecore:EReference" name="compositions" upperBound="-1"
         eType="#//Composition" eOpposite="#//Composition/tracks"/>
   </eClassifiers>
