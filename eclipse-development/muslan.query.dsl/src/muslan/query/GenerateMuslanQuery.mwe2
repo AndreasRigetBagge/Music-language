@@ -31,10 +31,10 @@ Workflow {
 			
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
 
-			formatter = {
-				generateStub = true
-				generateXtendStub = true
-			}
+			//formatter = {
+			//	generateStub = true
+			//	generateXtendStub = true
+			//}
 
 			serializer = {
 				generateStub = false
