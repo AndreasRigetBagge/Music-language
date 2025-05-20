@@ -30,8 +30,12 @@
   <categories CategoryType="Rating" Value="On fire"/>
   <categories Value="Nu metal"/>
   <categories Value="Folk Metal"/>
-  <configuration>
+  <configuration Name="A name for out default config :)">
     <option xsi:type="pbconfig:FlagConfig" Value="true"/>
     <option xsi:type="pbconfig:NumberConfig" Value="120"/>
+  </configuration>
+  <configuration Name="The good old Config2">
+    <option xsi:type="pbconfig:FlagConfig"/>
+    <option xsi:type="pbconfig:NumberConfig" Value="1234"/>
   </configuration>
 </collection:CollectionRoot>

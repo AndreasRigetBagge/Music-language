@@ -1,0 +1,166 @@
+-- @nsURI MMCollection=https://www.example.org/collection
+-- @nsURI MMRelation=https://www.example.org/relation
+-- @nsURI MMPBConfig=https://www.example.org/pbconfig
+
+module Relation2Collection;
+create OUT : MMCollection, OUT1 : MMPBConfig from IN1 : MMCollection, IN2 : MMRelation;
+
+-- ########## Helpers ##########
+
+-- Helper to resolve the actual Collection a CollectionReference points to
+helper context MMRelation!CollectionReference def: resolveCollection() : MMCollection!"Collection" =
+    self.pointsTo;
+
+-- Helper to get all Track elements from a Collection
+helper context MMCollection!"Collection" def: getAllTracks() : Sequence(MMCollection!Track) =
+    self.categorizedelements->select(e | e.oclIsTypeOf(MMCollection!Track))->asSequence();
+
+-- ########## Entry Rule ##########
+
+-- Create the CollectionRoot
+rule RelationRoot2CollectionRoot {
+    from
+        r : MMRelation!RelationRoot
+    using {
+    	defaultConfigName : MMCollection!Configuration = 
+            MMCollection!CollectionRoot.allInstances().first().defaultConfig.Name;
+    }
+	to
+        cr : MMCollection!CollectionRoot (
+            collection <- r.maincollection.deriveNewCollections(),
+            artist <- MMCollection!Artist.allInstances(),
+            categories <- MMCollection!Category.allInstances(),
+            configuration <- MMCollection!Configuration.allInstances()->collect(c | thisModule.Configuration2Configuration(c)),
+            defaultConfig <- cr.configuration->select(c | c.Name = defaultConfigName).first()
+        )
+}
+
+-- ########## Lazy Rule ##########
+
+-- Create new Collections based on the DerivedCollections
+lazy rule DerivedCollection2Collection {
+    from
+        d : MMRelation!DerivedCollection
+    to
+        c : MMCollection!"Collection" (
+            Name <- d.name,
+            categorizedelements <- d.getReferencedTracks()
+        )
+}
+
+rule Track2Track {
+    from
+        t : MMCollection!Track
+    to
+        newT : MMCollection!Track (
+            Name <- t.Name,
+			artists <- t.artists,
+			category <- t.category,
+			compositions <- t.compositions
+        )
+}
+
+rule Artist2Artist {
+    from
+        a : MMCollection!Artist
+    to
+        newA : MMCollection!Artist (
+            Name <- a.Name
+        )
+}
+
+rule Category2Category {
+    from
+        c : MMCollection!Category
+    to
+        newC : MMCollection!Category (
+			CategoryType <- c.CategoryType,
+			Value <- c.Value
+        )
+}
+
+rule Composition2Composition {
+    from
+        c : MMCollection!Composition
+    to
+        newC : MMCollection!Composition (
+            Name <- c.Name,
+            artists <- c.artists,
+			category <- c.category,
+			tracks <- c.tracks
+        )
+}
+
+lazy rule Configuration2Configuration {
+    from
+        c : MMPBConfig!Configuration
+    to
+        newC : MMPBConfig!Configuration (
+            Name <- c.Name,
+			option <- c.option->collect(o | 
+                if o.oclIsKindOf(MMPBConfig!FlagConfig) then
+                    thisModule.flagConfig2FlagConfig(o)
+                else if o.oclIsKindOf(MMPBConfig!NumberConfig) then
+                    thisModule.numberConfig2NumberConfig(o)
+                else
+					o.oclType() -- Skip any unknown config types
+                endif endif
+			)
+        )
+}
+
+lazy rule flagConfig2FlagConfig {
+    from
+        c : MMPBConfig!FlagConfig
+    to
+        newC : MMPBConfig!FlagConfig (
+            Value <- c.Value,
+			Kind <- c.Kind
+        )
+}
+
+lazy rule numberConfig2NumberConfig {
+    from
+        c : MMPBConfig!NumberConfig
+    to
+        newC : MMPBConfig!NumberConfig (
+            Value <- c.Value,
+            Kind <- c.Kind
+        )
+}
+
+helper def : logName(o : OclAny) : String = o.toString();
+
+helper def: getAllTracks() : Sequence(MMCollection!Track) =
+    MMCollection!Track.allInstances();
+
+-- Helper: get all tracks from CollectionReferences pointing to Collections
+helper context MMRelation!DerivedCollection def: getReferencedTracks() : Sequence(MMCollection!CategorizedElement) =
+    self.refersToAll()->collect(c | c.resolveCollection().getAllTracks())->flatten();
+
+-- Helper: all CollectionReference objects this DerivedCollection depends on
+helper context MMRelation!DerivedCollection def: refersToAll() : Sequence(MMRelation!CollectionReference) =
+    MMRelation!Link.allInstances()->select(l | l.outgoing = self)
+                                ->collect(l | l.incoming)
+                                ->select(i | i.oclIsTypeOf(MMRelation!CollectionReference))
+                                ->collect(i | i)
+                                ->asSequence();
+
+-- Generate all derived collections (called by main rule)
+-- safer way to collect only DerivedCollections
+helper context MMRelation!MainCollection def: deriveNewCollections() : Sequence(MMCollection!"Collection") =
+    MMRelation!Link.allInstances()
+        ->select(l | l.outgoing = self)
+        ->collect(l | l.incoming)
+        ->select(i | i.oclIsTypeOf(MMRelation!DerivedCollection))
+        ->collect(i | thisModule.DerivedCollection2Collection(i))
+        ->asSequence();
+
+
+-- Resolve any DerivedCollection or CollectionReference recursively
+helper def: resolveDerived(i : MMRelation!ICollection) : MMCollection!"Collection" =
+    if i.oclIsTypeOf(MMRelation!DerivedCollection) then
+        thisModule.DerivedCollection2Collection(i.oclAsType(MMRelation!DerivedCollection))
+    else OclUndefined
+    endif;
+

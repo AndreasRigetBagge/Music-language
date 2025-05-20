@@ -15,7 +15,23 @@ create OUT : MMCollection
 --	)
 --}
 
-rule DerivedCollection2Collection {
+rule MainCollection2DerivedCollection {
+	from 
+		s : MMRelation!RelationRoot
+	using {
+		oldRootCollection : MMCollection!CollectionRoot = s.getCollectionRoot();
+	}
+	to
+		t : MMCollection!CollectionRoot(
+			collection <- s.derivedCollections()->collect(d | thisModule.DerivedCollection2Collection(d)),
+			artist <- oldRootCollection.artist,
+			categories <- oldRootCollection.categories,
+			configuration <- oldRootCollection.configuration,
+			defaultConfig <- oldRootCollection.defaultConfig
+	)
+}
+
+lazy rule DerivedCollection2Collection {
 	from 
 		s : MMRelation!DerivedCollection (
 			s.oclIsTypeOf(MMRelation!DerivedCollection)
@@ -27,17 +43,9 @@ rule DerivedCollection2Collection {
 	)
 }
 
-rule MainCollection2DerivedCollection {
-	from 
-		s : MMRelation!RelationRoot
-	to
-		t : MMCollection!CollectionRoot (
-		collection <- s.derivedCollections()
-	)
-}
 
 helper context MMRelation!RelationRoot def: derivedCollections() : Sequence(MMCollection!DerivedCollection) =
-        self.providers->select(p | not p.oclIsTypeOf(MMRelation!DerivedCollection));
+        self.providers->select(p | p.oclIsTypeOf(MMRelation!DerivedCollection));
 
 helper context MMRelation!DerivedCollection def: getAllTracks() : Sequence(MMCollection!Track) =
     MMRelation!RelationRoot.allInstances()->collect(r | r.links)->flatten()->select(link | link.outgoing.oclIsTypeOf(MMRelation!DerivedCollection))
@@ -54,5 +62,12 @@ helper context MMRelation!DerivedCollection def: getAllTracks() : Sequence(MMCol
 helper context MMRelation!ICollection def: getTracks() : Sequence(MMCollection!Track) =
     self.tracks->select(t | t.oclIsTypeOf(MMCollection!Track));
 
+helper context MMRelation!RelationRoot def: getCollectionRoot() : MMCollection!CollectionRoot =
+    self.providers->select(p | p.oclIsTypeOf(MMRelation!CollectionReference))
+        ->first().pointsTo.refImmediateComposite();
 
-
+--helper context MMCollection!CollectionRoot def: getCollectionsCopy() : MMCollection!CollectionRoot =
+  --  self.collections->select(c | MMCollection!"Collection"(
+    --	name <- c.name,
+      --  categorizedelements <- c.getTracks(),
+   --     ));
