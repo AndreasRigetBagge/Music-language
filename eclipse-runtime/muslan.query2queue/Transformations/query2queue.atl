@@ -1,3 +1,6 @@
+-- @nsURI MMQuery=https://www.example.org/query
+-- @nsURI MMCollection=https://www.example.org/collection
+
 module query2queue;
 
 create OUT : QUEUE
