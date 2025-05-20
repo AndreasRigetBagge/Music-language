@@ -17,6 +17,7 @@ src-gen
 **/src/
 !**/muslan.query.interpreter/src/
 !**/muslan.query.interpreter.eclipse/src/
+!muslan.query.dsl/src/
 
 # External tool builders
 .externalToolBuilders/
