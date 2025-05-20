@@ -5,7 +5,6 @@
     <semanticResources>platform:/resource/muslan.playlist/model/playlist.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.collection/model/Collection.ecore</semanticResources>
-    <semanticResources>platform:/resource/muslan.collection/model/Collection.genmodel</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.genmodel</semanticResources>
     <semanticResources>queue.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Q5URYCTHEfC_qcDPliK8uQ">

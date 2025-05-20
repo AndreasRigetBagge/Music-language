@@ -13,6 +13,5 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- muslan.collection;visibility:=reexport,
  muslan.pbconfig;visibility:=reexport
 Bundle-ActivationPolicy: lazy

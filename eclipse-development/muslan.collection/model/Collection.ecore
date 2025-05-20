@@ -5,8 +5,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="categorizedelements" upperBound="-1"
         eType="#//CategorizedElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playlist" upperBound="-1"
+        eType="#//Playlist" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//CategorizedElement ../../muslan.playlist/model/playlist.ecore#//PlayItem">
+  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//CategorizedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="compositions" upperBound="-1"
         eType="#//Composition" eOpposite="#//Composition/tracks"/>
   </eClassifiers>
@@ -21,7 +23,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Artist">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CategorizedElement" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="CategorizedElement" abstract="true"
+      eSuperTypes="#//PlayItem">
     <eStructuralFeatures xsi:type="ecore:EReference" name="artists" upperBound="-1"
         eType="#//Artist"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -51,4 +54,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultConfig" lowerBound="1"
         eType="ecore:EClass ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Playlist">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playitem" upperBound="-1"
+        eType="#//PlayItem"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlayItem" abstract="true"/>
 </ecore:EPackage>

@@ -5,8 +5,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="playitem" upperBound="-1"
         eType="#//PlayItem" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" eType="ecore:EClass ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="collection" lowerBound="1"
-        eType="ecore:EClass ../../muslan.collection/model/Collection.ecore#//Collection"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlayItem" abstract="true" interface="true"/>
 </ecore:EPackage>

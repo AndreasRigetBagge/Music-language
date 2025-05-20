@@ -14,6 +14,5 @@ Export-Package: query,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  muslan.collection;bundle-version="1.0.0";visibility:=reexport,
- muslan.pbconfig;visibility:=reexport,
- muslan.playlist;visibility:=reexport
+ muslan.pbconfig;visibility:=reexport
 Bundle-ActivationPolicy: lazy
