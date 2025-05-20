@@ -93,27 +93,25 @@ rule Composition2Composition {
 
 lazy rule Configuration2Configuration {
     from
-        c : MMPBConfig!Configuration
+        c : MMCollection!Configuration
     to
-        newC : MMPBConfig!Configuration (
+        newC : MMCollection!Configuration (
             Name <- c.Name,
 			option <- c.option->collect(o | 
-                if o.oclIsKindOf(MMPBConfig!FlagConfig) then
+                if o.Value.oclIsTypeOf(Boolean) then
                     thisModule.flagConfig2FlagConfig(o)
-                else if o.oclIsKindOf(MMPBConfig!NumberConfig) then
-                    thisModule.numberConfig2NumberConfig(o)
                 else
-					o.oclType() -- Skip any unknown config types
-                endif endif
+                    thisModule.numberConfig2NumberConfig(o)
+				endif
 			)
         )
 }
 
 lazy rule flagConfig2FlagConfig {
     from
-        c : MMPBConfig!FlagConfig
+        c : MMCollection!FlagConfig
     to
-        newC : MMPBConfig!FlagConfig (
+        newC : MMCollection!FlagConfig (
             Value <- c.Value,
 			Kind <- c.Kind
         )
@@ -121,9 +119,9 @@ lazy rule flagConfig2FlagConfig {
 
 lazy rule numberConfig2NumberConfig {
     from
-        c : MMPBConfig!NumberConfig
+        c : MMCollection!NumberConfig
     to
-        newC : MMPBConfig!NumberConfig (
+        newC : MMCollection!NumberConfig (
             Value <- c.Value,
             Kind <- c.Kind
         )
