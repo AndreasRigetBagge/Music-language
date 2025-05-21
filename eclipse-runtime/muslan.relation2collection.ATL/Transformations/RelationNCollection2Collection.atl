@@ -3,7 +3,7 @@
 -- @nsURI MMPBConfig=https://www.example.org/pbconfig
 
 module Relation2Collection;
-create OUT : MMCollection, OUT1 : MMPBConfig from IN1 : MMCollection, IN2 : MMRelation;
+create OUT : MMCollection from IN1 : MMCollection, IN2 : MMRelation;
 
 -- ########## Helpers ##########
 
@@ -15,6 +15,14 @@ helper context MMRelation!CollectionReference def: resolveCollection() : MMColle
 helper context MMCollection!"Collection" def: getAllTracks() : Sequence(MMCollection!Track) =
     self.categorizedelements->select(e | e.oclIsTypeOf(MMCollection!Track))->asSequence();
 
+-- Helper to get all Composition elements from a Collection
+helper context MMCollection!"Collection" def: getAllCompositions() : Sequence(MMCollection!Composition) =
+    self.categorizedelements->select(e | e.oclIsTypeOf(MMCollection!Composition))->asSequence();
+
+-- Helper to get all Album elements from a Collection
+helper context MMCollection!"Collection" def: getAllAlbums() : Sequence(MMCollection!Album) =
+    self.categorizedelements->select(e | e.oclIsTypeOf(MMCollection!Album))->asSequence();
+
 -- ########## Entry Rule ##########
 
 -- Create the CollectionRoot
@@ -24,10 +32,12 @@ rule RelationRoot2CollectionRoot {
     using {
     	defaultConfigName : MMCollection!Configuration = 
             MMCollection!CollectionRoot.allInstances().first().defaultConfig.Name;
+        collections : Sequence(MMCollection!"Collection") = 
+            MMCollection!"Collection".allInstances();
     }
 	to
         cr : MMCollection!CollectionRoot (
-            collection <- r.maincollection.deriveNewCollections(),
+            collection <- collections.union(r.maincollection.deriveNewCollections()),
             artist <- MMCollection!Artist.allInstances(),
             categories <- MMCollection!Category.allInstances(),
             configuration <- MMCollection!Configuration.allInstances()->collect(c | thisModule.Configuration2Configuration(c)),
@@ -44,7 +54,20 @@ lazy rule DerivedCollection2Collection {
     to
         c : MMCollection!"Collection" (
             Name <- d.name,
-            categorizedelements <- d.getReferencedTracks()
+            categorizedelements <- d.getReferencedCompositions().union(d.getReferencedTracks()).union(d.getReferencedAlbums())
+        )
+}
+
+
+-- One-to-One Transformation Rules
+
+rule OldCollection2NewCollection {
+    from
+        c : MMCollection!"Collection"
+    to
+        newC : MMCollection!"Collection" (
+            Name <- c.Name,
+            categorizedelements <- c.categorizedelements
         )
 }
 
@@ -57,6 +80,30 @@ rule Track2Track {
 			artists <- t.artists,
 			category <- t.category,
 			compositions <- t.compositions
+        )
+}
+
+rule Composition2Composition {
+    from
+        c : MMCollection!Composition
+    to
+        newC : MMCollection!Composition (
+            Name <- c.Name,
+            artists <- c.artists,
+			category <- c.category,
+			tracks <- c.tracks
+        )
+}
+
+rule Album2Album {
+    from
+        a : MMCollection!Album
+    to
+        newA : MMCollection!Album (
+            Name <- a.Name,
+            artists <- a.artists,
+            category <- a.category,
+            tracks <- a.tracks
         )
 }
 
@@ -76,18 +123,6 @@ rule Category2Category {
         newC : MMCollection!Category (
 			CategoryType <- c.CategoryType,
 			Value <- c.Value
-        )
-}
-
-rule Composition2Composition {
-    from
-        c : MMCollection!Composition
-    to
-        newC : MMCollection!Composition (
-            Name <- c.Name,
-            artists <- c.artists,
-			category <- c.category,
-			tracks <- c.tracks
         )
 }
 
@@ -132,9 +167,18 @@ helper def : logName(o : OclAny) : String = o.toString();
 helper def: getAllTracks() : Sequence(MMCollection!Track) =
     MMCollection!Track.allInstances();
 
+helper def: getAllCompositions() : Sequence(MMCollection!Composition) =
+    MMCollection!Composition.allInstances();
+
 -- Helper: get all tracks from CollectionReferences pointing to Collections
 helper context MMRelation!DerivedCollection def: getReferencedTracks() : Sequence(MMCollection!CategorizedElement) =
     self.refersToAll()->collect(c | c.resolveCollection().getAllTracks())->flatten();
+
+helper context MMRelation!DerivedCollection def: getReferencedCompositions() : Sequence(MMCollection!CategorizedElement) =
+    self.refersToAll()->collect(c | c.resolveCollection().getAllCompositions())->flatten();
+
+helper context MMRelation!DerivedCollection def: getReferencedAlbums() : Sequence(MMCollection!CategorizedElement) =
+    self.refersToAll()->collect(c | c.resolveCollection().getAllAlbums())->flatten();
 
 -- Helper: all CollectionReference objects this DerivedCollection depends on
 helper context MMRelation!DerivedCollection def: refersToAll() : Sequence(MMRelation!CollectionReference) =
