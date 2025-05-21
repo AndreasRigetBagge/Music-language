@@ -14,7 +14,8 @@ local.properties
 .loadpath
 .recommenders
 src-gen
-src
+**/src/
+!**/muslan.query.interpreter/src/
 
 # External tool builders
 .externalToolBuilders/
