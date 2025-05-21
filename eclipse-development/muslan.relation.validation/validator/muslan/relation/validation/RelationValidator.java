@@ -143,6 +143,7 @@ public class RelationValidator extends EObjectValidator implements IStartup {
 		return res;
 	}
 	
+	//Inspired by GeeksForGeeks - https://www.geeksforgeeks.org/detect-cycle-in-a-graph/#expected-approach-1-using-dfs-ov-e-time-and-ove-space
 	private EObject[] detectCycles(RelationRoot r) {
 		var edgesOf = new HashMap<ICollection, ArrayList<Link>>();
 		for(var l : r.getLinks())
