@@ -97,7 +97,7 @@ public class RelationValidator extends EObjectValidator implements IStartup {
 							 .toArray(EObject[]::new);
 			var msg = "All collections must indirectly"
 					  + "  or directly flow to the main collection";
-			return constraintsViolated(unreached, );
+			return constraintsViolated(unreached, msg);
 		}
 		
 		//DO not allow cyclic relations
