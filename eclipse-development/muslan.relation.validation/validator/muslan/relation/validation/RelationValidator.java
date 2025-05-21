@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.Stack;
 
 import relation.*;
 
@@ -34,8 +35,11 @@ public class RelationValidator extends EObjectValidator implements IStartup {
 	}
 	
 	protected boolean constraintsViolated(EObject[] objects, String message) {
-		var diagnostic = new BasicDiagnostic(Diagnostic.ERROR, objects.toString(), 0, message, objects);
-		diagnostics.add(diagnostic);
+		for(var e : objects)
+		{
+			var diagnostic = new BasicDiagnostic(Diagnostic.ERROR, e.toString(), 0, message, new Object[] { e });
+			diagnostics.add(diagnostic);			
+		}
 		return false;
 	}
 	
@@ -62,12 +66,10 @@ public class RelationValidator extends EObjectValidator implements IStartup {
 	private boolean validateRelationRoot(RelationRoot r) {
 		//only a single main collection
 		long mcCount = r.getProviders().stream().filter(c -> c instanceof MainCollection).count();
-		if(mcCount == 0) 
-		{
+		if(mcCount == 0) {
 			return constraintViolated(r, "There must exist at least one main collection");
 		} 
-		else if (mcCount > 1)
-		{
+		else if (mcCount > 1) {
 			var mcs = r.getProviders()
 					   .stream()
 					   .filter(c -> c instanceof MainCollection)
@@ -78,22 +80,30 @@ public class RelationValidator extends EObjectValidator implements IStartup {
 		//The r.maincollection is in r.providers
 		if (r.getProviders().stream()
 			 .filter(c -> c.equals(r.getMaincollection())).findFirst()
-			 .isEmpty() )
-		{
+			 .isEmpty() ) {
 			var mc = r.getMaincollection();
-			return constraintViolated(mc, "Main collecton: \"" + mc.getName() + "\" must be part of the providers reference");
+			var msg = "Main collecton: \""
+					  + mc.getName()
+					  + "\" must be part of the providers reference";
+			return constraintViolated(mc, msg);
 		}
-		
 		
 		//all collections must flow to (be reachable from) main collection
 		var reachables = this.findAllReachableICollections(r);
-		if(reachables.size() != r.getProviders().size())
-		{
+		if(reachables.size() != r.getProviders().size()) {
 			var unreached = r.getProviders()
 							 .stream()
 							 .filter(c -> !reachables.contains(c))
 							 .toArray(EObject[]::new);
-			return constraintsViolated(unreached, "All collections must indirectly or directly flow to the main collection");
+			var msg = "All collections must indirectly"
+					  + "  or directly flow to the main collection";
+			return constraintsViolated(unreached, );
+		}
+		
+		//DO not allow cyclic relations
+		if(detectCycles(r) instanceof EObject[] collectionsInCycle) {
+			var msg = "Relations may not be cyclic";
+			return constraintsViolated(collectionsInCycle, msg);
 		}
 		
 		return true;
@@ -131,6 +141,56 @@ public class RelationValidator extends EObjectValidator implements IStartup {
 	        }
 	    }
 		return res;
+	}
+	
+	private EObject[] detectCycles(RelationRoot r) {
+		var edgesOf = new HashMap<ICollection, ArrayList<Link>>();
+		for(var l : r.getLinks())
+		{
+			var current = l.getIncoming();
+			edgesOf.computeIfAbsent(current, k -> new ArrayList<Link>()).add(l);
+		}
+		
+		var recursiveStack = new HashSet<ICollection>();
+		var visited = new HashSet<ICollection>();
+	
+		for(var v : r.getProviders())
+		{
+			if(!visited.contains(v) && detectCyclesUtil(v, edgesOf, recursiveStack, visited))
+				return recursiveStack.toArray(EObject[]::new);
+		}
+	
+		return null;
+	}
+	
+	private boolean detectCyclesUtil(
+			ICollection v,
+			HashMap<ICollection, ArrayList<Link>> edges,
+			HashSet<ICollection> callStack, 
+			HashSet<ICollection> visited) {
+		
+		if(callStack.contains(v)) {
+			return true;
+		}
+		
+		if(visited.contains(v)) {
+			return false;
+		}
+		
+		visited.add(v);
+		callStack.add(v);
+		
+		if(edges.containsKey(v))
+		{
+			for(var l : edges.get(v))
+			{
+				var u = l.getOutgoing();
+				if(detectCyclesUtil(u, edges, callStack, visited))
+					return true;
+			}			
+		}
+		callStack.remove(v);
+		return false;
 	}
 
 	private boolean validateSource(Source s) {
