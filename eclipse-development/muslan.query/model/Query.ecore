@@ -6,7 +6,7 @@
         eType="ecore:EClass ../../muslan.collection/model/Collection.ecore#//Collection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" lowerBound="1"
         eType="#//FilterClause" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//PlayItemType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//CategorizedElementType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FilterClause" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="AndClause" eSuperTypes="#//FilterClause">
@@ -22,7 +22,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
         eType="#//OperatorType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="PlayItemType">
+  <eClassifiers xsi:type="ecore:EEnum" name="CategorizedElementType">
     <eLiterals name="Track"/>
     <eLiterals name="Album" value="1"/>
   </eClassifiers>

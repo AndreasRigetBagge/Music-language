@@ -7,9 +7,9 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>Query.ecore</foreignModel>
   <genPackages prefix="Query" disposableProviderFactory="true" ecorePackage="Query.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Query.ecore#//PlayItemType">
-      <genEnumLiterals ecoreEnumLiteral="Query.ecore#//PlayItemType/Track"/>
-      <genEnumLiterals ecoreEnumLiteral="Query.ecore#//PlayItemType/Album"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Query.ecore#//CategorizedElementType">
+      <genEnumLiterals ecoreEnumLiteral="Query.ecore#//CategorizedElementType/Track"/>
+      <genEnumLiterals ecoreEnumLiteral="Query.ecore#//CategorizedElementType/Album"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Query.ecore#//OperatorType">
       <genEnumLiterals ecoreEnumLiteral="Query.ecore#//OperatorType/SameAs"/>

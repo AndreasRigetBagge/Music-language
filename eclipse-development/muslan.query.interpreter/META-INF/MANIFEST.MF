@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Interpreter
+Bundle-SymbolicName: muslan.query.interpreter;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: muslan.query.interpreter
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Require-Bundle: muslan.query;bundle-version="1.0.0",
+ muslan.queue;bundle-version="0.1.0"
