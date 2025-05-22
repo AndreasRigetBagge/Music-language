@@ -57,6 +57,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Playlist">
     <eStructuralFeatures xsi:type="ecore:EReference" name="playitem" upperBound="-1"
         eType="#//PlayItem"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlayItem" abstract="true"/>
 </ecore:EPackage>

@@ -39,7 +39,6 @@ public class QueryInterpreter {
 		 
 		 if (query.getType() == CategorizedElementType.ALBUM) filterAlbums(collection, filter, tracks);
 		 else if (query.getType() == CategorizedElementType.TRACK) filterTracks(collection, filter, tracks);
-		 q.
 		 return q;
 	}
 
