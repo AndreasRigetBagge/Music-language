@@ -44,7 +44,7 @@ public class QueryInterpreter {
 
 	public static void filterTracks(Collection c, FilterClause f, List<Track> output) {
 		List<Track> tracks = c.getCategorizedelements().stream()
-				.filter(e -> e instanceof Track && filterElement(e, f))
+				.filter(e -> (e instanceof Track) && filterElement(e, f))
 				.map(e -> (Track) e)
 				.toList();
 		output.addAll(tracks); 
@@ -52,7 +52,7 @@ public class QueryInterpreter {
 	
 	public static void filterAlbums(Collection c, FilterClause f, List<Track> output) {
 		List<Track> tracks = c.getCategorizedelements().stream()
-				.filter(e -> e instanceof Album && filterElement(e, f))
+				.filter(e -> (e instanceof Album) && filterElement(e, f))
 				.map(e -> (Album) e)
 				.flatMap(a -> a.getTracks().stream())
 				.toList();
@@ -78,12 +78,16 @@ public class QueryInterpreter {
 				switch (c.getOperator()) {
 				case OperatorType.SAME_AS:
 					if (t.equals(u)) return true;
+					break;
 				case OperatorType.DIFFERENT_FROM:
 					if (!t.equals(u)) return true;
+					break;
 				case OperatorType.GREATER_THAN:
 					if (t.compareToIgnoreCase(u) > 0) return true;
+					break;
 				case OperatorType.LESS_THAN:
 					if (t.compareToIgnoreCase(u) < 0) return true;
+					break;
 				}
 			}
 			return false;
@@ -95,7 +99,7 @@ public class QueryInterpreter {
 			return filterElement(e, orclause.getFilterclause().getFirst()) ||
 					filterElement(e, orclause.getFilterclause().getLast()); 
 		}
-		return true;
+		return false;
 	}
 /*
 	public String interpret(StateMachine stateMachine, String interpreterInput, OutputStream interpreterOutputStream) throws QueryInterpreterException {
