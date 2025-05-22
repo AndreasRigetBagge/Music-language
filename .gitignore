@@ -16,6 +16,7 @@ local.properties
 src-gen
 **/src/
 !**/muslan.query.interpreter/src/
+!**/muslan.query.interpreter.eclipse/src/
 
 # External tool builders
 .externalToolBuilders/

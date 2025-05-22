@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <!--
+     <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            id="muslan.query.interpreter.eclipse.launch.QueryLaunchDelegateType"
+            modes="run, debug"
+            name="Query Launch"
+            delegate="muslan.query.interpreter.eclipse.launch.QueryLaunchDelegate"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="org.xtext.builddsl.ui.launch.BuildDSLLaunchTabGroup"
+            id="org.xtext.builddsl.ui.BuildLaunchConfigurationTabGroup"
+            type="org.xtext.builddsl.ui.BuildLaunchConfigurationType">
+            <launchMode 
+                  mode="debug"
+                  perspective="org.eclipse.debug.ui.DebugPerspective"
+                  description="Debug a Build File">
+            </launchMode>
+            <launchMode
+                  mode="run"
+                  description="Run a Build File">
+            </launchMode>
+      </launchConfigurationTabGroup>
+   </extension>
+
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="org.xtext.builddsl.ui.BuildLaunchConfigurationType"
+            icon="icons/buildlaunch16.gif"
+            id="org.xtext.builddsl.ui.BuildLaunchConfigurationTypeImage"/>
+   </extension>
+   -->
+
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+      <shortcut
+            class="muslan.query.interpreter.eclipse.launch.QueryLaunchShortcut"
+            description="Executes a Query"
+            icon="icons/FSM16.gif"
+            id="muslan.query.interpreter.eclipse.launch.FSMLaunchShortcutType"
+            label="Execute Query"
+            modes="run">
+          <contextualLaunch>
+           <enablement>
+             <with variable="selection">
+               <count value="1"/>
+               <iterate
+                     ifEmpty="false"
+                     operator="and">
+                  <adapt type="org.eclipse.core.resources.IFile"/>
+                    <test property="org.eclipse.debug.ui.matchesPattern"
+                          value="*.query"/>
+               </iterate>
+             </with>
+           </enablement>
+           <contextLabel
+              mode="run"
+              label="Query"/>
+         </contextualLaunch>
+      </shortcut>
+   </extension>
+</plugin>

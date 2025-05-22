@@ -3,6 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Interpreter
 Bundle-SymbolicName: muslan.query.interpreter;singleton:=true
 Bundle-Version: 1.0.0.qualifier
+Export-Package: muslan.query.interpreter
 Automatic-Module-Name: muslan.query.interpreter
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: muslan.query;bundle-version="1.0.0",

@@ -5,6 +5,7 @@
     <semanticResources>ExampleCollection.collection</semanticResources>
     <semanticResources>My.pbconfig</semanticResources>
     <semanticResources>My.query</semanticResources>
+    <semanticResources>answer.queue</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_lnZ0sCqTEfCw9bHh1LeRiQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m55-YCqTEfCw9bHh1LeRiQ" name="ExampleRelationDiagram" repPath="#_m5tKECqTEfCw9bHh1LeRiQ" changeId="1746558906189">

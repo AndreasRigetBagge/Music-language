@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<queue:Queue xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:queue="https://www.example.org/queue">
+  <tracks href="ExampleCollection.collection#//@collection.1/@categorizedelements.1"/>
+  <tracks href="ExampleCollection.collection#//@collection.1/@categorizedelements.3"/>
+  <tracks href="ExampleCollection.collection#//@collection.1/@categorizedelements.5"/>
+  <tracks href="ExampleCollection.collection#//@collection.1/@categorizedelements.8"/>
+</queue:Queue>

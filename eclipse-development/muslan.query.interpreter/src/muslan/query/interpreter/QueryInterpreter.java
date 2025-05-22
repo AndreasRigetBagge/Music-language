@@ -31,7 +31,7 @@ import collection.CategorizedElement;
 public class QueryInterpreter {
 	static final List<String> emptyStringList = new ArrayList<String>();
 	
-	public Queue interpret(Query query) throws QueryInterpreterException {
+	public static Queue interpret(Query query) throws QueryInterpreterException {
 		 FilterClause filter = query.getFilter();
 		 Collection collection = query.getCollection();
 		 Queue q = QueueFactory.eINSTANCE.createQueue();
@@ -42,7 +42,7 @@ public class QueryInterpreter {
 		 return q;
 	}
 
-	public void filterTracks(Collection c, FilterClause f, List<Track> output) {
+	public static void filterTracks(Collection c, FilterClause f, List<Track> output) {
 		List<Track> tracks = c.getCategorizedelements().stream()
 				.filter(e -> e instanceof Track && filterElement(e, f))
 				.map(e -> (Track) e)
@@ -50,7 +50,7 @@ public class QueryInterpreter {
 		output.addAll(tracks); 
 	}
 	
-	public void filterAlbums(Collection c, FilterClause f, List<Track> output) {
+	public static void filterAlbums(Collection c, FilterClause f, List<Track> output) {
 		List<Track> tracks = c.getCategorizedelements().stream()
 				.filter(e -> e instanceof Album && filterElement(e, f))
 				.map(e -> (Album) e)
@@ -59,8 +59,7 @@ public class QueryInterpreter {
 		output.addAll(tracks); 
 	}
 	
-	public boolean filterElement(CategorizedElement e, FilterClause f) {
-		boolean pass = true;
+	public static boolean filterElement(CategorizedElement e, FilterClause f) {
 		if (f instanceof Clause c) {
 			List<String> values = emptyStringList;
 			String u = c.getValue();
@@ -78,15 +77,16 @@ public class QueryInterpreter {
 			for (String t : values) {
 				switch (c.getOperator()) {
 				case OperatorType.SAME_AS:
-					return t.equals(u);
+					if (t.equals(u)) return true;
 				case OperatorType.DIFFERENT_FROM:
-					return !t.equals(u);
+					if (!t.equals(u)) return true;
 				case OperatorType.GREATER_THAN:
-					return t.compareToIgnoreCase(u) > 0;
+					if (t.compareToIgnoreCase(u) > 0) return true;
 				case OperatorType.LESS_THAN:
-					return t.compareToIgnoreCase(u) < 0;
+					if (t.compareToIgnoreCase(u) < 0) return true;
 				}
 			}
+			return false;
 
 		} else if (f instanceof AndClause andclause) { 
 			return filterElement(e, andclause.getFilterclause().getFirst()) &&
