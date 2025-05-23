@@ -25,10 +25,43 @@ Query returns Query:
 ;
 
 FilterClause:
-	 Clause | AndClause | OrClause
+	 Clause | OrClause | AndClause
+;
+
+FilterClause2 returns FilterClause:
+	Clause | AndClause
 ;
 
 
+//used for splitting up rules
+Clause:
+	CategoryClause | ArtistClause | TitleClause
+;
+
+//Constitutes the units of an Or-clause as a number of clauses (separated as And-clauses), each separated with .'s
+//structured as to avoid left-recursion-problems
+//OrClause:
+//	"either(" filterclause+=FilterClause filterclause+=FilterClause ")"
+//;
+
+OrClause:
+	"either(" OrContent ")"
+;
+
+
+OrContent returns OrClause:
+	filterclause+=Clause "or" filterclause+=OrNext
+;
+
+OrNext returns FilterClause:
+	Clause | OrContent | AndClause
+;
+
+
+//Constitutes the units of an And-clause as a number of clauses, each separated with .'s
+AndClause:
+	"option[" filterclause+=FilterClause "and" filterclause+=FilterClause "]"
+;
 
 //Check!
 EString returns ecore::EString:
@@ -45,22 +78,7 @@ enum PlayItemType:
 //	{AndClause}
 //	filterclause+=Clause filterclause+=Clause;
 
-//used for splitting up rules
-Clause:
-	CategoryClause | ArtistClause | TitleClause
-;
 
-//Constitutes the units of an Or-clause as a number of clauses (separated as And-clauses), each separated with .'s
-//structured as to avoid left-recursion-problems
-OrClause:
-	filterclause+=Clause "." filterclause+=FilterClause
-;
-
-
-//Constitutes the units of an And-clause as a number of clauses, each separated with .'s
-AndClause:
-	filterclause+=Clause "," filterclause+=FilterClause
-;
 
 //NextAndClause returns FilterClause:
 //	Clause | AndClause
