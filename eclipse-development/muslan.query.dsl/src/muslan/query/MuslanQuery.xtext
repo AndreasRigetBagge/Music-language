@@ -48,18 +48,18 @@ OrClause:
 	"either" "(" OrContent ")"
 ;
 
-
 OrContent returns OrClause:
-	filterclause+=Clause "or" filterclause+=OrNext
+	filterclause+=FilterClause ("or" filterclause+=FilterClause)*
 ;
 
-OrFirst returns FilterClause:
-	Clause | AndClause
-;
 
-OrNext returns FilterClause:
-	Clause | OrContent | AndClause
-;
+////Solution with multiple or's
+//OrFirst returns FilterClause:
+//	Clause 
+//;
+//OrNext returns FilterClause:
+//	Clause | OrContent
+//;
 
 
 //Constitutes the units of an And-clause as a number of clauses, each separated with .'s
@@ -68,12 +68,18 @@ AndClause:
 ;
 
 AndContent returns AndClause:
-	filterclause+=Clause "and" filterclause+=AndNext
+	filterclause+=FilterClause ("and" filterclause+=FilterClause)*
 ;
 
-AndNext returns FilterClause:
-	Clause | AndContent | OrClause
-;
+////Solution with more "ands"
+
+//AndFirst returns FilterClause:
+//	Clause
+//;
+//AndNext returns FilterClause:
+//	Clause | OrClause | AndContent
+//;
+
 
 //Check!
 EString returns ecore::EString:
