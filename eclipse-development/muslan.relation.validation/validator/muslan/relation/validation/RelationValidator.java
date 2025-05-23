@@ -45,7 +45,7 @@ public class RelationValidator extends EObjectValidator implements IStartup {
 	
 	@Override
 	public boolean validate(EObject eObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate(eObject.eClass(), diagnostics, context);
+		return validate(eObject.eClass(), eObject, diagnostics, context);
 	}
 
 	@Override
