@@ -45,12 +45,16 @@ Clause:
 //;
 
 OrClause:
-	"either(" OrContent ")"
+	"either" "(" OrContent ")"
 ;
 
 
 OrContent returns OrClause:
 	filterclause+=Clause "or" filterclause+=OrNext
+;
+
+OrFirst returns FilterClause:
+	Clause | AndClause
 ;
 
 OrNext returns FilterClause:
@@ -60,7 +64,15 @@ OrNext returns FilterClause:
 
 //Constitutes the units of an And-clause as a number of clauses, each separated with .'s
 AndClause:
-	"option[" filterclause+=FilterClause "and" filterclause+=FilterClause "]"
+	"both" "[" AndContent "]"
+;
+
+AndContent returns AndClause:
+	filterclause+=Clause "and" filterclause+=AndNext
+;
+
+AndNext returns FilterClause:
+	Clause | AndContent | OrClause
 ;
 
 //Check!
