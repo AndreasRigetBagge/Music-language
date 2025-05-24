@@ -37,16 +37,8 @@
           </style>
         </edgeMappings>
         <edgeMappings name="SourcesRelationEdge" label="SourcesRelation" sourceMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']" targetMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']" targetFinderExpression="feature:sources">
-          <style sizeComputationExpression="2">
+          <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-        <edgeMappings name="SourceToLocationEdge" label="SourceToLocation" sourceMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']" targetFinderExpression="feature:locations">
-          <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
