@@ -9,5 +9,18 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: muslan.query,
  org.eclipse.xtext,
  org.eclipse.xtext.xbase,
- org.eclipse.equinox.common;bundle-version="3.19.0"
+ org.eclipse.equinox.common;bundle-version="3.19.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.38.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: muslan.query.serializer,
+ muslan.query.services,
+ muslan.query.validation,
+ muslan.query.scoping,
+ muslan.query,
+ muslan.query.generator,
+ muslan.query.formatting2,
+ muslan.query.parser.antlr,
+ muslan.query.parser.antlr.internal,
+ muslan.query.parser.antlr.lexer
+Import-Package: org.apache.log4j

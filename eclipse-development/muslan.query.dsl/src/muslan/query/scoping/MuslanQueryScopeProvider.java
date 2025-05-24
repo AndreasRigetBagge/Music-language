@@ -3,10 +3,13 @@
  */
 package muslan.query.scoping;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.xtext.EcoreUtil2;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import collection.Collection;
@@ -22,16 +25,23 @@ import query.Query;
 
 public class MuslanQueryScopeProvider extends AbstractMuslanQueryScopeProvider {
 	
-	@Override
-	public IScope getScope(EObject context, EReference reference) {
-		if(context instanceof Query) {
-			Query q = (Query) context;
-			EObject root = EcoreUtil.getRootContainer(q);
-			if(root instanceof CollectionRoot) {
-				CollectionRoot colRoot = (CollectionRoot) root;
-				return Scopes.scopeFor(colRoot.getCollection());
-			}
-		}
-		return super.getScope(context, reference);
-	}
+	//@Override
+	//public IScope getScope(EObject context, EReference reference) {
+	//	if(context instanceof Query && reference.getName().equals("collection")) {
+	//		Query query = (Query) context;
+	//		return getCollectionScope(query);
+	//		
+	//		}
+	//	return super.getScope(context, reference);
+	//}
+		
+	
+
+	//protected IScope getCollectionScope(Query query) {
+		//Collection target = query.getCollection();
+		////This line returns a Collection rather than a collection-root for some reason
+		//CollectionRoot root = (CollectionRoot) EcoreUtil.getRootContainer(target);
+		//EList<Collection> candidates = root.getCollection();
+	//	return Scopes.scopeFor(candidates);
+//	}
 }
