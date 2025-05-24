@@ -51,6 +51,12 @@ Workflow {
 			generator = {
 				generateXtendStub = true
 			}
+			//Makes it possible to have case-insensitive keywords:
+			parserGenerator = {
+				options = {
+					ignoreCase = true
+				}
+			}
 			junitSupport = {
 				junitVersion = "5"
 			}
