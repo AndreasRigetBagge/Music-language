@@ -13,4 +13,5 @@ Require-Bundle: muslan.query.dsl,
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: muslan.query.ide.contentassist.antlr.internal,
- muslan.query.ide.contentassist.antlr
+ muslan.query.ide.contentassist.antlr,
+ muslan.query.ide.contentassist.antlr.lexer
