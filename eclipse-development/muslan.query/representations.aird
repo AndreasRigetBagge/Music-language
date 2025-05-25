@@ -14,7 +14,7 @@
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BWEpICTLEfClaqb2N_ZnPw" name="query class diagram" repPath="#_BV_woCTLEfClaqb2N_ZnPw" changeId="1747584377295">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aeO98DQBEfCf9oI0nBN14A" name="query class diagram" repPath="#_aduAkDQBEfCf9oI0nBN14A" changeId="1748183802971">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aeO98DQBEfCf9oI0nBN14A" name="query class diagram" repPath="#_aduAkDQBEfCf9oI0nBN14A" changeId="1748185489320">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model/Query.ecore#/"/>
       </ownedRepresentationDescriptors>

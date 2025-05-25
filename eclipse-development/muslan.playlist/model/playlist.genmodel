@@ -8,7 +8,7 @@
   <foreignModel>playlist.ecore</foreignModel>
   <genPackages prefix="Playlist" disposableProviderFactory="true" ecorePackage="playlist.ecore#/">
     <genClasses ecoreClass="playlist.ecore#//Playlist">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playlist.ecore#//Playlist/playitem"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference playlist.ecore#//Playlist/playitem"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playlist.ecore#//Playlist/configuration"/>
     </genClasses>
     <genClasses image="false" ecoreClass="playlist.ecore#//PlayItem"/>

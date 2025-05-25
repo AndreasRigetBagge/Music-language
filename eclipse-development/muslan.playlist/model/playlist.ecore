@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="playlist" nsURI="https://www.example.org/playlist" nsPrefix="playlist">
   <eClassifiers xsi:type="ecore:EClass" name="Playlist">
     <eStructuralFeatures xsi:type="ecore:EReference" name="playitem" upperBound="-1"
-        eType="#//PlayItem" containment="true"/>
+        eType="#//PlayItem"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" eType="ecore:EClass ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlayItem" abstract="true" interface="true"/>
