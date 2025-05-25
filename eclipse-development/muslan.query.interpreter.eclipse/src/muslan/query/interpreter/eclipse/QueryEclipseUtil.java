@@ -1,11 +1,9 @@
 package muslan.query.interpreter.eclipse;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
@@ -20,36 +18,26 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.ui.console.ConsolePlugin;
-import org.eclipse.ui.console.IConsole;
-import org.eclipse.ui.console.IConsoleManager;
-import org.eclipse.ui.console.MessageConsole;
 
 import queue.Queue;
 
 public class QueryEclipseUtil {
 	public static EObject loadModel(IFile queryFile) {
-		IPath fullPath = queryFile.getFullPath();
-		
-		String absolutePathString = fullPath.toOSString();
-				
-		URI uri = URI.createPlatformResourceURI(absolutePathString, true);
-		
-		ResourceSet resourceSet = new ResourceSetImpl();
-		
+		IPath fullPath = queryFile.getFullPath(); 
+		String absolutePathString = fullPath.toOSString(); 
+		URI uri = URI.createPlatformResourceURI(absolutePathString, true); 
+		ResourceSet resourceSet = new ResourceSetImpl(); 
 		Resource resource = resourceSet.getResource(uri, true);
 		
 		try {
-	    	resource.load(Collections.EMPTY_MAP);
-	    	
-	    	List<EObject> contents = resource.getContents();
-	    	
+	    	resource.load(Collections.EMPTY_MAP); 
+	    	List<EObject> contents = resource.getContents(); 
 	    	if (contents == null || contents.isEmpty()) {
-	    		//Throw just to be caught again immediately and keep on going with the next model.
 	    		throw new UnsupportedOperationException();
-	    	}
-	    	
+	    	} 
+
     		return contents.get(0);
+
 	    } catch(Exception e) {
 	    	e.printStackTrace();
 	    	System.err.println("Failed to load model from \"" + resource.getURI() + "\".");
@@ -63,8 +51,7 @@ public class QueryEclipseUtil {
 		
 		for (IResource resource : resources) {
 			if (resource instanceof IFile) {
-				IFile file = (IFile) resource;
-				
+				IFile file = (IFile) resource; 
 				String fileExtension = file.getFileExtension();
 				if (fileExtension.equalsIgnoreCase(requestedFileExtension)) {
 					return file;
@@ -79,8 +66,7 @@ public class QueryEclipseUtil {
 		List<IResource> selectedResources = new ArrayList<IResource>();
 		
 		if (selection instanceof StructuredSelection) {
-			StructuredSelection structuredSelection = (StructuredSelection) selection;
-
+			StructuredSelection structuredSelection = (StructuredSelection) selection; 
 			List<?> selectedObjects = structuredSelection.toList();
 
 			for (Object selectedObject : selectedObjects) {
@@ -102,38 +88,6 @@ public class QueryEclipseUtil {
 		return selectedResources;
 	}
 	
-	public static MessageConsole findOrCreateConsole(String name) {
-		MessageConsole console = findConsole(name);
-		
-		if (console != null) {
-			return console;
-		}
-		
-		return createConsole(name);
-	}
-	
-	public static MessageConsole findConsole(String name) {
-		ConsolePlugin plugin = ConsolePlugin.getDefault();
-		IConsoleManager consoleManager = plugin.getConsoleManager();
-		IConsole[] existingConsoles = consoleManager.getConsoles();
-		
-		for (int i = 0; i < existingConsoles.length; i++) {
-			if (name.equals(existingConsoles[i].getName())) {
-				return (MessageConsole) existingConsoles[i];
-			}
-		}
-		
-		return null;
-	}
-	
-	public static MessageConsole createConsole(String name) {
-		ConsolePlugin plugin = ConsolePlugin.getDefault();
-		IConsoleManager consoleManager = plugin.getConsoleManager();
-		MessageConsole newConsole = new MessageConsole(name, null);
-		consoleManager.addConsoles(new IConsole[] { newConsole });
-		return newConsole;
-	}
-	
 	public static void save(Queue queue, IFile file) {
 
 		System.out.println("Working directory: " + System.getProperty("user.dir"));
@@ -149,7 +103,6 @@ public class QueryEclipseUtil {
 		try {
 			resource.save(Collections.EMPTY_MAP);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
 	}
