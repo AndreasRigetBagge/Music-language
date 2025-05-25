@@ -60,19 +60,19 @@ enum RestrictedOperatorType returns OperatorType:
 
 
 OrClause:
-	"either" "(" OrContent ")"
+	"either" "(" filterclause+=OrContent (("or"|",")? filterclause+=OrContent)+ ")"
 ;
 
 
-OrContent returns OrClause:
-	filterclause+=FilterClause "or" filterclause+=FilterClause
+OrContent returns FilterClause:
+	Clause | AndClause
 ;
 
 
 AndClause:
-	"both" "[" AndContent "]"
+	"both" "(" filterclause+=AndContent (("and"|",")? filterclause+=AndContent)+ ")"
 ;
 
-AndContent returns AndClause:
-	filterclause+=FilterClause "and" filterclause+=FilterClause
+AndContent returns FilterClause:
+	Clause | OrClause
 ;
