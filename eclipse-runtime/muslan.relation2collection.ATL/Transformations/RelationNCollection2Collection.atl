@@ -1,4 +1,4 @@
--- @nsURI MMCollection=https://www.example.org/collection
+-- @nsURI MMCollection=https://www.example.org/musiccollection
 -- @nsURI MMRelation=https://www.example.org/relation
 -- @nsURI MMPBConfig=https://www.example.org/pbconfig
 
@@ -7,20 +7,20 @@ create OUT : MMCollection from IN1 : MMCollection, IN2 : MMRelation;
 
 -- ########## Helpers ##########
 
--- Helper to resolve the actual Collection a CollectionReference points to
-helper context MMRelation!CollectionReference def: resolveCollection() : MMCollection!"Collection" =
+-- Helper to resolve the actual MusicCollection a CollectionReference points to
+helper context MMRelation!CollectionReference def: resolveCollection() : MMCollection!"MusicCollection" =
     self.pointsTo;
 
--- Helper to get all Track elements from a Collection
-helper context MMCollection!"Collection" def: getAllTracks() : Sequence(MMCollection!Track) =
+-- Helper to get all Track elements from a MusicCollection
+helper context MMCollection!"MusicCollection" def: getAllTracks() : Sequence(MMCollection!Track) =
     self.categorizedelements->select(e | e.oclIsTypeOf(MMCollection!Track))->asSequence();
 
--- Helper to get all Composition elements from a Collection
-helper context MMCollection!"Collection" def: getAllCompositions() : Sequence(MMCollection!Composition) =
+-- Helper to get all Composition elements from a MusicCollection
+helper context MMCollection!"MusicCollection" def: getAllCompositions() : Sequence(MMCollection!Composition) =
     self.categorizedelements->select(e | e.oclIsTypeOf(MMCollection!Composition))->asSequence();
 
--- Helper to get all Album elements from a Collection
-helper context MMCollection!"Collection" def: getAllAlbums() : Sequence(MMCollection!Album) =
+-- Helper to get all Album elements from a MusicCollection
+helper context MMCollection!"MusicCollection" def: getAllAlbums() : Sequence(MMCollection!Album) =
     self.categorizedelements->select(e | e.oclIsTypeOf(MMCollection!Album))->asSequence();
 
 -- ########## Entry Rule ##########
@@ -32,12 +32,12 @@ rule RelationRoot2CollectionRoot {
     using {
     	defaultConfigName : MMCollection!Configuration = 
             MMCollection!CollectionRoot.allInstances().first().defaultConfig.Name;
-        collections : Sequence(MMCollection!"Collection") = 
-            MMCollection!"Collection".allInstances();
+        collections : Sequence(MMCollection!"MusicCollection") = 
+            MMCollection!"MusicCollection".allInstances();
     }
 	to
         cr : MMCollection!CollectionRoot (
-            collection <- collections.union(r.maincollection.deriveNewCollections()),
+            musiccollection <- collections.union(r.maincollection.deriveNewCollections()),
             artist <- MMCollection!Artist.allInstances(),
             categories <- MMCollection!Category.allInstances(),
             configuration <- MMCollection!Configuration.allInstances()->collect(c | thisModule.Configuration2Configuration(c)),
@@ -52,7 +52,7 @@ lazy rule DerivedCollection2Collection {
     from
         d : MMRelation!DerivedCollection
     to
-        c : MMCollection!"Collection" (
+        c : MMCollection!"MusicCollection" (
             Name <- d.name,
             categorizedelements <- d.getReferencedCompositions().union(d.getReferencedTracks()).union(d.getReferencedAlbums())
         )
@@ -63,9 +63,9 @@ lazy rule DerivedCollection2Collection {
 
 rule OldCollection2NewCollection {
     from
-        c : MMCollection!"Collection"
+        c : MMCollection!"MusicCollection"
     to
-        newC : MMCollection!"Collection" (
+        newC : MMCollection!"MusicCollection" (
             Name <- c.Name,
             categorizedelements <- c.categorizedelements
         )
@@ -190,7 +190,7 @@ helper context MMRelation!DerivedCollection def: refersToAll() : Sequence(MMRela
 
 -- Generate all derived collections (called by main rule)
 -- safer way to collect only DerivedCollections
-helper context MMRelation!MainCollection def: deriveNewCollections() : Sequence(MMCollection!"Collection") =
+helper context MMRelation!MainCollection def: deriveNewCollections() : Sequence(MMCollection!"MusicCollection") =
     MMRelation!Link.allInstances()
         ->select(l | l.outgoing = self)
         ->collect(l | l.incoming)
@@ -200,7 +200,7 @@ helper context MMRelation!MainCollection def: deriveNewCollections() : Sequence(
 
 
 -- Resolve any DerivedCollection or CollectionReference recursively
-helper def: resolveDerived(i : MMRelation!ICollection) : MMCollection!"Collection" =
+helper def: resolveDerived(i : MMRelation!ICollection) : MMCollection!"MusicCollection" =
     if i.oclIsTypeOf(MMRelation!DerivedCollection) then
         thisModule.DerivedCollection2Collection(i.oclAsType(MMRelation!DerivedCollection))
     else OclUndefined

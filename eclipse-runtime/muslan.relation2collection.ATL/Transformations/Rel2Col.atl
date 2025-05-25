@@ -1,5 +1,5 @@
 -- @nsURI MMRelation=https://www.example.org/relation
--- @nsURI MMCollection=https://www.example.org/collection
+-- @nsURI MMCollection=https://www.example.org/musiccollection
 
 module Rel2Col;
 
@@ -23,7 +23,7 @@ rule MainCollection2DerivedCollection {
 	}
 	to
 		t : MMCollection!CollectionRoot(
-			collection <- s.derivedCollections()->collect(d | thisModule.DerivedCollection2Collection(d)),
+			musiccollection <- s.derivedCollections()->collect(d | thisModule.DerivedCollection2Collection(d)),
 			artist <- oldRootCollection.artist,
 			categories <- oldRootCollection.categories,
 			configuration <- oldRootCollection.configuration,
@@ -37,7 +37,7 @@ lazy rule DerivedCollection2Collection {
 			s.oclIsTypeOf(MMRelation!DerivedCollection)
 	)
 	to
-		t : MMCollection!"Collection" (
+		t : MMCollection!"MusicCollection" (
 		Name <- s.name,
 		categorizedelements <- s.getAllTracks()
 	)
@@ -67,7 +67,7 @@ helper context MMRelation!RelationRoot def: getCollectionRoot() : MMCollection!C
         ->first().pointsTo.refImmediateComposite();
 
 --helper context MMCollection!CollectionRoot def: getCollectionsCopy() : MMCollection!CollectionRoot =
-  --  self.collections->select(c | MMCollection!"Collection"(
+  --  self.collections->select(c | MMCollection!"MusicCollection"(
     --	name <- c.name,
       --  categorizedelements <- c.getTracks(),
    --     ));

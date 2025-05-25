@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <query:Query xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:query="https://www.example.org/query">
-  <collection href="ExampleCollection.collection#//@collection.1"/>
+  <musiccollection href="ExampleCollection.musiccollection#//@musiccollection.1"/>
   <filter xsi:type="query:OrClause">
     <filterclause xsi:type="query:AndClause">
       <filterclause xsi:type="query:ArtistClause" value="Equillibrium"/>

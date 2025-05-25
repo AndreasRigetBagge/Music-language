@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="collection" nsURI="https://www.example.org/collection" nsPrefix="collection">
-  <eClassifiers xsi:type="ecore:EClass" name="Collection">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="musiccollection" nsURI="https://www.example.org/musiccollection" nsPrefix="musiccollection">
+  <eClassifiers xsi:type="ecore:EClass" name="MusicCollection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="categorizedelements" upperBound="-1"
         eType="#//CategorizedElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -42,8 +42,8 @@
     <eLiterals name="Tag" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CollectionRoot">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="collection" upperBound="-1"
-        eType="#//Collection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="musiccollection" upperBound="-1"
+        eType="#//MusicCollection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="artist" upperBound="-1"
         eType="#//Artist" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="categories" upperBound="-1"

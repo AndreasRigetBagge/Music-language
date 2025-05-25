@@ -1,5 +1,5 @@
 -- @nsURI MMQuery=https://www.example.org/query
--- @nsURI MMCollection=https://www.example.org/collection
+-- @nsURI MMCollection=https://www.example.org/musiccollection
 
 module query2queue;
 

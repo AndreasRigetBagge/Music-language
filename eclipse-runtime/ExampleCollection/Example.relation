@@ -4,27 +4,27 @@
   <links outgoing="//@providers.0" incoming="//@providers.1"/>
   <links outgoing="//@providers.4" incoming="//@providers.3"/>
   <links outgoing="//@providers.0" incoming="//@providers.4"/>
-  <providers xsi:type="relation:MainCollection" name="My Complete Collection">
+  <providers xsi:type="relation:MainCollection" name="My Complete MusicCollection">
     <sources name="Spotify">
       <locations location="Heimat on spotify">
-        <track href="ExampleCollection.collection#//@collection.1/@categorizedelements.5"/>
+        <track href="ExampleCollection.musiccollection#//@musiccollection.1/@categorizedelements.5"/>
       </locations>
       <locations location="https://www.youtube.com/watch?v=kXYiU_JCYtU">
-        <track href="ExampleCollection.collection#//@collection.1/@categorizedelements.3"/>
+        <track href="ExampleCollection.musiccollection#//@musiccollection.1/@categorizedelements.3"/>
       </locations>
     </sources>
     <sources name="Harddrive">
       <locations location="https://www.youtube.com/watch?v=3YxaaGgTQYM">
-        <track href="ExampleCollection.collection#//@collection.1/@categorizedelements.1"/>
+        <track href="ExampleCollection.musiccollection#//@musiccollection.1/@categorizedelements.1"/>
       </locations>
     </sources>
   </providers>
   <providers xsi:type="relation:DerivedCollection" name="Nu Metal"/>
   <providers xsi:type="relation:CollectionReference">
-    <pointsTo href="ExampleCollection.collection#//@collection.1"/>
+    <pointsTo href="ExampleCollection.musiccollection#//@musiccollection.1"/>
   </providers>
   <providers xsi:type="relation:CollectionReference">
-    <pointsTo href="ExampleCollection.collection#//@collection.0"/>
+    <pointsTo href="ExampleCollection.musiccollection#//@musiccollection.0"/>
   </providers>
   <providers xsi:type="relation:DerivedCollection" name="Bingo Songs"/>
 </relation:RelationRoot>
