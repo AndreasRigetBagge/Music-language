@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="musiccollection" nsURI="https://www.example.org/musiccollection" nsPrefix="musiccollection">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="musiccollection" nsURI="https://www.example.org/musiccollection"
+    nsPrefix="musiccollection">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="pbconfig" value="platform:/resource/muslan.pbconfig/model/pbconfig.ecore#/"/>
+  </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
@@ -10,8 +14,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="categorizedelements" upperBound="-1"
         eType="#//CategorizedElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playlist" upperBound="-1"
+        eType="#//Playlist" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//CategorizedElement ../../muslan.playlist/model/playlist.ecore#//PlayItem">
+  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//CategorizedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="compositions" upperBound="-1"
         eType="#//Composition" eOpposite="#//Composition/tracks"/>
   </eClassifiers>
@@ -27,17 +33,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CategorizedElement" abstract="true">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="NameIsLowerCase"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="NameIsLowerCase" value="Tuple {&#xA;&#x9;message : String = 'Expected a lowercase name rather than '' + Name + ''',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;Name = Name?.toLowerCase()&#xA;}.status"/>
-    </eAnnotations>
-    <eOperations name="ucName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="body" value="Name?.toUpperCase()"/>
-      </eAnnotations>
-    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="artists" upperBound="-1"
         eType="#//Artist"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -66,5 +61,12 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultConfig" lowerBound="1"
         eType="ecore:EClass ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Playlist">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="query" upperBound="-1"
+        eType="ecore:EClass ../../muslan.query/model/Query.ecore#//Query" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="track" upperBound="-1"
+        eType="#//Track"/>
   </eClassifiers>
 </ecore:EPackage>

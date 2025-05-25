@@ -6,7 +6,7 @@
     usedGenPackages="../../muslan.pbconfig/model/pbconfig.genmodel#//pbconfig" operationReflection="true"
     importOrganizing="true">
   <foreignModel>MusicCollection.ecore</foreignModel>
-  <genPackages prefix="MusicCollection" disposableProviderFactory="true" ecorePackage="MusicCollection.ecore#/">
+  <genPackages prefix="Musiccollection" disposableProviderFactory="true" ecorePackage="MusicCollection.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="MusicCollection.ecore#//CategoryType">
       <genEnumLiterals ecoreEnumLiteral="MusicCollection.ecore#//CategoryType/Rating"/>
       <genEnumLiterals ecoreEnumLiteral="MusicCollection.ecore#//CategoryType/Genre"/>
@@ -46,9 +46,42 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MusicCollection.ecore#//CollectionRoot/defaultConfig"/>
     </genClasses>
     <genClasses ecoreClass="MusicCollection.ecore#//Playlist">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MusicCollection.ecore#//Playlist/playitem"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MusicCollection.ecore#//Playlist/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MusicCollection.ecore#//Playlist/query"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MusicCollection.ecore#//Playlist/track"/>
     </genClasses>
-    <genClasses ecoreClass="MusicCollection.ecore#//PlayItem"/>
+  </genPackages>
+  <genPackages prefix="Query" ecorePackage="../../muslan.query/model/Query.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../muslan.query/model/Query.ecore#//CategorizedElementType">
+      <genEnumLiterals ecoreEnumLiteral="../../muslan.query/model/Query.ecore#//CategorizedElementType/Track"/>
+      <genEnumLiterals ecoreEnumLiteral="../../muslan.query/model/Query.ecore#//CategorizedElementType/Album"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../muslan.query/model/Query.ecore#//OperatorType">
+      <genEnumLiterals ecoreEnumLiteral="../../muslan.query/model/Query.ecore#//OperatorType/SameAs"/>
+      <genEnumLiterals ecoreEnumLiteral="../../muslan.query/model/Query.ecore#//OperatorType/DifferentFrom"/>
+      <genEnumLiterals ecoreEnumLiteral="../../muslan.query/model/Query.ecore#//OperatorType/LessThan"/>
+      <genEnumLiterals ecoreEnumLiteral="../../muslan.query/model/Query.ecore#//OperatorType/GreaterThan"/>
+    </genEnums>
+    <genClasses ecoreClass="../../muslan.query/model/Query.ecore#//Query">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../muslan.query/model/Query.ecore#//Query/collection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.query/model/Query.ecore#//Query/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.query/model/Query.ecore#//Query/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../muslan.query/model/Query.ecore#//FilterClause"/>
+    <genClasses ecoreClass="../../muslan.query/model/Query.ecore#//AndClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.query/model/Query.ecore#//AndClause/filterclause"/>
+    </genClasses>
+    <genClasses ecoreClass="../../muslan.query/model/Query.ecore#//OrClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../muslan.query/model/Query.ecore#//OrClause/filterclause"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../muslan.query/model/Query.ecore#//Clause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.query/model/Query.ecore#//Clause/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.query/model/Query.ecore#//Clause/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="../../muslan.query/model/Query.ecore#//CategoryClause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../muslan.query/model/Query.ecore#//CategoryClause/category"/>
+    </genClasses>
+    <genClasses ecoreClass="../../muslan.query/model/Query.ecore#//ArtistClause"/>
+    <genClasses ecoreClass="../../muslan.query/model/Query.ecore#//TitleClause"/>
   </genPackages>
 </genmodel:GenModel>

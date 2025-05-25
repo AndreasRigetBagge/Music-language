@@ -10,7 +10,15 @@
       <!-- @generated MusicCollection -->
       <package
             uri="https://www.example.org/musiccollection"
-            class="musiccollection.MusicCollectionPackage"
+            class="musiccollection.MusiccollectionPackage"
+            genModel="model/MusicCollection.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated MusicCollection -->
+      <package
+            uri="https://www.example.org/query"
+            class="query.QueryPackage"
             genModel="model/MusicCollection.genmodel"/>
    </extension>
 

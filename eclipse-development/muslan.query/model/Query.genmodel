@@ -18,7 +18,7 @@
       <genEnumLiterals ecoreEnumLiteral="Query.ecore#//OperatorType/GreaterThan"/>
     </genEnums>
     <genClasses ecoreClass="Query.ecore#//Query">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Query.ecore#//Query/musiccollection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Query.ecore#//Query/collection"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Query.ecore#//Query/filter"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Query.ecore#//Query/type"/>
     </genClasses>

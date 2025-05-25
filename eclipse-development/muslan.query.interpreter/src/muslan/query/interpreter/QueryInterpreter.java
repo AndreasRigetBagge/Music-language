@@ -17,8 +17,6 @@ import query.CategoryClause;
 import query.OperatorType;
 import query.OrClause;
 import musiccollection.MusicCollection;
-import musiccollection.Category;
-import musiccollection.CategoryType;
 import musiccollection.Track;
 import musiccollection.Album;
 import musiccollection.CategorizedElement;
@@ -26,7 +24,7 @@ import musiccollection.CategorizedElement;
 public class QueryInterpreter {
 	public static Queue interpret(Query query) throws QueryInterpreterException {
 		FilterClause filter = query.getFilter();
-		MusicCollection musiccollection = query.getMusiccollection();
+		MusicCollection musiccollection = query.getCollection();
 		Queue q = QueueFactory.eINSTANCE.createQueue();
 		List<Track> tracks = q.getTracks();
 

@@ -8,13 +8,12 @@
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.genmodel</semanticResources>
     <semanticResources>model/Query.genmodel</semanticResources>
     <semanticResources>platform:/resource/muslan.playlist/model/playlist.genmodel</semanticResources>
-    <semanticResources>platform:/resource/muslan.musiccollection/model/MusicCollection.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_77R0YCTKEfClaqb2N_ZnPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BWEpICTLEfClaqb2N_ZnPw" name="query class diagram" repPath="#_BV_woCTLEfClaqb2N_ZnPw" changeId="1747584377295">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aeO98DQBEfCf9oI0nBN14A" name="query class diagram" repPath="#_aduAkDQBEfCf9oI0nBN14A" changeId="1748185489320">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aeO98DQBEfCf9oI0nBN14A" name="query class diagram" repPath="#_aduAkDQBEfCf9oI0nBN14A" changeId="1748191408445">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model/Query.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -736,9 +735,9 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_DNgzETW6EfCi66H84PrKyg" fontName=".AppleSystemUIFont" fontHeight="8" bold="true"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_DNgzEjW6EfCi66H84PrKyg"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_DNgzEzW6EfCi66H84PrKyg" type="3010" element="_DNascTW6EfCi66H84PrKyg">
-              <styles xmi:type="notation:FontStyle" xmi:id="_DNgzFDW6EfCi66H84PrKyg" fontName=".AppleSystemUIFont" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_DNgzFTW6EfCi66H84PrKyg"/>
+            <children xmi:type="notation:Node" xmi:id="_YoB3zDmHEfCji_9AElHftQ" type="3010" element="_Yn_bgzmHEfCji_9AElHftQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_YoB3zTmHEfCji_9AElHftQ" fontName=".AppleSystemUIFont" fontHeight="8" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_YoB3zjmHEfCji_9AElHftQ"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_DNgMAjW6EfCi66H84PrKyg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_DNgMAzW6EfCi66H84PrKyg"/>
@@ -1174,10 +1173,10 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DNascTW6EfCi66H84PrKyg" name=" musiccollection : MusicCollection" tooltipText="">
-        <target xmi:type="ecore:EReference" href="model/Query.ecore#//Query/musiccollection"/>
-        <semanticElements xmi:type="ecore:EReference" href="model/Query.ecore#//Query/musiccollection"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_DNasczW6EfCi66H84PrKyg" labelAlignment="LEFT" description="_DNascjW6EfCi66H84PrKyg" color="114,159,207">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Yn_bgzmHEfCji_9AElHftQ" name=" collection : MusicCollection" tooltipText="">
+        <target xmi:type="ecore:EReference" href="model/Query.ecore#//Query/collection"/>
+        <semanticElements xmi:type="ecore:EReference" href="model/Query.ecore#//Query/collection"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_YoACkDmHEfCji_9AElHftQ" labelAlignment="LEFT" description="_DNascjW6EfCi66H84PrKyg" color="114,159,207">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>

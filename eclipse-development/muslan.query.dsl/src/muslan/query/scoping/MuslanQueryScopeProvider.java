@@ -27,7 +27,7 @@ public class MuslanQueryScopeProvider extends AbstractMuslanQueryScopeProvider {
 	
 	@Override
     public IScope getScope(EObject context, EReference reference) {
-        if (reference == QueryPackage.Literals.QUERY__MUSICCOLLECTION) {
+        if (reference == QueryPackage.Literals.QUERY__COLLECTION) {
             ResourceSet rs = context.eResource().getResourceSet();
             List<MusicCollection> collections = new ArrayList<>();
             for (Resource r : rs.getResources()) {

@@ -10,10 +10,13 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: musiccollection,
  musiccollection.impl,
- musiccollection.util
+ musiccollection.util,
+ query,
+ query.impl,
+ query.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  muslan.pbconfig;visibility:=reexport,
- org.eclipse.ocl.pivot;bundle-version="1.22.0",
- org.eclipse.ocl.examples.codegen;bundle-version="2.22.0"
+ org.eclipse.ocl.pivot;bundle-version="1.22.0";visibility:=reexport,
+ org.eclipse.ocl.examples.codegen;bundle-version="2.22.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
