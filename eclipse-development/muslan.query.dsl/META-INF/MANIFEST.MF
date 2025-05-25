@@ -19,7 +19,6 @@ Export-Package: muslan.query.serializer,
  muslan.query.scoping,
  muslan.query,
  muslan.query.generator,
- muslan.query.formatting2,
  muslan.query.parser.antlr,
  muslan.query.parser.antlr.internal,
  muslan.query.parser.antlr.lexer
