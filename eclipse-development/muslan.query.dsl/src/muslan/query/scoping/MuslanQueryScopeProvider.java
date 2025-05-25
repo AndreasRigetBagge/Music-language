@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.xtext.EcoreUtil2;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
-import collection.Collection;
-import collection.CollectionRoot;
+import musiccollection.MusicCollection;
+import musiccollection.CollectionRoot;
 import query.Query;
 
 /**

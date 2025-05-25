@@ -32,7 +32,7 @@ public class QueryInterpreter {
 
 	public static Queue interpret(Query query) throws QueryInterpreterException {
 		FilterClause filter = query.getFilter();
-		MusicCollection musiccollection = query.getCollection();
+		MusicCollection musiccollection = query.getMusiccollection();
 		Queue q = QueueFactory.eINSTANCE.createQueue();
 		List<Track> tracks = q.getTracks();
 
