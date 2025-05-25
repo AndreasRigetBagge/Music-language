@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="query" nsURI="https://www.example.org/query" nsPrefix="query">
-  <eClassifiers xsi:type="ecore:EClass" name="Query" eSuperTypes="../../muslan.collection/model/Collection.ecore#//PlayItem">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="collection" lowerBound="1"
-        eType="ecore:EClass ../../muslan.collection/model/Collection.ecore#//Collection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Query" eSuperTypes="../../muslan.musiccollection/model/MusicCollection.ecore#//PlayItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="musiccollection" lowerBound="1"
+        eType="ecore:EClass ../../muslan.musiccollection/model/MusicCollection.ecore#//MusicCollection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" lowerBound="1"
         eType="#//FilterClause" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//CategorizedElementType"/>
@@ -34,7 +34,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CategoryClause" eSuperTypes="#//Clause">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" lowerBound="1"
-        eType="ecore:EEnum ../../muslan.collection/model/Collection.ecore#//CategoryType"/>
+        eType="ecore:EEnum ../../muslan.musiccollection/model/MusicCollection.ecore#//CategoryType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArtistClause" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="TitleClause" eSuperTypes="#//Clause"/>

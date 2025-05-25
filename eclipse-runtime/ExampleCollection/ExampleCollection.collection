@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<collection:CollectionRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:collection="https://www.example.org/collection" xmlns:pbconfig="https://www.example.org/pbconfig" defaultConfig="//@configuration.0">
-  <collection Name="Y2K">
-    <categorizedelements xsi:type="collection:Composition" artists="//@artist.2" Name="Oops!.. I Did It Again" category="//@categories.0" tracks="//@collection.0/@categorizedelements.1"/>
-    <categorizedelements xsi:type="collection:Track" artists="//@artist.2" Name="Britney Spears - Oops!...I Did It Again (Official HD Video)" category="//@categories.0 //@categories.2" compositions="//@collection.0/@categorizedelements.0"/>
-    <categorizedelements xsi:type="collection:Composition" artists="//@artist.0" Name="I Want It That Way" category="//@categories.0"/>
-    <categorizedelements xsi:type="collection:Composition" artists="//@artist.1" Name="Bye Bye Bye" category="//@categories.0" tracks="//@collection.0/@categorizedelements.4 //@collection.0/@categorizedelements.5"/>
-    <categorizedelements xsi:type="collection:Track" artists="//@artist.2" Name="Bye Bye Bye (Britney Spears Cover)" category="//@categories.0 //@categories.1" compositions="//@collection.0/@categorizedelements.3"/>
-    <categorizedelements xsi:type="collection:Track" artists="//@artist.0" Name="Bye Bye Bye (Original)" category="//@categories.0" compositions="//@collection.0/@categorizedelements.3"/>
-  </collection>
-  <collection Name="When life isn't lifing">
-    <categorizedelements xsi:type="collection:Composition" artists="//@artist.3" Name="Bring Me To Life" category="//@categories.2" tracks="//@collection.1/@categorizedelements.1"/>
-    <categorizedelements xsi:type="collection:Track" artists="//@artist.3" Name="Bring Me To Life (Official HD Music Video)" category="//@categories.3" compositions="//@collection.1/@categorizedelements.0"/>
-    <categorizedelements xsi:type="collection:Composition" artists="//@artist.4" Name="Numb" category="//@categories.3" tracks="//@collection.1/@categorizedelements.3"/>
-    <categorizedelements xsi:type="collection:Track" artists="//@artist.4" Name="Numb (Official Music Video) [4K UPGRADE] " category="//@categories.3" compositions="//@collection.1/@categorizedelements.2"/>
-    <categorizedelements xsi:type="collection:Album" artists="//@artist.5" Name="Armageddon" category="//@categories.4" tracks="//@collection.1/@categorizedelements.5 //@collection.1/@categorizedelements.8"/>
-    <categorizedelements xsi:type="collection:Track" artists="//@artist.5" Name="Heimat" category="//@categories.4 //@categories.2" compositions="//@collection.1/@categorizedelements.6"/>
-    <categorizedelements xsi:type="collection:Composition" artists="//@artist.5" Name="Heimat" category="//@categories.4" tracks="//@collection.1/@categorizedelements.5"/>
-    <categorizedelements xsi:type="collection:Composition" artists="//@artist.5" Name="Katharsis" category="//@categories.4" tracks="//@collection.1/@categorizedelements.8"/>
-    <categorizedelements xsi:type="collection:Track" artists="//@artist.5" Name="Katharsis" category="//@categories.4" compositions="//@collection.1/@categorizedelements.7"/>
-    <playlist playitem="//@collection.1/@categorizedelements.1 //@collection.1/@categorizedelements.5" Name="Car ride playlisty"/>
-  </collection>
+<musiccollection:CollectionRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:musiccollection="https://www.example.org/musiccollection" xmlns:pbconfig="https://www.example.org/pbconfig" defaultConfig="//@configuration.0">
+  <musiccollection Name="Y2K">
+    <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.2" Name="Oops!.. I Did It Again" category="//@categories.0" tracks="//@musiccollection.0/@categorizedelements.1"/>
+    <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.2" Name="Britney Spears - Oops!...I Did It Again (Official HD Video)" category="//@categories.0 //@categories.2" compositions="//@musiccollection.0/@categorizedelements.0"/>
+    <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.0" Name="I Want It That Way" category="//@categories.0"/>
+    <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.1" Name="Bye Bye Bye" category="//@categories.0" tracks="//@musiccollection.0/@categorizedelements.4 //@musiccollection.0/@categorizedelements.5"/>
+    <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.2" Name="Bye Bye Bye (Britney Spears Cover)" category="//@categories.0 //@categories.1" compositions="//@musiccollection.0/@categorizedelements.3"/>
+    <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.0" Name="Bye Bye Bye (Original)" category="//@categories.0" compositions="//@musiccollection.0/@categorizedelements.3"/>
+  </musiccollection>
+  <musiccollection Name="When life isn't lifing">
+    <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.3" Name="Bring Me To Life" category="//@categories.2" tracks="//@musiccollection.1/@categorizedelements.1"/>
+    <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.3" Name="Bring Me To Life (Official HD Music Video)" category="//@categories.3" compositions="//@musiccollection.1/@categorizedelements.0"/>
+    <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.4" Name="Numb" category="//@categories.3" tracks="//@musiccollection.1/@categorizedelements.3"/>
+    <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.4" Name="Numb (Official Music Video) [4K UPGRADE] " category="//@categories.3" compositions="//@musiccollection.1/@categorizedelements.2"/>
+    <categorizedelements xsi:type="musiccollection:Album" artists="//@artist.5" Name="Armageddon" category="//@categories.4" tracks="//@musiccollection.1/@categorizedelements.5 //@musiccollection.1/@categorizedelements.8"/>
+    <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.5" Name="Heimat" category="//@categories.4 //@categories.2" compositions="//@musiccollection.1/@categorizedelements.6"/>
+    <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.5" Name="Heimat" category="//@categories.4" tracks="//@musiccollection.1/@categorizedelements.5"/>
+    <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.5" Name="Katharsis" category="//@categories.4" tracks="//@musiccollection.1/@categorizedelements.8"/>
+    <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.5" Name="Katharsis" category="//@categories.4" compositions="//@musiccollection.1/@categorizedelements.7"/>
+    <playlist playitem="//@musiccollection.1/@categorizedelements.1 //@musiccollection.1/@categorizedelements.5" Name="Car ride playlisty"/>
+  </musiccollection>
   <artist Name="Millennium"/>
   <artist Name="No Strings Attached"/>
   <artist Name="Britney Spears"/>
@@ -39,4 +39,4 @@
     <option xsi:type="pbconfig:FlagConfig"/>
     <option xsi:type="pbconfig:NumberConfig" Value="1234"/>
   </configuration>
-</collection:CollectionRoot>
+</musiccollection:CollectionRoot>

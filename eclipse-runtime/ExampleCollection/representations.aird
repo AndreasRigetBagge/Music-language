@@ -2,15 +2,15 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:relation="https://www.example.org/relation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_avw8wCqTEfCw9bHh1LeRiQ" selectedViews="_lnZ0sCqTEfCw9bHh1LeRiQ" version="15.4.1.202403191723">
     <semanticResources>Example.relation</semanticResources>
-    <semanticResources>ExampleCollection.collection</semanticResources>
+    <semanticResources>ExampleCollection.musiccollection</semanticResources>
     <semanticResources>My.pbconfig</semanticResources>
     <semanticResources>My.query</semanticResources>
     <semanticResources>answer.queue</semanticResources>
     <semanticResources>Example.muslanquery</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_lnZ0sCqTEfCw9bHh1LeRiQ">
-      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']"/>
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m55-YCqTEfCw9bHh1LeRiQ" name="ExampleRelationDiagram" repPath="#_m5tKECqTEfCw9bHh1LeRiQ" changeId="1746558906189">
-        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']"/>
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']"/>
         <target xmi:type="relation:RelationRoot" href="Example.relation#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
@@ -266,163 +266,163 @@
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_m8W1cCqTEfCw9bHh1LeRiQ" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_m8XcgCqTEfCw9bHh1LeRiQ"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6Rx0CqTEfCw9bHh1LeRiQ" name="My Complete Collection" tooltipText="Create a main collection" outgoingEdges="_6M41gCqUEfCtMbZih3mPng _P--D9CqkEfCnDvVJ72pOng" incomingEdges="_m8VARCqTEfCw9bHh1LeRiQ _YqKOQCqrEfCzNujEFnD0Bw" width="20" height="10" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6Rx0CqTEfCw9bHh1LeRiQ" name="My Complete MusicCollection" tooltipText="Create a main musiccollection" outgoingEdges="_6M41gCqUEfCtMbZih3mPng _P--D9CqkEfCnDvVJ72pOng" incomingEdges="_m8VARCqTEfCw9bHh1LeRiQ _YqKOQCqrEfCzNujEFnD0Bw" width="20" height="10" resizeKind="NSEW">
       <target xmi:type="relation:MainCollection" href="Example.relation#//@providers.0"/>
       <semanticElements xmi:type="relation:MainCollection" href="Example.relation#//@providers.0"/>
       <ownedStyle xmi:type="diagram:Square" uid="_m6ZtoCqTEfCw9bHh1LeRiQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="39,76,114" labelPosition="node" width="20" height="10" color="194,239,255">
-        <description xmi:type="style:SquareDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6d_EiqTEfCw9bHh1LeRiQ" name="Nu Metal" tooltipText="Create a derived collection" outgoingEdges="_m8VARCqTEfCw9bHh1LeRiQ" incomingEdges="_m8SkACqTEfCw9bHh1LeRiQ" width="10" height="10" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6d_EiqTEfCw9bHh1LeRiQ" name="Nu Metal" tooltipText="Create a derived musiccollection" outgoingEdges="_m8VARCqTEfCw9bHh1LeRiQ" incomingEdges="_m8SkACqTEfCw9bHh1LeRiQ" width="10" height="10" resizeKind="NSEW">
       <target xmi:type="relation:DerivedCollection" href="Example.relation#//@providers.1"/>
       <semanticElements xmi:type="relation:DerivedCollection" href="Example.relation#//@providers.1"/>
       <ownedStyle xmi:type="diagram:BundledImage" uid="_m6d_EyqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="224,133,3" labelPosition="node" shape="ring" color="253,206,137">
-        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']/@style"/>
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_WpU7wCqnEfC4IfDQpoGHPw" name="Bingo Songs" tooltipText="Create a derived collection" outgoingEdges="_YqKOQCqrEfCzNujEFnD0Bw" incomingEdges="_XXXJoSqrEfCzNujEFnD0Bw" width="10" height="10" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_WpU7wCqnEfC4IfDQpoGHPw" name="Bingo Songs" tooltipText="Create a derived musiccollection" outgoingEdges="_YqKOQCqrEfCzNujEFnD0Bw" incomingEdges="_XXXJoSqrEfCzNujEFnD0Bw" width="10" height="10" resizeKind="NSEW">
       <target xmi:type="relation:DerivedCollection" href="Example.relation#//@providers.4"/>
       <semanticElements xmi:type="relation:DerivedCollection" href="Example.relation#//@providers.4"/>
       <ownedStyle xmi:type="diagram:BundledImage" uid="_WpVi0CqnEfC4IfDQpoGHPw" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="224,133,3" labelPosition="node" shape="ring" color="253,206,137">
-        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']/@style"/>
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6emISqTEfCw9bHh1LeRiQ" name="When life isn't lifing" tooltipText="Create a collection reference that points to one of your already existing collections! \o/" outgoingEdges="_m8SkACqTEfCw9bHh1LeRiQ" width="10" height="10" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6emISqTEfCw9bHh1LeRiQ" name="When life isn't lifing" tooltipText="Create a musiccollection reference that points to one of your already existing collections! \o/" outgoingEdges="_m8SkACqTEfCw9bHh1LeRiQ" width="10" height="10" resizeKind="NSEW">
       <target xmi:type="relation:CollectionReference" href="Example.relation#//@providers.2"/>
       <semanticElements xmi:type="relation:CollectionReference" href="Example.relation#//@providers.2"/>
       <ownedStyle xmi:type="diagram:BundledImage" uid="_m6emIiqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,73,110" labelPosition="node" shape="ring" color="217,196,215">
-        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']/@style"/>
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6emJCqTEfCw9bHh1LeRiQ" name="Y2K" tooltipText="Create a collection reference that points to one of your already existing collections! \o/" outgoingEdges="_XXXJoSqrEfCzNujEFnD0Bw" width="10" height="10" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6emJCqTEfCw9bHh1LeRiQ" name="Y2K" tooltipText="Create a musiccollection reference that points to one of your already existing collections! \o/" outgoingEdges="_XXXJoSqrEfCzNujEFnD0Bw" width="10" height="10" resizeKind="NSEW">
       <target xmi:type="relation:CollectionReference" href="Example.relation#//@providers.3"/>
       <semanticElements xmi:type="relation:CollectionReference" href="Example.relation#//@providers.3"/>
       <ownedStyle xmi:type="diagram:BundledImage" uid="_m6fNMCqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="114,73,110" labelPosition="node" shape="ring" color="217,196,215">
-        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']/@style"/>
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6fNMiqTEfCw9bHh1LeRiQ" name="Spotify" tooltipText="Create a new source entity" outgoingEdges="_6M6qsCqUEfCtMbZih3mPng _6M7RxCqUEfCtMbZih3mPng" incomingEdges="_6M41gCqUEfCtMbZih3mPng" width="8" height="10" resizeKind="NSEW">
       <target xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.0"/>
       <semanticElements xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.0"/>
       <ownedStyle xmi:type="diagram:Lozenge" uid="_m6f0QCqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="77,137,20" labelPosition="node" width="8" height="10" color="204,242,166">
-        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']/@style"/>
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_P-XnACqkEfCnDvVJ72pOng" name="Harddrive" tooltipText="Create a new source entity" outgoingEdges="_UF4PAyqkEfCnDvVJ72pOng" incomingEdges="_P--D9CqkEfCnDvVJ72pOng" width="8" height="10" resizeKind="NSEW">
       <target xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.1"/>
       <semanticElements xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.1"/>
       <ownedStyle xmi:type="diagram:Lozenge" uid="_P-YOECqkEfCnDvVJ72pOng" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="77,137,20" labelPosition="node" width="8" height="10" color="204,242,166">
-        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']/@style"/>
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m6f0QiqTEfCw9bHh1LeRiQ" name="['Location of \'' + self.track.Name + '\''/]" tooltipText="Create a new track location" incomingEdges="_6M6qsCqUEfCtMbZih3mPng" width="6" height="8" resizeKind="NSEW">
       <target xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.0"/>
       <semanticElements xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.0"/>
       <ownedStyle xmi:type="diagram:Lozenge" uid="_m77XoCqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="255,255,255" borderLineStyle="dash" labelPosition="node" width="6" height="8" color="138,226,52">
-        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']/@style"/>
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m77-sSqTEfCw9bHh1LeRiQ" name="['Location of \'' + self.track.Name + '\''/]" tooltipText="Create a new track location" incomingEdges="_6M7RxCqUEfCtMbZih3mPng" width="6" height="8" resizeKind="NSEW">
       <target xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.1"/>
       <semanticElements xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.0/@locations.1"/>
       <ownedStyle xmi:type="diagram:Lozenge" uid="_m79M0CqTEfCw9bHh1LeRiQ" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="255,255,255" borderLineStyle="dash" labelPosition="node" width="6" height="8" color="138,226,52">
-        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']/@style"/>
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_UFcxICqkEfCnDvVJ72pOng" name="Location of 'Bring Me To Life (Official HD Music Video)'" tooltipText="Create a new track location" incomingEdges="_UF4PAyqkEfCnDvVJ72pOng" width="6" height="8" resizeKind="NSEW">
       <target xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.1/@locations.0"/>
       <semanticElements xmi:type="relation:Location" href="Example.relation#//@providers.0/@sources.1/@locations.0"/>
       <ownedStyle xmi:type="diagram:Lozenge" uid="_UFi3wCqkEfCnDvVJ72pOng" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="255,255,255" borderLineStyle="dash" labelPosition="node" width="6" height="8" color="138,226,52">
-        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']/@style"/>
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='LocationNode']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_m8SkACqTEfCw9bHh1LeRiQ" sourceNode="_m6emISqTEfCw9bHh1LeRiQ" targetNode="_m6d_EiqTEfCw9bHh1LeRiQ">
       <target xmi:type="relation:Link" href="Example.relation#//@links.0"/>
       <semanticElements xmi:type="relation:Link" href="Example.relation#//@links.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_m8TyICqTEfCw9bHh1LeRiQ" targetArrow="InputClosedArrow" size="2" strokeColor="173,127,168">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_m8TyISqTEfCw9bHh1LeRiQ" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_m8VARCqTEfCw9bHh1LeRiQ" sourceNode="_m6d_EiqTEfCw9bHh1LeRiQ" targetNode="_m6Rx0CqTEfCw9bHh1LeRiQ">
       <target xmi:type="relation:Link" href="Example.relation#//@links.1"/>
       <semanticElements xmi:type="relation:Link" href="Example.relation#//@links.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_m8VnUCqTEfCw9bHh1LeRiQ" targetArrow="InputClosedArrow" size="2" strokeColor="173,127,168">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_m8VnUSqTEfCw9bHh1LeRiQ" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_6M41gCqUEfCtMbZih3mPng" sourceNode="_m6Rx0CqTEfCw9bHh1LeRiQ" targetNode="_m6fNMiqTEfCw9bHh1LeRiQ">
       <target xmi:type="relation:MainCollection" href="Example.relation#//@providers.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_6M41gSqUEfCtMbZih3mPng" size="2" strokeColor="138,226,52">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourcesRelationEdge']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourcesRelationEdge']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6M41giqUEfCtMbZih3mPng" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourcesRelationEdge']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourcesRelationEdge']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_6M6qsCqUEfCtMbZih3mPng" sourceNode="_m6fNMiqTEfCw9bHh1LeRiQ" targetNode="_m6f0QiqTEfCw9bHh1LeRiQ">
       <target xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_6M7RwCqUEfCtMbZih3mPng" size="2" strokeColor="204,242,166">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6M7RwSqUEfCtMbZih3mPng" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_6M7RxCqUEfCtMbZih3mPng" sourceNode="_m6fNMiqTEfCw9bHh1LeRiQ" targetNode="_m77-sSqTEfCw9bHh1LeRiQ">
       <target xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_6M7RxSqUEfCtMbZih3mPng" size="2" strokeColor="204,242,166">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6M7RxiqUEfCtMbZih3mPng" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_P--D9CqkEfCnDvVJ72pOng" sourceNode="_m6Rx0CqTEfCw9bHh1LeRiQ" targetNode="_P-XnACqkEfCnDvVJ72pOng">
       <target xmi:type="relation:MainCollection" href="Example.relation#//@providers.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_P--D9SqkEfCnDvVJ72pOng" size="2" strokeColor="138,226,52">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourcesRelationEdge']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourcesRelationEdge']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_P--D9iqkEfCnDvVJ72pOng" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourcesRelationEdge']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourcesRelationEdge']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_UF4PAyqkEfCnDvVJ72pOng" sourceNode="_P-XnACqkEfCnDvVJ72pOng" targetNode="_UFcxICqkEfCnDvVJ72pOng">
       <target xmi:type="relation:Source" href="Example.relation#//@providers.0/@sources.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_UF42ACqkEfCnDvVJ72pOng" size="2" strokeColor="204,242,166">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_UF42ASqkEfCnDvVJ72pOng" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='SourceToLocationEdge']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_XXXJoSqrEfCzNujEFnD0Bw" sourceNode="_m6emJCqTEfCw9bHh1LeRiQ" targetNode="_WpU7wCqnEfC4IfDQpoGHPw">
       <target xmi:type="relation:Link" href="Example.relation#//@links.3"/>
       <semanticElements xmi:type="relation:Link" href="Example.relation#//@links.3"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_XXXwsCqrEfCzNujEFnD0Bw" targetArrow="InputClosedArrow" size="2" strokeColor="173,127,168">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YqKOQCqrEfCzNujEFnD0Bw" sourceNode="_WpU7wCqnEfC4IfDQpoGHPw" targetNode="_m6Rx0CqTEfCw9bHh1LeRiQ">
       <target xmi:type="relation:Link" href="Example.relation#//@links.4"/>
       <semanticElements xmi:type="relation:Link" href="Example.relation#//@links.4"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YqKOQSqrEfCzNujEFnD0Bw" targetArrow="InputClosedArrow" size="2" strokeColor="173,127,168">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']"/>
     </ownedDiagramElements>
-    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']"/>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_m5zQsCqTEfCw9bHh1LeRiQ"/>
-    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/muslan.relation.graphical/description/graphical.odesign#//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer"/>
     <target xmi:type="relation:RelationRoot" href="Example.relation#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

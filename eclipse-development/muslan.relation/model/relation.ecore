@@ -13,7 +13,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="track" lowerBound="1" eType="ecore:EClass ../../muslan.collection/model/Collection.ecore#//Track"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="track" lowerBound="1" eType="ecore:EClass ../../muslan.musiccollection/model/MusicCollection.ecore#//Track"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link">
     <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" lowerBound="1"
@@ -26,7 +26,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CollectionReference" eSuperTypes="#//ICollection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pointsTo" lowerBound="1"
-        eType="ecore:EClass ../../muslan.collection/model/Collection.ecore#//Collection"/>
+        eType="ecore:EClass ../../muslan.musiccollection/model/MusicCollection.ecore#//MusicCollection"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ICollection" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="RelationRoot">

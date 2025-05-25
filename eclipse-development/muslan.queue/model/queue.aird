@@ -4,7 +4,7 @@
     <semanticResources>queue.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.playlist/model/playlist.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
-    <semanticResources>platform:/resource/muslan.collection/model/Collection.ecore</semanticResources>
+    <semanticResources>platform:/resource/muslan.musiccollection/model/MusicCollection.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.genmodel</semanticResources>
     <semanticResources>queue.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Q5URYCTHEfC_qcDPliK8uQ">
@@ -86,8 +86,8 @@
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_PRKGICTaEfC_qcDPliK8uQ" name="Track" tooltipText="" incomingEdges="_PRO-oCTaEfC_qcDPliK8uQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="platform:/resource/muslan.collection/Collection.ecore#//Track"/>
-      <semanticElements xmi:type="ecore:EClass" href="platform:/resource/muslan.collection/Collection.ecore#//Track"/>
+      <target xmi:type="ecore:EClass" href="platform:/resource/muslan.musiccollection/MusicCollection.ecore#//Track"/>
+      <semanticElements xmi:type="ecore:EClass" href="platform:/resource/muslan.musiccollection/MusicCollection.ecore#//Track"/>
       <decorations xmi:type="viewpoint:Decoration" uid="_PRLUQCTaEfC_qcDPliK8uQ">
         <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
       </decorations>
@@ -96,8 +96,8 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_PRNwgCTaEfC_qcDPliK8uQ" name=" artists : Artist" tooltipText="">
-        <target xmi:type="ecore:EReference" href="platform:/resource/muslan.collection/Collection.ecore#//CategorizedElement/artists"/>
-        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/muslan.collection/Collection.ecore#//CategorizedElement/artists"/>
+        <target xmi:type="ecore:EReference" href="platform:/resource/muslan.musiccollection/MusicCollection.ecore#//CategorizedElement/artists"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/muslan.musiccollection/MusicCollection.ecore#//CategorizedElement/artists"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_PRNwgSTaEfC_qcDPliK8uQ" labelColor="125,125,125" labelAlignment="LEFT">
           <labelFormat>italic</labelFormat>
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@conditionnalStyles.0/@style"/>
@@ -105,8 +105,8 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_PRNwgiTaEfC_qcDPliK8uQ" name=" category : Category" tooltipText="">
-        <target xmi:type="ecore:EReference" href="platform:/resource/muslan.collection/Collection.ecore#//CategorizedElement/category"/>
-        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/muslan.collection/Collection.ecore#//CategorizedElement/category"/>
+        <target xmi:type="ecore:EReference" href="platform:/resource/muslan.musiccollection/MusicCollection.ecore#//CategorizedElement/category"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/muslan.musiccollection/MusicCollection.ecore#//CategorizedElement/category"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_PROXkCTaEfC_qcDPliK8uQ" labelColor="125,125,125" labelAlignment="LEFT">
           <labelFormat>italic</labelFormat>
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@conditionnalStyles.0/@style"/>
@@ -114,8 +114,8 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_PROXkSTaEfC_qcDPliK8uQ" name=" compositions : Composition" tooltipText="">
-        <target xmi:type="ecore:EReference" href="platform:/resource/muslan.collection/Collection.ecore#//Track/compositions"/>
-        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/muslan.collection/Collection.ecore#//Track/compositions"/>
+        <target xmi:type="ecore:EReference" href="platform:/resource/muslan.musiccollection/MusicCollection.ecore#//Track/compositions"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/muslan.musiccollection/MusicCollection.ecore#//Track/compositions"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_PROXkyTaEfC_qcDPliK8uQ" labelAlignment="LEFT" description="_PROXkiTaEfC_qcDPliK8uQ" color="114,159,207">
           <labelFormat>bold</labelFormat>
         </ownedStyle>

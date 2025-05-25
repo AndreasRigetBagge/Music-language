@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/muslan.query/src" modelPluginID="muslan.query"
     modelName="Query" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
-    usedGenPackages="../../muslan.collection/model/Collection.genmodel#//collection ../../muslan.pbconfig/model/pbconfig.genmodel#//pbconfig"
+    usedGenPackages="../../muslan.musiccollection/model/MusicCollection.genmodel#//musiccollection ../../muslan.pbconfig/model/pbconfig.genmodel#//pbconfig"
     operationReflection="true" importOrganizing="true">
   <foreignModel>Query.ecore</foreignModel>
   <genPackages prefix="Query" disposableProviderFactory="true" ecorePackage="Query.ecore#/">
@@ -18,7 +18,7 @@
       <genEnumLiterals ecoreEnumLiteral="Query.ecore#//OperatorType/GreaterThan"/>
     </genEnums>
     <genClasses ecoreClass="Query.ecore#//Query">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Query.ecore#//Query/collection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Query.ecore#//Query/musiccollection"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Query.ecore#//Query/filter"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Query.ecore#//Query/type"/>
     </genClasses>

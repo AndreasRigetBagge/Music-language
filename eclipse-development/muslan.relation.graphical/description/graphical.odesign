@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="graphical" version="12.0.0.2017041100">
-  <ownedViewpoints name="Collection Relation Viewpoint" modelFileExtension="relation">
+  <ownedViewpoints name="MusicCollection Relation Viewpoint" modelFileExtension="relation">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CollectionRelationDiagramRepresentation" domainClass="relation::RelationRoot" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="MainCollectionNode" label="Main Collection" labelDirectEdit="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" domainClass="relation::MainCollection">
-          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" tooltipExpression="['Main Collection: ' + self.name /]" labelPosition="node" resizeKind="NSEW" width="20" height="10">
+        <nodeMappings name="MainCollectionNode" label="Main MusicCollection" labelDirectEdit="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" domainClass="relation::MainCollection">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" tooltipExpression="['Main MusicCollection: ' + self.name /]" labelPosition="node" resizeKind="NSEW" width="20" height="10">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="DerivedCollectionNode" label="Derived Collected" labelDirectEdit="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" semanticCandidatesExpression="[ eAllContents()->select(e | not e.oclIsTypeOf(MainCollection)) /]" domainClass="relation::DerivedCollection">
+        <nodeMappings name="DerivedCollectionNode" label="Derived Collected" labelDirectEdit="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" semanticCandidatesExpression="[ eAllContents()->select(e | not e.oclIsTypeOf(MainCollection)) /]" domainClass="relation::DerivedCollection">
           <style xsi:type="style:BundledImageDescription" labelSize="9" showIcon="false" tooltipExpression="[ self.name /]" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="triangle">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="CollectionReferenceNode" label="Collection Reference" domainClass="relation::CollectionReference">
+        <nodeMappings name="CollectionReferenceNode" label="MusicCollection Reference" domainClass="relation::CollectionReference">
           <style xsi:type="style:BundledImageDescription" labelSize="9" showIcon="false" labelExpression="[ if self.pointsTo &lt;> null then self.pointsTo.Name else '' endif /]" tooltipExpression="[ 'Reference to ' + (if self.pointsTo &lt;> null then self.pointsTo.Name else '' endif) /]" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" shape="ring">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="SourceNode" label="Source" labelDirectEdit="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" domainClass="relation::Source">
+        <nodeMappings name="SourceNode" label="Source" labelDirectEdit="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@toolSections.0/@ownedTools[name='ChangeNameField']" domainClass="relation::Source">
           <style xsi:type="style:LozengeNodeDescription" borderSizeComputationExpression="2" labelSize="9" showIcon="false" tooltipExpression="[ 'Source: ' + self.name /]" labelPosition="node" resizeKind="NSEW" widthComputationExpression="8" heightComputationExpression="10">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="LinkEdge" label="Link" sourceMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode'] //@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']" targetMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode'] //@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']" targetFinderExpression="[ self.outgoing /]" sourceFinderExpression="[ self.incoming /]" domainClass="relation::Link" useDomainElement="true">
+        <edgeMappings name="LinkEdge" label="Link" sourceMapping="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode'] //@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']" targetMapping="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode'] //@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']" targetFinderExpression="[ self.outgoing /]" sourceFinderExpression="[ self.incoming /]" domainClass="relation::Link" useDomainElement="true">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
           </style>
         </edgeMappings>
-        <edgeMappings name="SourcesRelationEdge" label="SourcesRelation" sourceMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']" targetMapping="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']" targetFinderExpression="feature:sources">
+        <edgeMappings name="SourcesRelationEdge" label="SourcesRelation" sourceMapping="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']" targetMapping="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']" targetFinderExpression="feature:sources">
           <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -45,7 +45,7 @@
           </style>
         </edgeMappings>
         <toolSections name="CreateSection">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="MainCollectionCreationTool" label="Main Collection Creator" nodeMappings="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="MainCollectionCreationTool" label="Main MusicCollection Creator" nodeMappings="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='MainCollectionNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -58,21 +58,21 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="DerivedCollectionCreationTool" label="Derived Collection Creator" nodeMappings="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DerivedCollectionCreationTool" label="Derived MusicCollection Creator" nodeMappings="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='DerivedCollectionNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="relation::DerivedCollection" referenceName="providers"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="CollectionReferenceCreationTool" label="Collection Reference Creator" nodeMappings="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CollectionReferenceCreationTool" label="MusicCollection Reference Creator" nodeMappings="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='CollectionReferenceNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="relation::CollectionReference" referenceName="providers"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="SourceCreationTool" label="Source Creator" nodeMappings="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SourceCreationTool" label="Source Creator" nodeMappings="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@nodeMappings[name='SourceNode']">
             <variable name="container">
               <subVariables xsi:type="tool_1:SelectModelElementVariable" name="mc" candidatesExpression="[ eAllContents()->select(c | c.oclIsTypeOf(MainCollection) ) /]"/>
             </variable>
@@ -93,7 +93,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="ArrowSection" label="Arrow Section">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="LinkCreationTool" label="Link Creator" edgeMappings="//@ownedViewpoints[name='Collection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="LinkCreationTool" label="Link Creator" edgeMappings="//@ownedViewpoints[name='MusicCollection%20Relation%20Viewpoint']/@ownedRepresentations[name='CollectionRelationDiagramRepresentation']/@defaultLayer/@edgeMappings[name='LinkEdge']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>

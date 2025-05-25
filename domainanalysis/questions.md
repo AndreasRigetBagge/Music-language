@@ -8,15 +8,15 @@ A language for music enthusiasts to define, organize and navigate collections of
 
 *What are the use cases?*
 
-- I want to have a collection of all my music media independent of their physical location. (Collection)
-- I want to express my own organization of music - not just Artist/Album (Preferences + Collection)
+- I want to have a musiccollection of all my music media independent of their physical location. (MusicCollection)
+- I want to express my own organization of music - not just Artist/Album (Preferences + MusicCollection)
 - Playlists
   - I want to make "normal" playlists of songs in order
   - I want to make "advanced" playlists based on queries
   - I want to customize how a playlist is played (e.g. play entire albums, artist, random songs, sleep timer, loop)
-- I want to present my collection to other people (e.g. to share a list of favorite albums) (model to text)
+- I want to present my musiccollection to other people (e.g. to share a list of favorite albums) (model to text)
 - I want to import and export collections to JSON or XML (model test)
-- I want to insure my record collection
+- I want to insure my record musiccollection
 
 ## Q2: StakeHolders
 
@@ -36,7 +36,7 @@ Prioritized list:
 - PlayList (simple, advanced)
 - Source - location
 - Recommendation
-- Collection
+- MusicCollection
 - Queue
 - Object
   - Album
@@ -95,12 +95,12 @@ Location MyLocalMusicfolder + URI to Composition.
 An album is 0 or more Compositions or Tracks.
 With an album artist.
 
-**Collection**
+**MusicCollection**
 
-A collection has 0 or more objects.
+A musiccollection has 0 or more objects.
 Objects can exist in 0 or more collections.
-A collection can be a subcollection of another collection.
-A collection can have a name and an owner (the user)
+A musiccollection can be a subcollection of another musiccollection.
+A musiccollection can have a name and an owner (the user)
 
 **Playlist**
 
@@ -130,7 +130,7 @@ Resource
 Playback preference examples:
 
 a) I only want to play back Compositions with currently available locations.
-b) I want to "play" Compositions with a specific location type (e.g. in my LP collection).
+b) I want to "play" Compositions with a specific location type (e.g. in my LP musiccollection).
 c) I want to skip unavailable Compositions
 d) I want to pause at unavailable Compositions.
 e) I want the playback unit to be entire albums (or sides) (e.g. shuffle will shuffle albums, but each album will be played in sequence)
@@ -150,11 +150,11 @@ Query example:
 
 ```ourquery
 playlist myplaylist
-Compositions in collection my-collection1
+Compositions in musiccollection my-collection1
 with length over 7 minutes and average bpm like 123
 and category rock, country, indie 
 add
-albums in collection my-collection2
+albums in musiccollection my-collection2
 with year after 200
 add
 Compositions in playlist myplaylist
@@ -162,7 +162,7 @@ Compositions in playlist myplaylist
 
 ```ourquery
 playlist: name,
-from collection: my-collection,
+from musiccollection: my-musiccollection,
 with length: 7 minutes,
 & average bpm like: 123,
 & category: rock, country, indie

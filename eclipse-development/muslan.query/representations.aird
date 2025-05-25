@@ -4,11 +4,11 @@
     <semanticResources>model/Query.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.playlist/model/playlist.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.ecore</semanticResources>
-    <semanticResources>platform:/resource/muslan.collection/model/Collection.ecore</semanticResources>
+    <semanticResources>platform:/resource/muslan.musiccollection/model/MusicCollection.ecore</semanticResources>
     <semanticResources>platform:/resource/muslan.pbconfig/model/pbconfig.genmodel</semanticResources>
     <semanticResources>model/Query.genmodel</semanticResources>
     <semanticResources>platform:/resource/muslan.playlist/model/playlist.genmodel</semanticResources>
-    <semanticResources>platform:/resource/muslan.collection/model/Collection.genmodel</semanticResources>
+    <semanticResources>platform:/resource/muslan.musiccollection/model/MusicCollection.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_77R0YCTKEfClaqb2N_ZnPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BWEpICTLEfClaqb2N_ZnPw" name="query class diagram" repPath="#_BV_woCTLEfClaqb2N_ZnPw" changeId="1747584377295">
@@ -342,9 +342,9 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_8N9CUiTWEfCs95pUVcBpnw" name=" collection : Collection" tooltipText="">
-        <target xmi:type="ecore:EReference" href="model/Query.ecore#//Query/collection"/>
-        <semanticElements xmi:type="ecore:EReference" href="model/Query.ecore#//Query/collection"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_8N9CUiTWEfCs95pUVcBpnw" name=" musiccollection : MusicCollection" tooltipText="">
+        <target xmi:type="ecore:EReference" href="model/Query.ecore#//Query/musiccollection"/>
+        <semanticElements xmi:type="ecore:EReference" href="model/Query.ecore#//Query/musiccollection"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_8N9pYSTWEfCs95pUVcBpnw" labelAlignment="LEFT" description="_8N9pYCTWEfCs95pUVcBpnw" color="114,159,207">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
@@ -1174,9 +1174,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DNascTW6EfCi66H84PrKyg" name=" collection : Collection" tooltipText="">
-        <target xmi:type="ecore:EReference" href="model/Query.ecore#//Query/collection"/>
-        <semanticElements xmi:type="ecore:EReference" href="model/Query.ecore#//Query/collection"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DNascTW6EfCi66H84PrKyg" name=" musiccollection : MusicCollection" tooltipText="">
+        <target xmi:type="ecore:EReference" href="model/Query.ecore#//Query/musiccollection"/>
+        <semanticElements xmi:type="ecore:EReference" href="model/Query.ecore#//Query/musiccollection"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_DNasczW6EfCi66H84PrKyg" labelAlignment="LEFT" description="_DNascjW6EfCi66H84PrKyg" color="114,159,207">
           <labelFormat>bold</labelFormat>
         </ownedStyle>

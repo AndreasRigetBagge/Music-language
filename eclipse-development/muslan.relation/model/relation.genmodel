@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/muslan.relation/src" modelPluginID="muslan.relation"
     modelName="Relation" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
-    usedGenPackages="../../muslan.collection/model/Collection.genmodel#//collection ../../muslan.pbconfig/model/pbconfig.genmodel#//pbconfig ../../muslan.collection/model/Collection.genmodel#//playlist"
+    usedGenPackages="../../muslan.musiccollection/model/MusicCollection.genmodel#//musiccollection ../../muslan.pbconfig/model/pbconfig.genmodel#//pbconfig"
     operationReflection="true" importOrganizing="true">
   <foreignModel>relation.ecore</foreignModel>
   <genPackages prefix="Relation" disposableProviderFactory="true" ecorePackage="relation.ecore#/">
