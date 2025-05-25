@@ -1,6 +1,7 @@
 package muslan.query.interpreter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import queue.QueueFactory;
@@ -23,8 +24,6 @@ import musiccollection.Album;
 import musiccollection.CategorizedElement;
 
 public class QueryInterpreter {
-	static final List<String> emptyStringList = new ArrayList<String>();
-
 	public static Queue interpret(Query query) throws QueryInterpreterException {
 		FilterClause filter = query.getFilter();
 		MusicCollection musiccollection = query.getMusiccollection();
@@ -57,7 +56,7 @@ public class QueryInterpreter {
 
 	public static boolean filterElement(CategorizedElement e, FilterClause f) {
 		if (f instanceof Clause c) {
-			List<String> values = emptyStringList;
+			List<String> values = Collections.emptyList();
 			String u = c.getValue();
 
 			if (f instanceof CategoryClause cc) {
