@@ -4,7 +4,10 @@ Bundle-Name: %pluginName
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: playlist,
  playlist.impl,
- playlist.util
+ playlist.util,
+ query,
+ query.impl,
+ query.util
 Bundle-SymbolicName: muslan.playlist;singleton:=true
 Automatic-Module-Name: muslan.playlist
 Bundle-Version: 0.1.0.qualifier

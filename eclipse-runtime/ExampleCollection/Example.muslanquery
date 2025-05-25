@@ -1,5 +1,5 @@
 pick album from "Y2K" with
-both [ 
+both ( 
 	artist = "Britney Spears" 
 	and genre = "Nu metal"
-]
+)

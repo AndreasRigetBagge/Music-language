@@ -14,5 +14,13 @@
             genModel="model/playlist.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated playlist -->
+      <package
+            uri="https://www.example.org/query"
+            class="query.QueryPackage"
+            genModel="model/playlist.genmodel"/>
+   </extension>
+
 null
 </plugin>
