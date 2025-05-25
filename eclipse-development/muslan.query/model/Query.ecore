@@ -11,11 +11,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="FilterClause" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="AndClause" eSuperTypes="#//FilterClause">
     <eStructuralFeatures xsi:type="ecore:EReference" name="filterclause" lowerBound="2"
-        upperBound="2" eType="#//FilterClause" containment="true"/>
+        upperBound="-1" eType="#//FilterClause" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OrClause" eSuperTypes="#//FilterClause">
     <eStructuralFeatures xsi:type="ecore:EReference" name="filterclause" lowerBound="2"
-        upperBound="2" eType="#//FilterClause" containment="true"/>
+        upperBound="-1" eType="#//FilterClause" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Clause" abstract="true" eSuperTypes="#//FilterClause">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
