@@ -68,5 +68,6 @@
         eType="ecore:EClass ../../muslan.query/model/Query.ecore#//Query" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="track" upperBound="-1"
         eType="#//Track"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" eType="ecore:EClass ../../muslan.pbconfig/model/pbconfig.ecore#//Configuration"/>
   </eClassifiers>
 </ecore:EPackage>

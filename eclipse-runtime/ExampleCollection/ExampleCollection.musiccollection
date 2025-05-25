@@ -18,7 +18,6 @@
     <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.5" Name="Heimat" category="//@categories.4" tracks="//@musiccollection.1/@categorizedelements.5"/>
     <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.5" Name="Katharsis" category="//@categories.4" tracks="//@musiccollection.1/@categorizedelements.8"/>
     <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.5" Name="Katharsis" category="//@categories.4" compositions="//@musiccollection.1/@categorizedelements.7"/>
-    <playlist playitem="//@musiccollection.1/@categorizedelements.1 //@musiccollection.1/@categorizedelements.5" Name="Car ride playlisty"/>
   </musiccollection>
   <artist Name="Millennium"/>
   <artist Name="No Strings Attached"/>

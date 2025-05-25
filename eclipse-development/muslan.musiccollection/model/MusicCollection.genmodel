@@ -49,6 +49,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MusicCollection.ecore#//Playlist/Name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MusicCollection.ecore#//Playlist/query"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MusicCollection.ecore#//Playlist/track"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MusicCollection.ecore#//Playlist/configuration"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Query" ecorePackage="../../muslan.query/model/Query.ecore#/">
