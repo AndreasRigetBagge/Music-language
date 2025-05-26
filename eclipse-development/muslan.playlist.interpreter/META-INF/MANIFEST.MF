@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Playlist Interpreter
+Bundle-SymbolicName: muslan.playlist.interpreter;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Export-Package: muslan.playlist.interpreter;uses:="query,musiccollection,queue"
+Automatic-Module-Name: muslan.playlist.interpreter
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Require-Bundle: muslan.musiccollection;bundle-version="1.0.0",
+ muslan.queue;bundle-version="0.1.0",
+ muslan.query.interpreter;bundle-version="1.0.0"

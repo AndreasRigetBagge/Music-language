@@ -34,7 +34,7 @@
   <categories Value="Folk Metal"/>
   <configuration Name="A name for out default config :)">
     <option xsi:type="pbconfig:FlagConfig" Value="true"/>
-    <option xsi:type="pbconfig:NumberConfig" Value="120"/>
+    <option xsi:type="pbconfig:NumberConfig" Value="2"/>
   </configuration>
   <configuration Name="The good old Config2">
     <option xsi:type="pbconfig:FlagConfig"/>

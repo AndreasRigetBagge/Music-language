@@ -13,10 +13,14 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-src-gen
-**/src/
+#src-gen
+#**/src/
 !**/muslan.query.interpreter/src/
 !**/muslan.query.interpreter.eclipse/src/
+!**/muslan.playlist.interpreter/src/
+!**/muslan.playlist.interpreter.eclipse/src/
+!**/muslan.musiccollection.interpreter.eclipse/src/
+
 !muslan.query.dsl/src/
 
 # External tool builders
@@ -165,7 +169,7 @@ $RECYCLE.BIN/
 bin/
 tmp/
 target/
-xtend-gen/
+#xtend-gen/
 *.tmp
 *.bak
 *.swp

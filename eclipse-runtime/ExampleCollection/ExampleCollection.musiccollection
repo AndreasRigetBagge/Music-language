@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<musiccollection:CollectionRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:musiccollection="https://www.example.org/musiccollection" xmlns:pbconfig="https://www.example.org/pbconfig" defaultConfig="//@configuration.0">
+<musiccollection:CollectionRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:musiccollection="https://www.example.org/musiccollection" xmlns:pbconfig="https://www.example.org/pbconfig" xmlns:query="https://www.example.org/query" defaultConfig="//@configuration.0">
   <musiccollection Name="Y2K">
     <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.2" Name="Oops!.. I Did It Again" category="//@categories.0" tracks="//@musiccollection.0/@categorizedelements.1"/>
     <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.2" Name="Britney Spears - Oops!...I Did It Again (Official HD Video)" category="//@categories.0 //@categories.2" compositions="//@musiccollection.0/@categorizedelements.0"/>
@@ -7,6 +7,11 @@
     <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.1" Name="Bye Bye Bye" category="//@categories.0" tracks="//@musiccollection.0/@categorizedelements.4 //@musiccollection.0/@categorizedelements.5"/>
     <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.2" Name="Bye Bye Bye (Britney Spears Cover)" category="//@categories.0 //@categories.1" compositions="//@musiccollection.0/@categorizedelements.3"/>
     <categorizedelements xsi:type="musiccollection:Track" artists="//@artist.0" Name="Bye Bye Bye (Original)" category="//@categories.0" compositions="//@musiccollection.0/@categorizedelements.3"/>
+    <playlist Name="MyP" configuration="//@configuration.0">
+      <query collection="//@musiccollection.0">
+        <filter xsi:type="query:ArtistClause" value="Britney Spears"/>
+      </query>
+    </playlist>
   </musiccollection>
   <musiccollection Name="When life isn't lifing">
     <categorizedelements xsi:type="musiccollection:Composition" artists="//@artist.3" Name="Bring Me To Life" category="//@categories.2" tracks="//@musiccollection.1/@categorizedelements.1"/>
@@ -32,7 +37,7 @@
   <categories Value="Folk Metal"/>
   <configuration Name="A name for out default config :)">
     <option xsi:type="pbconfig:FlagConfig" Value="true"/>
-    <option xsi:type="pbconfig:NumberConfig" Value="120"/>
+    <option xsi:type="pbconfig:NumberConfig" Value="2"/>
   </configuration>
   <configuration Name="The good old Config2">
     <option xsi:type="pbconfig:FlagConfig"/>

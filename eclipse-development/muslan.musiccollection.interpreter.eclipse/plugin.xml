@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin> 
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+            <shortcut
+            class="muslan.musiccollection.interpreter.eclipse.launch.MusicCollectionLaunchShortcut"
+            description="Executes a playlist from a music collection"
+            icon="icons/FSM16.gif"
+            id="muslan.musiccollection.interpreter.eclipse.launch.MusicCollectionLaunchShortcutType"
+            label="Execute Playlist from collection"
+            modes="run">
+          <contextualLaunch>
+           <enablement>
+             <with variable="selection">
+               <count value="1"/>
+               <iterate
+                     ifEmpty="false"
+                     operator="and">
+                  <adapt type="org.eclipse.core.resources.IFile"/>
+                    <test property="org.eclipse.debug.ui.matchesPattern"
+                          value="*.musiccollection"/>
+               </iterate>
+             </with>
+           </enablement>
+           <contextLabel
+              mode="run"
+              label="Playlist"/>
+         </contextualLaunch>
+      </shortcut>
+   </extension>
+</plugin>

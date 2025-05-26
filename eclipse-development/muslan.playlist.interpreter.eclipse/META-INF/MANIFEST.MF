@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Music collection Interpreter Eclipse Integration
+Bundle-SymbolicName: muslan.playlist.interpreter.eclipse;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Export-Package: muslan.playlist.interpreter.eclipse.launch
+Automatic-Module-Name: muslan.playlist.interpreter.eclipse
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Require-Bundle: org.eclipse.debug.core;bundle-version="3.0.0",
+ org.eclipse.debug.ui;bundle-version="3.0.0",
+ org.eclipse.ui;bundle-version="3.0.0",
+ org.eclipse.ui.console;bundle-version="3.0.0",
+ org.eclipse.core.runtime;bundle-version="3.0.0",
+ org.eclipse.emf.edit,
+ muslan.queue;bundle-version="0.1.0",
+ org.eclipse.ui.workbench,
+ org.eclipse.ui.ide;bundle-version="3.22.500",
+ muslan.playlist.interpreter;bundle-version="1.0.0"
+Import-Package: org.eclipse.emf.ecore.xmi.impl;version="[2.38.0,3.0.0)"
